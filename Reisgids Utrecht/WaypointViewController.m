@@ -6,12 +6,14 @@
 //  Copyright (c) 2012 Sjors Provoost. All rights reserved.
 //
 
-#import "DataViewController.h"
+#import "WaypointViewController.h"
 
-@implementation DataViewController
+@implementation WaypointViewController
 
-@synthesize dataLabel = _dataLabel;
-@synthesize dataObject = _dataObject;
+@synthesize dataObject=_dataObject;
+@synthesize picture=_picture;
+@synthesize waypointTitle=waipointTitle;
+@synthesize intro=_intro;
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,7 +39,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.dataLabel.text = [self.dataObject description];
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];//    self.dataLabel.text = [self.dataObject description];
 }
 
 - (void)viewDidAppear:(BOOL)animated

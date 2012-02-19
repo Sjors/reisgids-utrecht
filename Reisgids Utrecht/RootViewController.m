@@ -8,18 +8,18 @@
 
 #import "RootViewController.h"
 
-#import "ModelController.h"
+#import "WaypointController.h"
 
-#import "DataViewController.h"
+#import "WaypointViewController.h"
 
 @interface RootViewController ()
-@property (readonly, strong, nonatomic) ModelController *modelController;
+@property (readonly, strong, nonatomic) WaypointController *waypointController;
 @end
 
 @implementation RootViewController
 
 @synthesize pageViewController = _pageViewController;
-@synthesize modelController = _modelController;
+@synthesize waypointController = _waypointController;
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,11 +37,11 @@
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.delegate = self;
 
-    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    WaypointViewController *startingViewController = [self.waypointController viewControllerAtIndex:0 storyboard:self.storyboard];
     NSArray *viewControllers = [NSArray arrayWithObject:startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
 
-    self.pageViewController.dataSource = self.modelController;
+    self.pageViewController.dataSource = self.waypointController;
 
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
@@ -89,16 +89,16 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (ModelController *)modelController
+- (WaypointController *)waypointController
 {
     /*
      Return the model controller object, creating it if necessary.
      In more complex implementations, the model controller may be passed to the view controller.
      */
-    if (!_modelController) {
-        _modelController = [[ModelController alloc] init];
+    if (!_waypointController) {
+        _waypointController = [[WaypointController alloc] init];
     }
-    return _modelController;
+    return _waypointController;
 }
 
 #pragma mark - UIPageViewController delegate methods

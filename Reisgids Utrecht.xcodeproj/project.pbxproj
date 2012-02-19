@@ -14,9 +14,25 @@
 		A25EE1E314F163F600A81707 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1E214F163F600A81707 /* main.m */; };
 		A25EE1E714F163F700A81707 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1E614F163F700A81707 /* AppDelegate.m */; };
 		A25EE1EA14F163F700A81707 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1E914F163F700A81707 /* RootViewController.m */; };
-		A25EE1ED14F163F700A81707 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1EC14F163F700A81707 /* DataViewController.m */; };
-		A25EE1F014F163F700A81707 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1EF14F163F700A81707 /* ModelController.m */; };
+		A25EE1ED14F163F700A81707 /* WaypointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1EC14F163F700A81707 /* WaypointViewController.m */; };
+		A25EE1F014F163F700A81707 /* WaypointController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1EF14F163F700A81707 /* WaypointController.m */; };
 		A25EE1F314F163F700A81707 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1F114F163F700A81707 /* MainStoryboard.storyboard */; };
+		A25EE1FE14F1795D00A81707 /* SpoorwegmuseumLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1FA14F1795D00A81707 /* SpoorwegmuseumLandscape.png */; };
+		A25EE1FF14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1FB14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png */; };
+		A25EE20014F1795D00A81707 /* Spoorwegmuseum.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1FC14F1795D00A81707 /* Spoorwegmuseum.png */; };
+		A25EE20114F1795D00A81707 /* Spoorwegmuseum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1FD14F1795D00A81707 /* Spoorwegmuseum@2x.png */; };
+		A25EE20414F19AF900A81707 /* VanafSpoorwegmuseum.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20214F19AF900A81707 /* VanafSpoorwegmuseum.png */; };
+		A25EE20514F19AF900A81707 /* VanafSpoorwegmuseum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20314F19AF900A81707 /* VanafSpoorwegmuseum@2x.png */; };
+		A25EE20814F19CFE00A81707 /* LepelenburgLinksaf.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20614F19CFE00A81707 /* LepelenburgLinksaf.png */; };
+		A25EE20914F19CFE00A81707 /* LepelenburgLinksaf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20714F19CFE00A81707 /* LepelenburgLinksaf@2x.png */; };
+		A25EE20E14F1A04200A81707 /* Bruntenhof.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20A14F1A04200A81707 /* Bruntenhof.png */; };
+		A25EE20F14F1A04200A81707 /* Bruntenhof@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20B14F1A04200A81707 /* Bruntenhof@2x.png */; };
+		A25EE21014F1A04200A81707 /* BruntenhofLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20C14F1A04200A81707 /* BruntenhofLandscape.png */; };
+		A25EE21114F1A04200A81707 /* BruntenhofLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20D14F1A04200A81707 /* BruntenhofLandscape@2x.png */; };
+		A25EE21614F1A2B100A81707 /* NieuweGrachtManOpDak.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21214F1A2B100A81707 /* NieuweGrachtManOpDak.png */; };
+		A25EE21714F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21314F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png */; };
+		A25EE21814F1A2B100A81707 /* NieuwegrachtRechtsaf.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21414F1A2B100A81707 /* NieuwegrachtRechtsaf.png */; };
+		A25EE21914F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21514F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,19 +40,35 @@
 		A25EE1D614F163F600A81707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A25EE1D814F163F600A81707 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A25EE1DA14F163F600A81707 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A25EE1DE14F163F600A81707 /* Reisgids Utrecht-Info.plist */ = {isa = PBXFileReference; path = "Reisgids Utrecht-Info.plist"; sourceTree = "<group>"; };
+		A25EE1DE14F163F600A81707 /* Reisgids Utrecht-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reisgids Utrecht-Info.plist"; sourceTree = "<group>"; };
 		A25EE1E014F163F600A81707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A25EE1E214F163F600A81707 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A25EE1E414F163F700A81707 /* Reisgids Utrecht-Prefix.pch */ = {isa = PBXFileReference; path = "Reisgids Utrecht-Prefix.pch"; sourceTree = "<group>"; };
-		A25EE1E514F163F700A81707 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		A25EE1E414F163F700A81707 /* Reisgids Utrecht-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reisgids Utrecht-Prefix.pch"; sourceTree = "<group>"; };
+		A25EE1E514F163F700A81707 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A25EE1E614F163F700A81707 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A25EE1E814F163F700A81707 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		A25EE1E814F163F700A81707 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		A25EE1E914F163F700A81707 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		A25EE1EB14F163F700A81707 /* DataViewController.h */ = {isa = PBXFileReference; path = DataViewController.h; sourceTree = "<group>"; };
-		A25EE1EC14F163F700A81707 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
-		A25EE1EE14F163F700A81707 /* ModelController.h */ = {isa = PBXFileReference; path = ModelController.h; sourceTree = "<group>"; };
-		A25EE1EF14F163F700A81707 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		A25EE1EB14F163F700A81707 /* WaypointViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaypointViewController.h; sourceTree = "<group>"; };
+		A25EE1EC14F163F700A81707 /* WaypointViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaypointViewController.m; sourceTree = "<group>"; };
+		A25EE1EE14F163F700A81707 /* WaypointController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaypointController.h; sourceTree = "<group>"; };
+		A25EE1EF14F163F700A81707 /* WaypointController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaypointController.m; sourceTree = "<group>"; };
 		A25EE1F214F163F700A81707 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A25EE1FA14F1795D00A81707 /* SpoorwegmuseumLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SpoorwegmuseumLandscape.png; path = Photos/SpoorwegmuseumLandscape.png; sourceTree = "<group>"; };
+		A25EE1FB14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SpoorwegmuseumLandscape@2x.png"; path = "Photos/SpoorwegmuseumLandscape@2x.png"; sourceTree = "<group>"; };
+		A25EE1FC14F1795D00A81707 /* Spoorwegmuseum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spoorwegmuseum.png; path = Photos/Spoorwegmuseum.png; sourceTree = "<group>"; };
+		A25EE1FD14F1795D00A81707 /* Spoorwegmuseum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Spoorwegmuseum@2x.png"; path = "Photos/Spoorwegmuseum@2x.png"; sourceTree = "<group>"; };
+		A25EE20214F19AF900A81707 /* VanafSpoorwegmuseum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VanafSpoorwegmuseum.png; path = Photos/VanafSpoorwegmuseum.png; sourceTree = "<group>"; };
+		A25EE20314F19AF900A81707 /* VanafSpoorwegmuseum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VanafSpoorwegmuseum@2x.png"; path = "Photos/VanafSpoorwegmuseum@2x.png"; sourceTree = "<group>"; };
+		A25EE20614F19CFE00A81707 /* LepelenburgLinksaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LepelenburgLinksaf.png; path = Photos/LepelenburgLinksaf.png; sourceTree = "<group>"; };
+		A25EE20714F19CFE00A81707 /* LepelenburgLinksaf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LepelenburgLinksaf@2x.png"; path = "Photos/LepelenburgLinksaf@2x.png"; sourceTree = "<group>"; };
+		A25EE20A14F1A04200A81707 /* Bruntenhof.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bruntenhof.png; path = Photos/Bruntenhof.png; sourceTree = "<group>"; };
+		A25EE20B14F1A04200A81707 /* Bruntenhof@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bruntenhof@2x.png"; path = "Photos/Bruntenhof@2x.png"; sourceTree = "<group>"; };
+		A25EE20C14F1A04200A81707 /* BruntenhofLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BruntenhofLandscape.png; path = Photos/BruntenhofLandscape.png; sourceTree = "<group>"; };
+		A25EE20D14F1A04200A81707 /* BruntenhofLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BruntenhofLandscape@2x.png"; path = "Photos/BruntenhofLandscape@2x.png"; sourceTree = "<group>"; };
+		A25EE21214F1A2B100A81707 /* NieuweGrachtManOpDak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NieuweGrachtManOpDak.png; path = Photos/NieuweGrachtManOpDak.png; sourceTree = "<group>"; };
+		A25EE21314F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NieuweGrachtManOpDak@2x.png"; path = "Photos/NieuweGrachtManOpDak@2x.png"; sourceTree = "<group>"; };
+		A25EE21414F1A2B100A81707 /* NieuwegrachtRechtsaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NieuwegrachtRechtsaf.png; path = Photos/NieuwegrachtRechtsaf.png; sourceTree = "<group>"; };
+		A25EE21514F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NieuwegrachtRechtsaf@2x.png"; path = "Photos/NieuwegrachtRechtsaf@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				A25EE1DC14F163F600A81707 /* Reisgids Utrecht */,
+				A25EE1F914F1794500A81707 /* Photos */,
 				A25EE1D514F163F600A81707 /* Frameworks */,
 				A25EE1D314F163F600A81707 /* Products */,
 			);
@@ -87,10 +120,10 @@
 				A25EE1E614F163F700A81707 /* AppDelegate.m */,
 				A25EE1E814F163F700A81707 /* RootViewController.h */,
 				A25EE1E914F163F700A81707 /* RootViewController.m */,
-				A25EE1EB14F163F700A81707 /* DataViewController.h */,
-				A25EE1EC14F163F700A81707 /* DataViewController.m */,
-				A25EE1EE14F163F700A81707 /* ModelController.h */,
-				A25EE1EF14F163F700A81707 /* ModelController.m */,
+				A25EE1EB14F163F700A81707 /* WaypointViewController.h */,
+				A25EE1EC14F163F700A81707 /* WaypointViewController.m */,
+				A25EE1EE14F163F700A81707 /* WaypointController.h */,
+				A25EE1EF14F163F700A81707 /* WaypointController.m */,
 				A25EE1F114F163F700A81707 /* MainStoryboard.storyboard */,
 				A25EE1DD14F163F600A81707 /* Supporting Files */,
 			);
@@ -106,6 +139,29 @@
 				A25EE1E414F163F700A81707 /* Reisgids Utrecht-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A25EE1F914F1794500A81707 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				A25EE1FA14F1795D00A81707 /* SpoorwegmuseumLandscape.png */,
+				A25EE1FB14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png */,
+				A25EE1FC14F1795D00A81707 /* Spoorwegmuseum.png */,
+				A25EE1FD14F1795D00A81707 /* Spoorwegmuseum@2x.png */,
+				A25EE20214F19AF900A81707 /* VanafSpoorwegmuseum.png */,
+				A25EE20314F19AF900A81707 /* VanafSpoorwegmuseum@2x.png */,
+				A25EE20614F19CFE00A81707 /* LepelenburgLinksaf.png */,
+				A25EE20714F19CFE00A81707 /* LepelenburgLinksaf@2x.png */,
+				A25EE20A14F1A04200A81707 /* Bruntenhof.png */,
+				A25EE20B14F1A04200A81707 /* Bruntenhof@2x.png */,
+				A25EE20C14F1A04200A81707 /* BruntenhofLandscape.png */,
+				A25EE20D14F1A04200A81707 /* BruntenhofLandscape@2x.png */,
+				A25EE21214F1A2B100A81707 /* NieuweGrachtManOpDak.png */,
+				A25EE21314F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png */,
+				A25EE21414F1A2B100A81707 /* NieuwegrachtRechtsaf.png */,
+				A25EE21514F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png */,
+			);
+			name = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +217,22 @@
 			files = (
 				A25EE1E114F163F600A81707 /* InfoPlist.strings in Resources */,
 				A25EE1F314F163F700A81707 /* MainStoryboard.storyboard in Resources */,
+				A25EE1FE14F1795D00A81707 /* SpoorwegmuseumLandscape.png in Resources */,
+				A25EE1FF14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png in Resources */,
+				A25EE20014F1795D00A81707 /* Spoorwegmuseum.png in Resources */,
+				A25EE20114F1795D00A81707 /* Spoorwegmuseum@2x.png in Resources */,
+				A25EE20414F19AF900A81707 /* VanafSpoorwegmuseum.png in Resources */,
+				A25EE20514F19AF900A81707 /* VanafSpoorwegmuseum@2x.png in Resources */,
+				A25EE20814F19CFE00A81707 /* LepelenburgLinksaf.png in Resources */,
+				A25EE20914F19CFE00A81707 /* LepelenburgLinksaf@2x.png in Resources */,
+				A25EE20E14F1A04200A81707 /* Bruntenhof.png in Resources */,
+				A25EE20F14F1A04200A81707 /* Bruntenhof@2x.png in Resources */,
+				A25EE21014F1A04200A81707 /* BruntenhofLandscape.png in Resources */,
+				A25EE21114F1A04200A81707 /* BruntenhofLandscape@2x.png in Resources */,
+				A25EE21614F1A2B100A81707 /* NieuweGrachtManOpDak.png in Resources */,
+				A25EE21714F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png in Resources */,
+				A25EE21814F1A2B100A81707 /* NieuwegrachtRechtsaf.png in Resources */,
+				A25EE21914F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +246,8 @@
 				A25EE1E314F163F600A81707 /* main.m in Sources */,
 				A25EE1E714F163F700A81707 /* AppDelegate.m in Sources */,
 				A25EE1EA14F163F700A81707 /* RootViewController.m in Sources */,
-				A25EE1ED14F163F700A81707 /* DataViewController.m in Sources */,
-				A25EE1F014F163F700A81707 /* ModelController.m in Sources */,
+				A25EE1ED14F163F700A81707 /* WaypointViewController.m in Sources */,
+				A25EE1F014F163F700A81707 /* WaypointController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +321,12 @@
 		A25EE1F714F163F700A81707 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sjors Provoost (599HTV8YRC)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reisgids Utrecht/Reisgids Utrecht-Prefix.pch";
 				INFOPLIST_FILE = "Reisgids Utrecht/Reisgids Utrecht-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6492AF41-0905-42E0-A22F-4C9008D409D1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

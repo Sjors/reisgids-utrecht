@@ -1,17 +1,17 @@
 //
-//  ModelController.m
+//  WaypointController.m
 //  Reisgids Utrecht
 //
 //  Created by Sjors Provoost on 19-02-12.
 //  Copyright (c) 2012 Sjors Provoost. All rights reserved.
 //
 
-#import "ModelController.h"
+#import "WaypointController.h"
 
-#import "DataViewController.h"
+#import "WaypointViewController.h"
 
 /*
- A controller object that manages a simple model -- a collection of month names.
+ A controller object that manages a .....
  
  The controller serves as the data source for the page view controller; it therefore implements pageViewController:viewControllerBeforeViewController: and pageViewController:viewControllerAfterViewController:.
  It also implements a custom method, viewControllerAtIndex: which is useful in the implementation of the data source methods, and in the initial configuration of the application.
@@ -19,11 +19,11 @@
  There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
  */
 
-@interface ModelController()
+@interface WaypointController()
 @property (readonly, strong, nonatomic) NSArray *pageData;
 @end
 
-@implementation ModelController
+@implementation WaypointController
 
 @synthesize pageData = _pageData;
 
@@ -38,7 +38,7 @@
     return self;
 }
 
-- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
+- (WaypointViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
 {   
     // Return the data view controller for the given index.
     if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
@@ -46,12 +46,12 @@
     }
     
     // Create a new view controller and pass suitable data.
-    DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
-    dataViewController.dataObject = [self.pageData objectAtIndex:index];
-    return dataViewController;
+    WaypointViewController *waypointViewController = [storyboard instantiateViewControllerWithIdentifier:@"WaypointViewController"];
+    waypointViewController.dataObject = [self.pageData objectAtIndex:index];
+    return waypointViewController;
 }
 
-- (NSUInteger)indexOfViewController:(DataViewController *)viewController
+- (NSUInteger)indexOfViewController:(WaypointViewController *)viewController
 {   
     /*
      Return the index of the given data view controller.
@@ -64,7 +64,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    NSUInteger index = [self indexOfViewController:(WaypointViewController *)viewController];
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
@@ -75,7 +75,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    NSUInteger index = [self indexOfViewController:(WaypointViewController *)viewController];
     if (index == NSNotFound) {
         return nil;
     }

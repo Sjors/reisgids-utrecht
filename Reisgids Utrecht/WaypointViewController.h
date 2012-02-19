@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DataViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *dataLabel;
+@interface WaypointViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *waypointTitle;
+@property (strong, nonatomic) IBOutlet UILabel *intro;
+@property (strong, nonatomic) IBOutlet UIImageView *picture;
 @property (strong, nonatomic) id dataObject;
 @end

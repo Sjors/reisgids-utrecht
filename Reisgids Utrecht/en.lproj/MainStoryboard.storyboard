@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1906" systemVersion="11A511" targetRuntime="iOS.CocoaTouch" nextObjectID="17" propertyAccessControl="none" initialViewController="12">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="12">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="902"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
     </dependencies>
     <scenes>
         <scene sceneID="8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="DataViewController" id="5" customClass="DataViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WaypointViewController" id="5" customClass="WaypointViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="9">
-                                <rect key="frame" x="8" y="37" width="304" height="415"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="10">
-                                <rect key="frame" x="8" y="8" width="304" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Spoorwegmuseum.png" id="5tD-kR-wjg" userLabel="Picture">
+                                <rect key="frame" x="0.0" y="140" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Spoorwegmuseum" lineBreakMode="tailTruncation" minimumFontSize="10" id="geZ-HT-KWF" userLabel="Title">
+                                <rect key="frame" x="20" y="0.0" width="280" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="4" adjustsFontSizeToFit="NO" minimumFontSize="10" id="BKA-LA-xLU" userLabel="Intro">
+                                <rect key="frame" x="20" y="44" width="280" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Jkj-zZ-PLk">
+                                <rect key="frame" x="20" y="424" width="280" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.97826086960000003" green="0.91848131079999995" blue="0.73914263440000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="dataLabel" destination="10" id="11"/>
+                        <outlet property="intro" destination="BKA-LA-xLU" id="ra6-Eb-UiQ"/>
+                        <outlet property="picture" destination="5tD-kR-wjg" id="4lz-Xw-Zu9"/>
+                        <outlet property="waypointTitle" destination="geZ-HT-KWF" id="SA4-cU-Mxz"/>
                     </connections>
                 </viewController>
             </objects>
@@ -43,25 +56,25 @@
                     <view key="view" contentMode="scaleToFill" id="13">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews/>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="360" y="476"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Spoorwegmuseum.png" width="320" height="320"/>
+    </resources>
     <classes>
-        <class className="DataViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DataViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dataLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
         <class className="RootViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
+        </class>
+        <class className="WaypointViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WaypointViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="pageViewController" candidateClass="UIPageViewController"/>
+                <relationship kind="outlet" name="intro" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="waypointTitle" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>
