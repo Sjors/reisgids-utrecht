@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="12">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2177" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="12">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1173"/>
     </dependencies>
     <scenes>
+        <!--Waypoint View Controller-->
         <scene sceneID="8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7" sceneMemberID="firstResponder"/>
@@ -24,7 +25,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="4" adjustsFontSizeToFit="NO" minimumFontSize="10" id="BKA-LA-xLU" userLabel="Intro">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="4" minimumFontSize="10" id="BKA-LA-xLU" userLabel="Intro">
                                 <rect key="frame" x="20" y="44" width="280" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
@@ -32,7 +33,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Jkj-zZ-PLk">
+                            <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="100" id="Jkj-zZ-PLk">
                                 <rect key="frame" x="20" y="424" width="280" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
@@ -41,14 +42,16 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="intro" destination="BKA-LA-xLU" id="ra6-Eb-UiQ"/>
-                        <outlet property="picture" destination="5tD-kR-wjg" id="4lz-Xw-Zu9"/>
-                        <outlet property="waypointTitle" destination="geZ-HT-KWF" id="SA4-cU-Mxz"/>
+                        <outlet property="intro" destination="BKA-LA-xLU" id="c3f-W0-stN"/>
+                        <outlet property="pageControl" destination="Jkj-zZ-PLk" id="eq0-4m-Tg6"/>
+                        <outlet property="picture" destination="5tD-kR-wjg" id="TfJ-kY-wKV"/>
+                        <outlet property="waypointTitle" destination="geZ-HT-KWF" id="wb6-Bi-iIY"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="772" y="476"/>
         </scene>
+        <!--Root View Controller-->
         <scene sceneID="15">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -73,6 +76,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WaypointViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="intro" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
                 <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="waypointTitle" candidateClass="UILabel"/>
             </relationships>

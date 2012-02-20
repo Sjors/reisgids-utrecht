@@ -10,10 +10,9 @@
 
 @implementation WaypointViewController
 
-@synthesize dataObject=_dataObject;
-@synthesize picture=_picture;
-@synthesize waypointTitle=waipointTitle;
-@synthesize intro=_intro;
+@synthesize waypoint=_waypoint;
+@synthesize currentPage=_currentPage;
+@synthesize numberOfPages=_numberOfPages;
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,7 +25,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    waypointTitle.text = self.waypoint.title;
+    intro.text = self.waypoint.intro;
+    picture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.waypoint.picture_name]];
+    
+    pageControl.currentPage = self.currentPage;
+    pageControl.numberOfPages = self.numberOfPages;
+    
+    
 }
 
 - (void)viewDidUnload
@@ -42,10 +49,12 @@
 //    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];//    self.dataLabel.text = [self.dataObject description];
 }
 
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
 }
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {

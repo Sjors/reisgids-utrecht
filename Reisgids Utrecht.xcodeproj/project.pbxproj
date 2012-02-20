@@ -33,6 +33,11 @@
 		A25EE21714F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21314F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png */; };
 		A25EE21814F1A2B100A81707 /* NieuwegrachtRechtsaf.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21414F1A2B100A81707 /* NieuwegrachtRechtsaf.png */; };
 		A25EE21914F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21514F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png */; };
+		A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A287E88014F2561300807435 /* Model.xcdatamodeld */; };
+		A287E88614F2585E00807435 /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A287E88514F2585E00807435 /* Waypoint.m */; };
+		A287E88814F2596E00807435 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287E88714F2596E00807435 /* CoreData.framework */; };
+		A2ABFE5E14F27C8C00550070 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5C14F27C8C00550070 /* icon.png */; };
+		A2ABFE5F14F27C8C00550070 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5D14F27C8C00550070 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +74,12 @@
 		A25EE21314F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NieuweGrachtManOpDak@2x.png"; path = "Photos/NieuweGrachtManOpDak@2x.png"; sourceTree = "<group>"; };
 		A25EE21414F1A2B100A81707 /* NieuwegrachtRechtsaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NieuwegrachtRechtsaf.png; path = Photos/NieuwegrachtRechtsaf.png; sourceTree = "<group>"; };
 		A25EE21514F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NieuwegrachtRechtsaf@2x.png"; path = "Photos/NieuwegrachtRechtsaf@2x.png"; sourceTree = "<group>"; };
+		A287E88114F2561300807435 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A287E88414F2585E00807435 /* Waypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waypoint.h; sourceTree = "<group>"; };
+		A287E88514F2585E00807435 /* Waypoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waypoint.m; sourceTree = "<group>"; };
+		A287E88714F2596E00807435 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A2ABFE5C14F27C8C00550070 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A2ABFE5D14F27C8C00550070 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A287E88814F2596E00807435 /* CoreData.framework in Frameworks */,
 				A25EE1D714F163F600A81707 /* UIKit.framework in Frameworks */,
 				A25EE1D914F163F600A81707 /* Foundation.framework in Frameworks */,
 				A25EE1DB14F163F600A81707 /* CoreGraphics.framework in Frameworks */,
@@ -88,8 +100,9 @@
 		A25EE1C714F163F600A81707 = {
 			isa = PBXGroup;
 			children = (
+				A287E88714F2596E00807435 /* CoreData.framework */,
 				A25EE1DC14F163F600A81707 /* Reisgids Utrecht */,
-				A25EE1F914F1794500A81707 /* Photos */,
+				A2ABFE5B14F27C6700550070 /* Resources */,
 				A25EE1D514F163F600A81707 /* Frameworks */,
 				A25EE1D314F163F600A81707 /* Products */,
 			);
@@ -126,6 +139,9 @@
 				A25EE1EF14F163F700A81707 /* WaypointController.m */,
 				A25EE1F114F163F700A81707 /* MainStoryboard.storyboard */,
 				A25EE1DD14F163F600A81707 /* Supporting Files */,
+				A287E88014F2561300807435 /* Model.xcdatamodeld */,
+				A287E88414F2585E00807435 /* Waypoint.h */,
+				A287E88514F2585E00807435 /* Waypoint.m */,
 			);
 			path = "Reisgids Utrecht";
 			sourceTree = "<group>";
@@ -156,12 +172,22 @@
 				A25EE20B14F1A04200A81707 /* Bruntenhof@2x.png */,
 				A25EE20C14F1A04200A81707 /* BruntenhofLandscape.png */,
 				A25EE20D14F1A04200A81707 /* BruntenhofLandscape@2x.png */,
-				A25EE21214F1A2B100A81707 /* NieuweGrachtManOpDak.png */,
-				A25EE21314F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png */,
 				A25EE21414F1A2B100A81707 /* NieuwegrachtRechtsaf.png */,
 				A25EE21514F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png */,
+				A25EE21214F1A2B100A81707 /* NieuweGrachtManOpDak.png */,
+				A25EE21314F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png */,
 			);
 			name = Photos;
+			sourceTree = "<group>";
+		};
+		A2ABFE5B14F27C6700550070 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A25EE1F914F1794500A81707 /* Photos */,
+				A2ABFE5C14F27C8C00550070 /* icon.png */,
+				A2ABFE5D14F27C8C00550070 /* icon@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +216,7 @@
 		A25EE1C914F163F600A81707 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Sjors Provoost";
 			};
 			buildConfigurationList = A25EE1CC14F163F600A81707 /* Build configuration list for PBXProject "Reisgids Utrecht" */;
@@ -233,6 +259,8 @@
 				A25EE21714F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png in Resources */,
 				A25EE21814F1A2B100A81707 /* NieuwegrachtRechtsaf.png in Resources */,
 				A25EE21914F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png in Resources */,
+				A2ABFE5E14F27C8C00550070 /* icon.png in Resources */,
+				A2ABFE5F14F27C8C00550070 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +276,8 @@
 				A25EE1EA14F163F700A81707 /* RootViewController.m in Sources */,
 				A25EE1ED14F163F700A81707 /* WaypointViewController.m in Sources */,
 				A25EE1F014F163F700A81707 /* WaypointController.m in Sources */,
+				A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */,
+				A287E88614F2585E00807435 /* Waypoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,8 +391,22 @@
 				A25EE1F814F163F700A81707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A287E88014F2561300807435 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A287E88114F2561300807435 /* Model.xcdatamodel */,
+			);
+			currentVersion = A287E88114F2561300807435 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A25EE1C914F163F600A81707 /* Project object */;
 }

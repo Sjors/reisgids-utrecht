@@ -9,6 +9,7 @@
 #import "WaypointController.h"
 
 #import "WaypointViewController.h"
+#import "AppDelegate.h"
 
 /*
  A controller object that manages a .....
@@ -19,35 +20,38 @@
  There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
  */
 
-@interface WaypointController()
-@property (readonly, strong, nonatomic) NSArray *pageData;
-@end
+//@interface WaypointController()
+//@property (readonly, strong, nonatomic) NSArray *pageData;
+//@end
 
 @implementation WaypointController
 
-@synthesize pageData = _pageData;
+@synthesize fetchedResultsController=_fetchedResultsController;
+@synthesize managedObjectContext=_managedObjectContext;
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        // Create the data model.
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        _pageData = [[dateFormatter monthSymbols] copy];
+        [self createFetchedResultsController];
     }
     return self;
 }
 
 - (WaypointViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
 {   
+    int n = [[self.fetchedResultsController fetchedObjects] count];
+    
     // Return the data view controller for the given index.
-    if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
+    if ((n == 0) || (index >= n)) {
         return nil;
     }
     
     // Create a new view controller and pass suitable data.
     WaypointViewController *waypointViewController = [storyboard instantiateViewControllerWithIdentifier:@"WaypointViewController"];
-    waypointViewController.dataObject = [self.pageData objectAtIndex:index];
+    waypointViewController.waypoint = [[self.fetchedResultsController fetchedObjects] objectAtIndex:index];
+    waypointViewController.currentPage = index;
+    waypointViewController.numberOfPages = n;
     return waypointViewController;
 }
 
@@ -55,9 +59,9 @@
 {   
     /*
      Return the index of the given data view controller.
-     For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
+
      */
-    return [self.pageData indexOfObject:viewController.dataObject];
+    return [[self.fetchedResultsController fetchedObjects] indexOfObject:viewController.waypoint];
 }
 
 #pragma mark - Page View Controller Data Source
@@ -81,10 +85,53 @@
     }
     
     index++;
-    if (index == [self.pageData count]) {
+    if (index == [[self.fetchedResultsController fetchedObjects] count]) {
         return nil;
     }
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
+
+-(void)createFetchedResultsController {  
+    self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    [self.fetchedResultsController performFetch:nil];
+    self.fetchedResultsController.delegate = self;    
+}
+
+#pragma mark - NSFetchedResultController delegates
+- (NSFetchedResultsController *)fetchedResultsController {
+    
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
+    
+    
+    NSEntityDescription *entity = [NSEntityDescription 
+                                   entityForName:@"Waypoint" inManagedObjectContext:self.managedObjectContext];
+    
+    
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] 
+                              initWithKey:@"position" ascending:YES]; 
+    
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    [fetchRequest setFetchBatchSize:20];
+    
+    NSFetchedResultsController *theFetchedResultsController = 
+    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
+                                        managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil 
+                                                   cacheName:nil];
+    self.fetchedResultsController = theFetchedResultsController;
+    _fetchedResultsController.delegate = self;
+    
+    
+    return _fetchedResultsController;    
+    
+}
+
 
 @end
