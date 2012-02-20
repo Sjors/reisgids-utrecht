@@ -41,14 +41,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A25EE1D214F163F600A81707 /* Reisgids Utrecht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reisgids Utrecht.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25EE1D214F163F600A81707 /* Utrecht Gids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Utrecht Gids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25EE1D614F163F600A81707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A25EE1D814F163F600A81707 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A25EE1DA14F163F600A81707 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A25EE1DE14F163F600A81707 /* Reisgids Utrecht-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reisgids Utrecht-Info.plist"; sourceTree = "<group>"; };
+		A25EE1DE14F163F600A81707 /* Utrecht Gids-Info.plist */ = {isa = PBXFileReference; path = "Utrecht Gids-Info.plist"; sourceTree = "<group>"; };
 		A25EE1E014F163F600A81707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A25EE1E214F163F600A81707 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A25EE1E414F163F700A81707 /* Reisgids Utrecht-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reisgids Utrecht-Prefix.pch"; sourceTree = "<group>"; };
+		A25EE1E414F163F700A81707 /* Utrecht Gids-Prefix.pch */ = {isa = PBXFileReference; path = "Utrecht Gids-Prefix.pch"; sourceTree = "<group>"; };
 		A25EE1E514F163F700A81707 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A25EE1E614F163F700A81707 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A25EE1E814F163F700A81707 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -100,7 +100,6 @@
 		A25EE1C714F163F600A81707 = {
 			isa = PBXGroup;
 			children = (
-				A287E88714F2596E00807435 /* CoreData.framework */,
 				A25EE1DC14F163F600A81707 /* Reisgids Utrecht */,
 				A2ABFE5B14F27C6700550070 /* Resources */,
 				A25EE1D514F163F600A81707 /* Frameworks */,
@@ -111,7 +110,7 @@
 		A25EE1D314F163F600A81707 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A25EE1D214F163F600A81707 /* Reisgids Utrecht.app */,
+				A25EE1D214F163F600A81707 /* Utrecht Gids.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +118,7 @@
 		A25EE1D514F163F600A81707 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A287E88714F2596E00807435 /* CoreData.framework */,
 				A25EE1D614F163F600A81707 /* UIKit.framework */,
 				A25EE1D814F163F600A81707 /* Foundation.framework */,
 				A25EE1DA14F163F600A81707 /* CoreGraphics.framework */,
@@ -149,10 +149,10 @@
 		A25EE1DD14F163F600A81707 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A25EE1DE14F163F600A81707 /* Reisgids Utrecht-Info.plist */,
+				A25EE1DE14F163F600A81707 /* Utrecht Gids-Info.plist */,
 				A25EE1DF14F163F600A81707 /* InfoPlist.strings */,
 				A25EE1E214F163F600A81707 /* main.m */,
-				A25EE1E414F163F700A81707 /* Reisgids Utrecht-Prefix.pch */,
+				A25EE1E414F163F700A81707 /* Utrecht Gids-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -193,9 +193,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A25EE1D114F163F600A81707 /* Reisgids Utrecht */ = {
+		A25EE1D114F163F600A81707 /* Utrecht Gids */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A25EE1F614F163F700A81707 /* Build configuration list for PBXNativeTarget "Reisgids Utrecht" */;
+			buildConfigurationList = A25EE1F614F163F700A81707 /* Build configuration list for PBXNativeTarget "Utrecht Gids" */;
 			buildPhases = (
 				A25EE1CE14F163F600A81707 /* Sources */,
 				A25EE1CF14F163F600A81707 /* Frameworks */,
@@ -205,9 +205,9 @@
 			);
 			dependencies = (
 			);
-			name = "Reisgids Utrecht";
+			name = "Utrecht Gids";
 			productName = "Reisgids Utrecht";
-			productReference = A25EE1D214F163F600A81707 /* Reisgids Utrecht.app */;
+			productReference = A25EE1D214F163F600A81707 /* Utrecht Gids.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +219,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Sjors Provoost";
 			};
-			buildConfigurationList = A25EE1CC14F163F600A81707 /* Build configuration list for PBXProject "Reisgids Utrecht" */;
+			buildConfigurationList = A25EE1CC14F163F600A81707 /* Build configuration list for PBXProject "Utrecht Gids" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,7 +231,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A25EE1D114F163F600A81707 /* Reisgids Utrecht */,
+				A25EE1D114F163F600A81707 /* Utrecht Gids */,
 			);
 		};
 /* End PBXProject section */
@@ -353,9 +353,9 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sjors Provoost (599HTV8YRC)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Reisgids Utrecht/Reisgids Utrecht-Prefix.pch";
-				INFOPLIST_FILE = "Reisgids Utrecht/Reisgids Utrecht-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Reisgids Utrecht/Utrecht Gids-Prefix.pch";
+				INFOPLIST_FILE = "Reisgids Utrecht/Utrecht Gids-Info.plist";
+				PRODUCT_NAME = "Utrecht Gids";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6492AF41-0905-42E0-A22F-4C9008D409D1";
 				WRAPPER_EXTENSION = app;
 			};
@@ -365,9 +365,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Reisgids Utrecht/Reisgids Utrecht-Prefix.pch";
-				INFOPLIST_FILE = "Reisgids Utrecht/Reisgids Utrecht-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Reisgids Utrecht/Utrecht Gids-Prefix.pch";
+				INFOPLIST_FILE = "Reisgids Utrecht/Utrecht Gids-Info.plist";
+				PRODUCT_NAME = "Utrecht Gids";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -375,7 +375,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A25EE1CC14F163F600A81707 /* Build configuration list for PBXProject "Reisgids Utrecht" */ = {
+		A25EE1CC14F163F600A81707 /* Build configuration list for PBXProject "Utrecht Gids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A25EE1F414F163F700A81707 /* Debug */,
@@ -384,7 +384,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A25EE1F614F163F700A81707 /* Build configuration list for PBXNativeTarget "Reisgids Utrecht" */ = {
+		A25EE1F614F163F700A81707 /* Build configuration list for PBXNativeTarget "Utrecht Gids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A25EE1F714F163F700A81707 /* Debug */,
