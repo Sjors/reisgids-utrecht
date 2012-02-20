@@ -33,7 +33,8 @@
         waypoint.intro = @"Treintjes... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
         waypoint.picture_name = @"Spoorwegmuseum";    
         waypoint.is_sight = [NSNumber numberWithBool:YES];
-    
+        waypoint.lat = [NSNumber numberWithFloat:52.088004];
+        waypoint.lon = [NSNumber numberWithFloat:5.130816];
         waypoint = nil;
     
         waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
@@ -41,13 +42,17 @@
         waypoint.title = @"Richting brug";
         waypoint.intro = @"Met je rug naar het spoorwegmuseum zie je achter de boom al de Dom. Loop rechtdoor en over de brug.";
         waypoint.picture_name = @"VanafSpoorwegmuseum";   
+        waypoint.lat = [NSNumber numberWithFloat:52.088004];
+        waypoint.lon = [NSNumber numberWithFloat:5.130816];
         
         waypoint = nil;
         waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
         waypoint.position = [NSNumber numberWithInt:2];
         waypoint.title = @"Volg de stoep naar links";
-        waypoint.intro = @"Geniet van het uitzicht vanaf de brug en over het Lepelenburg rechts. Steek de straat over en ga linksaf.";
-        waypoint.picture_name = @"LepelenburgLinksaf";   
+        waypoint.intro = @"Geniet van het uitzicht vanaf de brug en over het Lepelenburg. Sla linksaf en volg de stoep aan de rechterkant.";
+        waypoint.picture_name = @"LepelenburgLinksaf";  
+        waypoint.lat = [NSNumber numberWithFloat:52.088729];
+        waypoint.lon = [NSNumber numberWithFloat:5.128502];
         
         waypoint = nil;
         waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
@@ -56,6 +61,8 @@
         waypoint.intro = @"Schattige huisjes toch? Loop nu de Schalkwijkstraat door.";
         waypoint.picture_name = @"Bruntenhof";   
         waypoint.is_sight = [NSNumber numberWithBool:YES];
+        waypoint.lat = [NSNumber numberWithFloat:52.088128];
+        waypoint.lon = [NSNumber numberWithFloat:5.127861];
 
         waypoint = nil;
         waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
@@ -63,6 +70,8 @@
         waypoint.title = @"Rechtsaf langs de Nieuwegracht";
         waypoint.intro = @"De verleiding is groot om langs de kant van het water te lopen. Weersta die: er ligt nog wel eens hondenpoep.";
         waypoint.picture_name = @"NieuwegrachtRechtsaf";   
+        waypoint.lat = [NSNumber numberWithFloat:52.087447];
+        waypoint.lon = [NSNumber numberWithFloat:5.126013];
         
         waypoint = nil;
         waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
@@ -71,6 +80,8 @@
         waypoint.intro = @"Aan de overkant zie je een beeld van een sterke man op het dak.";
         waypoint.picture_name = @"NieuweGrachtManOpDak";   
         waypoint.is_sight = [NSNumber numberWithBool:YES];
+        waypoint.lat = [NSNumber numberWithFloat:52.08935];
+        waypoint.lon = [NSNumber numberWithFloat:5.124206];
         
 //        waypoint = nil;
 //        
