@@ -11,7 +11,7 @@
 
 @class WaypointViewController;
 
-@interface WaypointController : NSObject <UIPageViewControllerDataSource, NSFetchedResultsControllerDelegate>
+@interface WaypointController : NSObject <UIPageViewControllerDataSource, NSFetchedResultsControllerDelegate, UIPageViewControllerDelegate>
 - (WaypointViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;

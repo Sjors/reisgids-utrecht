@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationController.h"
 
 @interface RootViewController : UIViewController <UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (nonatomic, strong) LocationController *locationController;
+
 
 @end

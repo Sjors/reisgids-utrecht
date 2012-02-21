@@ -10,6 +10,7 @@
 #import "Waypoint.h"
 
 @interface WaypointViewController : UIViewController {
+    
     IBOutlet UILabel *waypointTitle;
     IBOutlet UILabel *intro;
     IBOutlet UIImageView *picture;

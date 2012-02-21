@@ -20,6 +20,7 @@
 
 @synthesize pageViewController = _pageViewController;
 @synthesize waypointController = _waypointController;
+@synthesize locationController = _locationController;
 
 - (void)didReceiveMemoryWarning
 {
@@ -42,6 +43,7 @@
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
 
     self.pageViewController.dataSource = self.waypointController;
+    self.pageViewController.delegate = self.waypointController;
 
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
@@ -54,6 +56,9 @@
 
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
+    
+    self.locationController = [[LocationController alloc] initWithRootViewController:self];
+    
 }
 
 - (void)viewDidUnload

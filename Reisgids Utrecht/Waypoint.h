@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <CoreLocation/CoreLocation.h>
 
 
 @interface Waypoint : NSManagedObject
@@ -19,5 +20,11 @@
 @property (nonatomic, retain) NSString * intro;
 @property (nonatomic, retain) NSString * picture_name;
 @property (nonatomic, retain) NSNumber * is_sight;
+
++(Waypoint *)findByPosition:(NSNumber *)position managedObjectContext:(NSManagedObjectContext *)moc;
+
+-(CLLocation *)location;
+
+-(Waypoint *)next:(NSManagedObjectContext *)moc;
 
 @end

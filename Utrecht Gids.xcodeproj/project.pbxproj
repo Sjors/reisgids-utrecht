@@ -36,6 +36,8 @@
 		A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A287E88014F2561300807435 /* Model.xcdatamodeld */; };
 		A287E88614F2585E00807435 /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A287E88514F2585E00807435 /* Waypoint.m */; };
 		A287E88814F2596E00807435 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287E88714F2596E00807435 /* CoreData.framework */; };
+		A29BEF3414F3DF6500C36818 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29BEF3314F3DF6500C36818 /* CoreLocation.framework */; };
+		A29BEF3814F3E00500C36818 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29BEF3714F3E00500C36818 /* LocationController.m */; };
 		A2ABFE5E14F27C8C00550070 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5C14F27C8C00550070 /* Icon.png */; };
 		A2ABFE5F14F27C8C00550070 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5D14F27C8C00550070 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,9 @@
 		A287E88714F2596E00807435 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A298D48114F2825F00ECB06C /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = nl; path = "/Users/sjors/Dropbox/Reisgids/iPhone/Reisgids Utrecht/nl.lproj/MainStoryboard.storyboard"; sourceTree = "<absolute>"; };
 		A298D48214F2825F00ECB06C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "/Users/sjors/Dropbox/Reisgids/iPhone/Reisgids Utrecht/nl.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		A29BEF3314F3DF6500C36818 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A29BEF3614F3E00500C36818 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		A29BEF3714F3E00500C36818 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		A2ABFE5C14F27C8C00550070 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		A2ABFE5D14F27C8C00550070 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29BEF3414F3DF6500C36818 /* CoreLocation.framework in Frameworks */,
 				A287E88814F2596E00807435 /* CoreData.framework in Frameworks */,
 				A25EE1D714F163F600A81707 /* UIKit.framework in Frameworks */,
 				A25EE1D914F163F600A81707 /* Foundation.framework in Frameworks */,
@@ -119,6 +125,7 @@
 		A25EE1D514F163F600A81707 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A29BEF3314F3DF6500C36818 /* CoreLocation.framework */,
 				A287E88714F2596E00807435 /* CoreData.framework */,
 				A25EE1D614F163F600A81707 /* UIKit.framework */,
 				A25EE1D814F163F600A81707 /* Foundation.framework */,
@@ -142,6 +149,8 @@
 				A287E88014F2561300807435 /* Model.xcdatamodeld */,
 				A287E88414F2585E00807435 /* Waypoint.h */,
 				A287E88514F2585E00807435 /* Waypoint.m */,
+				A29BEF3614F3E00500C36818 /* LocationController.h */,
+				A29BEF3714F3E00500C36818 /* LocationController.m */,
 			);
 			path = "Reisgids Utrecht";
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 				A25EE1F014F163F700A81707 /* WaypointController.m in Sources */,
 				A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */,
 				A287E88614F2585E00807435 /* Waypoint.m in Sources */,
+				A29BEF3814F3E00500C36818 /* LocationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

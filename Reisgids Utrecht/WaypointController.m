@@ -55,6 +55,14 @@
     return waypointViewController;
 }
 
+
+-(void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+    
+    Waypoint *waypoint = ((WaypointViewController *)[pageViewController.viewControllers objectAtIndex:0]).waypoint;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pageTurned" object:nil userInfo:[NSDictionary dictionaryWithObject:waypoint.position forKey:@"waypoint_pos"]];
+}
+
 - (NSUInteger)indexOfViewController:(WaypointViewController *)viewController
 {   
     /*

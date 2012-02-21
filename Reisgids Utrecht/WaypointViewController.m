@@ -32,8 +32,6 @@
     
     pageControl.currentPage = self.currentPage;
     pageControl.numberOfPages = self.numberOfPages;
-    
-    
 }
 
 - (void)viewDidUnload
