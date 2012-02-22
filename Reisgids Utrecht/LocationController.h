@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "RootViewController.h"
 
+@class RootViewController;
 
 @interface LocationController : NSObject <CLLocationManagerDelegate> {
     
@@ -16,7 +18,8 @@
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) RootViewController *rootViewController;
 
-- (LocationController *)initWithRootViewController:(UIViewController *)rootViewController;
+- (LocationController *)initWithRootViewController:(RootViewController *)rootViewController;
 
 @end

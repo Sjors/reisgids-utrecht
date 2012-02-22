@@ -27,7 +27,10 @@
     [super viewDidLoad];
     
     waypointTitle.text = self.waypoint.title;
+    waypointTitle.accessibilityLabel = self.waypoint.title;
+
     intro.text = self.waypoint.intro;
+    
     picture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.waypoint.picture_name]];
     
     pageControl.currentPage = self.currentPage;

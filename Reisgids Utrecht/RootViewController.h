@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "LocationController.h"
+#import "Waypoint.h"
+
+@class LocationController;
 
 @interface RootViewController : UIViewController <UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (nonatomic, strong) LocationController *locationController;
 
+-(void)turnToPageForWaypoint:(Waypoint *)waypoint;
 
 @end

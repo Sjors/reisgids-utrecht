@@ -9,19 +9,24 @@
 #import "LocationController.h"
 #import "Waypoint.h"
 #import "AppDelegate.h"
+#import "WaypointViewController.h"
 
 @implementation LocationController
 
 @synthesize managedObjectContext=_managedObjectContext;
 @synthesize locationManager=_locationManager;
+@synthesize rootViewController=_rootViewController;
 
-- (LocationController *)initWithRootViewController:(UIViewController *)rootViewController {
+- (LocationController *)initWithRootViewController:(RootViewController *)rootViewController {
     
     if((self = [super init])) {
         self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
         
+        self.rootViewController = rootViewController;
+        
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
+        self.locationManager.purpose = @"De gids werkt ook zonder, maar kan je beter helpen met navigeren en voorbereiden als je locatie bekend is.";
         
         // Monitor when the user or system turns the page:
         [[NSNotificationCenter defaultCenter] addObserverForName:@"pageTurned" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
@@ -44,7 +49,9 @@
                 // End of the tour
                 [self.locationManager stopUpdatingLocation];
             } else if ([waypoint.location distanceFromLocation:nextWaypoint.location] <= 50) {
-                // We're at a sight where the user manually needs to flip the page to continue his tour.                
+                // We're at a sight where the user manually needs to flip the page to continue his tour.  
+
+                [self.locationManager stopUpdatingLocation];
             } else {
                 NSLog(@"This shoudn't happen");
             }
@@ -58,17 +65,48 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    
     NSLog(@"We're here: %@", [newLocation description]);
     
-    // Check if it's recent
+    // Check if it's recent (2 minutes)
+    if([newLocation.timestamp timeIntervalSinceNow] < -120) return;
     
     // Figure out why we need it...
     
-    // What do we do with it?
+    // Which waypoint is the user looking at?
+    Waypoint *currentWaypoint = ((WaypointViewController *)[self.rootViewController.pageViewController.viewControllers objectAtIndex:0]).waypoint;
+    
+    // How far are we from the next waypoint?
+    Waypoint *nextWaypoint = [currentWaypoint next:self.managedObjectContext];
+    
+    if(nextWaypoint != nil) {
+        NSInteger distance = [newLocation distanceFromLocation:nextWaypoint.location];
+        
+        NSLog(@"Distance to next waypoint: %d meters.", distance);
+        
+        // What do we do with it
+        
+        // Flip the page is we are less than 30 meters from the next waypoint
+        if (distance < 30) {
+            [self.rootViewController turnToPageForWaypoint:nextWaypoint];
+        }
+        
+    } else {
+        NSLog(@"We're already at the last waypoint. This shouldn't happen.");
+    }
+    
+
+    
     
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    // What happened?
+    
+    // Did we not get authorization?
+    
+        // We don't care
+    
     
 }
 

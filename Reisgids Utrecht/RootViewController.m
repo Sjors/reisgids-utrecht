@@ -61,6 +61,14 @@
     
 }
 
+-(void)turnToPageForWaypoint:(Waypoint *)waypoint {
+    WaypointViewController *vc = [self.waypointController viewControllerAtIndex:[waypoint.position intValue] storyboard:self.storyboard];
+    
+    NSArray *viewControllers = [NSArray arrayWithObject:vc];
+    
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
