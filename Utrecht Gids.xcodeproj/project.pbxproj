@@ -33,6 +33,8 @@
 		A25EE21714F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21314F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png */; };
 		A25EE21814F1A2B100A81707 /* NieuwegrachtRechtsaf.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21414F1A2B100A81707 /* NieuwegrachtRechtsaf.png */; };
 		A25EE21914F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE21514F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png */; };
+		A262749414F7E15C007304C2 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A262749314F7E15C007304C2 /* InfoTableViewController.m */; };
+		A262749714F7E25D007304C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A262749614F7E25D007304C2 /* MapKit.framework */; };
 		A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A287E88014F2561300807435 /* Model.xcdatamodeld */; };
 		A287E88614F2585E00807435 /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A287E88514F2585E00807435 /* Waypoint.m */; };
 		A287E88814F2596E00807435 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287E88714F2596E00807435 /* CoreData.framework */; };
@@ -74,6 +76,9 @@
 		A25EE21314F1A2B100A81707 /* NieuweGrachtManOpDak@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NieuweGrachtManOpDak@2x.png"; path = "Photos/NieuweGrachtManOpDak@2x.png"; sourceTree = "<group>"; };
 		A25EE21414F1A2B100A81707 /* NieuwegrachtRechtsaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NieuwegrachtRechtsaf.png; path = Photos/NieuwegrachtRechtsaf.png; sourceTree = "<group>"; };
 		A25EE21514F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NieuwegrachtRechtsaf@2x.png"; path = "Photos/NieuwegrachtRechtsaf@2x.png"; sourceTree = "<group>"; };
+		A262749214F7E15C007304C2 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
+		A262749314F7E15C007304C2 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
+		A262749614F7E25D007304C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A287E88114F2561300807435 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A287E88414F2585E00807435 /* Waypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waypoint.h; sourceTree = "<group>"; };
 		A287E88514F2585E00807435 /* Waypoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waypoint.m; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A262749714F7E25D007304C2 /* MapKit.framework in Frameworks */,
 				A29BEF3414F3DF6500C36818 /* CoreLocation.framework in Frameworks */,
 				A287E88814F2596E00807435 /* CoreData.framework in Frameworks */,
 				A25EE1D714F163F600A81707 /* UIKit.framework in Frameworks */,
@@ -125,6 +131,7 @@
 		A25EE1D514F163F600A81707 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A262749614F7E25D007304C2 /* MapKit.framework */,
 				A29BEF3314F3DF6500C36818 /* CoreLocation.framework */,
 				A287E88714F2596E00807435 /* CoreData.framework */,
 				A25EE1D614F163F600A81707 /* UIKit.framework */,
@@ -151,6 +158,8 @@
 				A287E88514F2585E00807435 /* Waypoint.m */,
 				A29BEF3614F3E00500C36818 /* LocationController.h */,
 				A29BEF3714F3E00500C36818 /* LocationController.m */,
+				A262749214F7E15C007304C2 /* InfoTableViewController.h */,
+				A262749314F7E15C007304C2 /* InfoTableViewController.m */,
 			);
 			path = "Reisgids Utrecht";
 			sourceTree = "<group>";
@@ -289,6 +298,7 @@
 				A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */,
 				A287E88614F2585E00807435 /* Waypoint.m in Sources */,
 				A29BEF3814F3E00500C36818 /* LocationController.m in Sources */,
+				A262749414F7E15C007304C2 /* InfoTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

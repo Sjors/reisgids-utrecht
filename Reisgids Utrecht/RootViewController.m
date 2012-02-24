@@ -59,6 +59,21 @@
     
     self.locationController = [[LocationController alloc] initWithRootViewController:self];
     
+    // Allow user to tap on info button
+    for (UIGestureRecognizer *gR in self.view.gestureRecognizers) {
+        gR.delegate = self;
+    }
+    
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
+        CGPoint touchPoint = [touch locationInView:self.view];
+        if (touchPoint.x > 50 && touchPoint.x < 430) {//Let the buttons in the middle of the top bar receive the touch
+            return NO;
+        }
+    }
+    return YES;
 }
 
 -(void)turnToPageForWaypoint:(Waypoint *)waypoint {

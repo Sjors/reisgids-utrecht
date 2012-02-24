@@ -12,7 +12,7 @@
 
 @class LocationController;
 
-@interface RootViewController : UIViewController <UIPageViewControllerDelegate>
+@interface RootViewController : UIViewController <UIPageViewControllerDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (nonatomic, strong) LocationController *locationController;
