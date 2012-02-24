@@ -15,6 +15,8 @@
 
 @implementation InfoTableViewController
 
+@synthesize waypoint=_waypoint;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -35,6 +37,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"infoScreen" object:nil userInfo:nil];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -48,6 +54,8 @@
 }
 
 - (IBAction)done:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pageTurned" object:nil userInfo:[NSDictionary dictionaryWithObject:self.waypoint.position forKey:@"waypoint_pos"]];
+    
     [self dismissModalViewControllerAnimated:YES];
 }
 

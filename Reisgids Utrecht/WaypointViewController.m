@@ -7,6 +7,7 @@
 //
 
 #import "WaypointViewController.h"
+#import "InfoTableViewController.h"
 
 @implementation WaypointViewController
 
@@ -72,5 +73,14 @@
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"info"]  ) {
+        InfoTableViewController *vc = (InfoTableViewController *)((UINavigationController *)segue.destinationViewController).topViewController;
+        vc.waypoint = self.waypoint;
+    }
+}
+
+
 
 @end

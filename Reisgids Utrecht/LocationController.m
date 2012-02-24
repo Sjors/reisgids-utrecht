@@ -31,7 +31,7 @@
         // Monitor when the user or system turns the page:
         [[NSNotificationCenter defaultCenter] addObserverForName:@"pageTurned" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
             
-            
+            applicationMode = kApplicationModeDefault;
             
             Waypoint *waypoint = [Waypoint findByPosition:[notif.userInfo objectForKey:@"waypoint_pos"] managedObjectContext:self.managedObjectContext];
             
@@ -59,6 +59,16 @@
             
             
         }] ;
+        
+        
+        // Monitor when the user flips to info view
+        [[NSNotificationCenter defaultCenter] addObserverForName:@"infoScreen" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
+            
+            applicationMode = kApplicationModeInfoScreen;
+         
+            self.locationManager.distanceFilter = 500;
+            [self.locationManager startUpdatingLocation];
+        }] ;
     };
     
     return self;
@@ -76,25 +86,30 @@
     // Which waypoint is the user looking at?
     Waypoint *currentWaypoint = ((WaypointViewController *)[self.rootViewController.pageViewController.viewControllers objectAtIndex:0]).waypoint;
     
-    // How far are we from the next waypoint?
-    Waypoint *nextWaypoint = [currentWaypoint next:self.managedObjectContext];
+    if(applicationMode == kApplicationModeInfoScreen) {
+        // Nothing to do
+    } else {
     
-    if(nextWaypoint != nil) {
-        NSInteger distance = [newLocation distanceFromLocation:nextWaypoint.location];
+        // How far are we from the next waypoint?
+        Waypoint *nextWaypoint = [currentWaypoint next:self.managedObjectContext];
         
-        NSLog(@"Distance to next waypoint: %d meters.", distance);
-        
-        // What do we do with it
-        
-        // Flip the page is we are less than 30 meters from the next waypoint
-        if (distance < 30) {
-            [self.rootViewController turnToPageForWaypoint:nextWaypoint];
+        if(nextWaypoint != nil) {
+            NSInteger distance = [newLocation distanceFromLocation:nextWaypoint.location];
+            
+            NSLog(@"Distance to next waypoint: %d meters.", distance);
+            
+            // What do we do with it
+            
+            // Flip the page is we are less than 30 meters from the next waypoint
+            if (distance < 30) {
+                [self.rootViewController turnToPageForWaypoint:nextWaypoint];
+            }
+            
+        } else {
+            NSLog(@"We're already at the last waypoint. This shouldn't happen.");
         }
         
-    } else {
-        NSLog(@"We're already at the last waypoint. This shouldn't happen.");
     }
-    
 
     
     

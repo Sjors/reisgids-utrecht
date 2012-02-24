@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
+#import "Waypoint.h"
 
-@interface InfoTableViewController : UITableViewController
+@interface InfoTableViewController : UITableViewController {
+    
+}
+
+@property (nonatomic, strong) Waypoint *waypoint;
 
 @end
