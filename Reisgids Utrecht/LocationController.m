@@ -87,7 +87,7 @@
     Waypoint *currentWaypoint = ((WaypointViewController *)[self.rootViewController.pageViewController.viewControllers objectAtIndex:0]).waypoint;
     
     if(applicationMode == kApplicationModeInfoScreen) {
-        // Nothing to do
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"locationUpdate" object:nil userInfo:nil];
     } else {
     
         // How far are we from the next waypoint?

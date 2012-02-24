@@ -15,6 +15,8 @@
     IBOutlet UILabel *intro;
     IBOutlet UIImageView *picture;
     
+    IBOutlet UIButton *infoButton;
+    
     IBOutlet UIPageControl *pageControl;
 }
 

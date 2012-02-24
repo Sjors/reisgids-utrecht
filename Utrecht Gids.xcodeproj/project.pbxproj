@@ -42,6 +42,7 @@
 		A29BEF3814F3E00500C36818 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29BEF3714F3E00500C36818 /* LocationController.m */; };
 		A2ABFE5E14F27C8C00550070 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5C14F27C8C00550070 /* Icon.png */; };
 		A2ABFE5F14F27C8C00550070 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5D14F27C8C00550070 /* Icon@2x.png */; };
+		A2C799A814F7F127000D197E /* WaypointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C799A714F7F127000D197E /* WaypointAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,8 @@
 		A29BEF3714F3E00500C36818 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		A2ABFE5C14F27C8C00550070 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		A2ABFE5D14F27C8C00550070 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		A2C799A614F7F127000D197E /* WaypointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaypointAnnotation.h; sourceTree = "<group>"; };
+		A2C799A714F7F127000D197E /* WaypointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaypointAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				A29BEF3714F3E00500C36818 /* LocationController.m */,
 				A262749214F7E15C007304C2 /* InfoTableViewController.h */,
 				A262749314F7E15C007304C2 /* InfoTableViewController.m */,
+				A2C799A614F7F127000D197E /* WaypointAnnotation.h */,
+				A2C799A714F7F127000D197E /* WaypointAnnotation.m */,
 			);
 			path = "Reisgids Utrecht";
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				A287E88614F2585E00807435 /* Waypoint.m in Sources */,
 				A29BEF3814F3E00500C36818 /* LocationController.m in Sources */,
 				A262749414F7E15C007304C2 /* InfoTableViewController.m in Sources */,
+				A2C799A814F7F127000D197E /* WaypointAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
