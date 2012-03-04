@@ -32,6 +32,16 @@
 
     intro.text = self.waypoint.intro;
     
+    // Top align text
+    CGSize maximumSize = CGSizeMake(280, 165);
+    CGSize stringSize = [self.waypoint.intro sizeWithFont:[UIFont systemFontOfSize:17.0] 
+                                   constrainedToSize:maximumSize 
+                                       lineBreakMode:intro.lineBreakMode];
+    
+    CGRect frame = CGRectMake(20, 61, 280, stringSize.height);
+    
+    intro.frame = frame;
+    
     picture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", self.waypoint.picture_name]];
     
     pageControl.currentPage = self.currentPage;
