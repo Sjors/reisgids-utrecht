@@ -30,7 +30,7 @@
         Waypoint *waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
         waypoint.position = [NSNumber numberWithInt:0];
         waypoint.title = @"Spoorwegmuseum";
-        waypoint.intro = @"Treintjes... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+        waypoint.intro = @"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
         waypoint.picture_name = @"Spoorwegmuseum";    
         waypoint.is_sight = [NSNumber numberWithBool:YES];
         waypoint.lat = [NSNumber numberWithFloat:52.088004];

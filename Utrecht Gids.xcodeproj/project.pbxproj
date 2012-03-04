@@ -17,10 +17,6 @@
 		A25EE1ED14F163F700A81707 /* WaypointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1EC14F163F700A81707 /* WaypointViewController.m */; };
 		A25EE1F014F163F700A81707 /* WaypointController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1EF14F163F700A81707 /* WaypointController.m */; };
 		A25EE1F314F163F700A81707 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1F114F163F700A81707 /* MainStoryboard.storyboard */; };
-		A25EE1FE14F1795D00A81707 /* SpoorwegmuseumLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1FA14F1795D00A81707 /* SpoorwegmuseumLandscape.png */; };
-		A25EE1FF14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1FB14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png */; };
-		A25EE20014F1795D00A81707 /* Spoorwegmuseum.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1FC14F1795D00A81707 /* Spoorwegmuseum.png */; };
-		A25EE20114F1795D00A81707 /* Spoorwegmuseum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE1FD14F1795D00A81707 /* Spoorwegmuseum@2x.png */; };
 		A25EE20414F19AF900A81707 /* VanafSpoorwegmuseum.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20214F19AF900A81707 /* VanafSpoorwegmuseum.png */; };
 		A25EE20514F19AF900A81707 /* VanafSpoorwegmuseum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20314F19AF900A81707 /* VanafSpoorwegmuseum@2x.png */; };
 		A25EE20814F19CFE00A81707 /* LepelenburgLinksaf.png in Resources */ = {isa = PBXBuildFile; fileRef = A25EE20614F19CFE00A81707 /* LepelenburgLinksaf.png */; };
@@ -38,6 +34,8 @@
 		A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A287E88014F2561300807435 /* Model.xcdatamodeld */; };
 		A287E88614F2585E00807435 /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A287E88514F2585E00807435 /* Waypoint.m */; };
 		A287E88814F2596E00807435 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287E88714F2596E00807435 /* CoreData.framework */; };
+		A290BD2E15038DA500EC39F1 /* Spoorwegmuseum@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A290BD2D15038DA500EC39F1 /* Spoorwegmuseum@2x.jpg */; };
+		A290BD3015038EA200EC39F1 /* Spoorwegmuseum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A290BD2F15038EA200EC39F1 /* Spoorwegmuseum.jpg */; };
 		A29BEF3414F3DF6500C36818 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29BEF3314F3DF6500C36818 /* CoreLocation.framework */; };
 		A29BEF3814F3E00500C36818 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29BEF3714F3E00500C36818 /* LocationController.m */; };
 		A2ABFE5E14F27C8C00550070 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5C14F27C8C00550070 /* Icon.png */; };
@@ -61,10 +59,6 @@
 		A25EE1EC14F163F700A81707 /* WaypointViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaypointViewController.m; sourceTree = "<group>"; };
 		A25EE1EE14F163F700A81707 /* WaypointController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaypointController.h; sourceTree = "<group>"; };
 		A25EE1EF14F163F700A81707 /* WaypointController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaypointController.m; sourceTree = "<group>"; };
-		A25EE1FA14F1795D00A81707 /* SpoorwegmuseumLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SpoorwegmuseumLandscape.png; path = Photos/SpoorwegmuseumLandscape.png; sourceTree = "<group>"; };
-		A25EE1FB14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SpoorwegmuseumLandscape@2x.png"; path = "Photos/SpoorwegmuseumLandscape@2x.png"; sourceTree = "<group>"; };
-		A25EE1FC14F1795D00A81707 /* Spoorwegmuseum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spoorwegmuseum.png; path = Photos/Spoorwegmuseum.png; sourceTree = "<group>"; };
-		A25EE1FD14F1795D00A81707 /* Spoorwegmuseum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Spoorwegmuseum@2x.png"; path = "Photos/Spoorwegmuseum@2x.png"; sourceTree = "<group>"; };
 		A25EE20214F19AF900A81707 /* VanafSpoorwegmuseum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VanafSpoorwegmuseum.png; path = Photos/VanafSpoorwegmuseum.png; sourceTree = "<group>"; };
 		A25EE20314F19AF900A81707 /* VanafSpoorwegmuseum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VanafSpoorwegmuseum@2x.png"; path = "Photos/VanafSpoorwegmuseum@2x.png"; sourceTree = "<group>"; };
 		A25EE20614F19CFE00A81707 /* LepelenburgLinksaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LepelenburgLinksaf.png; path = Photos/LepelenburgLinksaf.png; sourceTree = "<group>"; };
@@ -84,6 +78,8 @@
 		A287E88414F2585E00807435 /* Waypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waypoint.h; sourceTree = "<group>"; };
 		A287E88514F2585E00807435 /* Waypoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waypoint.m; sourceTree = "<group>"; };
 		A287E88714F2596E00807435 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A290BD2D15038DA500EC39F1 /* Spoorwegmuseum@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Spoorwegmuseum@2x.jpg"; sourceTree = "<group>"; };
+		A290BD2F15038EA200EC39F1 /* Spoorwegmuseum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Spoorwegmuseum.jpg; sourceTree = "<group>"; };
 		A298D48114F2825F00ECB06C /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = nl; path = "/Users/sjors/Dropbox/Reisgids/iPhone/Reisgids Utrecht/nl.lproj/MainStoryboard.storyboard"; sourceTree = "<absolute>"; };
 		A298D48214F2825F00ECB06C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "/Users/sjors/Dropbox/Reisgids/iPhone/Reisgids Utrecht/nl.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
 		A29BEF3314F3DF6500C36818 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -184,10 +180,8 @@
 		A25EE1F914F1794500A81707 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				A25EE1FA14F1795D00A81707 /* SpoorwegmuseumLandscape.png */,
-				A25EE1FB14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png */,
-				A25EE1FC14F1795D00A81707 /* Spoorwegmuseum.png */,
-				A25EE1FD14F1795D00A81707 /* Spoorwegmuseum@2x.png */,
+				A290BD2F15038EA200EC39F1 /* Spoorwegmuseum.jpg */,
+				A290BD2D15038DA500EC39F1 /* Spoorwegmuseum@2x.jpg */,
 				A25EE20214F19AF900A81707 /* VanafSpoorwegmuseum.png */,
 				A25EE20314F19AF900A81707 /* VanafSpoorwegmuseum@2x.png */,
 				A25EE20614F19CFE00A81707 /* LepelenburgLinksaf.png */,
@@ -267,10 +261,6 @@
 			files = (
 				A25EE1E114F163F600A81707 /* InfoPlist.strings in Resources */,
 				A25EE1F314F163F700A81707 /* MainStoryboard.storyboard in Resources */,
-				A25EE1FE14F1795D00A81707 /* SpoorwegmuseumLandscape.png in Resources */,
-				A25EE1FF14F1795D00A81707 /* SpoorwegmuseumLandscape@2x.png in Resources */,
-				A25EE20014F1795D00A81707 /* Spoorwegmuseum.png in Resources */,
-				A25EE20114F1795D00A81707 /* Spoorwegmuseum@2x.png in Resources */,
 				A25EE20414F19AF900A81707 /* VanafSpoorwegmuseum.png in Resources */,
 				A25EE20514F19AF900A81707 /* VanafSpoorwegmuseum@2x.png in Resources */,
 				A25EE20814F19CFE00A81707 /* LepelenburgLinksaf.png in Resources */,
@@ -285,6 +275,8 @@
 				A25EE21914F1A2B100A81707 /* NieuwegrachtRechtsaf@2x.png in Resources */,
 				A2ABFE5E14F27C8C00550070 /* Icon.png in Resources */,
 				A2ABFE5F14F27C8C00550070 /* Icon@2x.png in Resources */,
+				A290BD2E15038DA500EC39F1 /* Spoorwegmuseum@2x.jpg in Resources */,
+				A290BD3015038EA200EC39F1 /* Spoorwegmuseum.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

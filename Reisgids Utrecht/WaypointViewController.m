@@ -32,7 +32,7 @@
 
     intro.text = self.waypoint.intro;
     
-    picture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.waypoint.picture_name]];
+    picture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", self.waypoint.picture_name]];
     
     pageControl.currentPage = self.currentPage;
     pageControl.numberOfPages = self.numberOfPages;
