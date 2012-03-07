@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1170" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Link" representedClassName="Link" syncable="YES">
+        <attribute name="identifier" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="url" attributeType="String" syncable="YES"/>
+        <relationship name="waypoint" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="links" inverseEntity="Waypoint" syncable="YES"/>
+    </entity>
     <entity name="Waypoint" representedClassName="Waypoint" syncable="YES">
-        <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="intro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_sight" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="lat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="lon" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lat" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lon" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="position" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
-        <attribute name="range" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="range" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="links" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Link" inverseName="waypoint" inverseEntity="Link" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Waypoint" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Waypoint" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="Link" positionX="160" positionY="192" width="128" height="105"/>
     </elements>
 </model>

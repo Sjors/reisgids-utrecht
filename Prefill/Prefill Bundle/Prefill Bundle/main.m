@@ -7,6 +7,7 @@
 //
 
 #include "Waypoint.h"
+#include "Link.h"
 
 static NSManagedObjectModel *managedObjectModel()
 {
@@ -103,7 +104,7 @@ int main(int argc, const char * argv[])
         
         NSMutableArray *waypoints = [[NSMutableArray alloc] initWithContentsOfFile:path];
         
-        for (Waypoint *waypoint_data in waypoints) {
+        for (NSDictionary *waypoint_data in waypoints) {
             Waypoint *waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:context];
             waypoint.identifier = [waypoint_data valueForKey:@"id"];
             waypoint.position = [waypoint_data valueForKey:@"position"];
@@ -114,6 +115,14 @@ int main(int argc, const char * argv[])
             waypoint.is_sight = [waypoint_data valueForKey:@"is_sight"]; //[NSNumber numberWithBool:YES];
             waypoint.lat = [waypoint_data valueForKey:@"latitude"]; //[NSNumber numberWithFloat:52.088004];
             waypoint.lon = [waypoint_data valueForKey:@"longitude"];
+            
+            for (NSDictionary *link_data in [waypoint_data valueForKey:@"links"]) {
+                Link *link = [NSEntityDescription insertNewObjectForEntityForName:@"Link"  inManagedObjectContext:context];
+                link.waypoint = waypoint;
+                link.identifier = [link_data valueForKey:@"id"];
+                link.title = [link_data valueForKey:@"title"];
+                link.url = [link_data valueForKey:@"url"];
+            }
         }
         
         // Insert waypoints

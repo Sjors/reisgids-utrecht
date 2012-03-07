@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A202447A1507C5D7004810BA /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = A20244791507C5D7004810BA /* Link.m */; };
 		A25EE1D714F163F600A81707 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EE1D614F163F600A81707 /* UIKit.framework */; };
 		A25EE1D914F163F600A81707 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EE1D814F163F600A81707 /* Foundation.framework */; };
 		A25EE1DB14F163F600A81707 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EE1DA14F163F600A81707 /* CoreGraphics.framework */; };
@@ -83,6 +84,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A20244781507C5D7004810BA /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
+		A20244791507C5D7004810BA /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
 		A25EE1D214F163F600A81707 /* Utrecht Gids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Utrecht Gids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25EE1D614F163F600A81707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A25EE1D814F163F600A81707 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -235,6 +238,8 @@
 				A25EE1EB14F163F700A81707 /* WaypointViewController.h */,
 				A25EE1EC14F163F700A81707 /* WaypointViewController.m */,
 				A25EE1F114F163F700A81707 /* MainStoryboard.storyboard */,
+				A20244781507C5D7004810BA /* Link.h */,
+				A20244791507C5D7004810BA /* Link.m */,
 				A287E88014F2561300807435 /* Model.xcdatamodeld */,
 				A287E88414F2585E00807435 /* Waypoint.h */,
 				A287E88514F2585E00807435 /* Waypoint.m */,
@@ -455,6 +460,7 @@
 				A262749414F7E15C007304C2 /* InfoTableViewController.m in Sources */,
 				A2C799A814F7F127000D197E /* WaypointAnnotation.m in Sources */,
 				A2BED8C81507C01C007A20B3 /* LocalizedCurrentLocation.m in Sources */,
+				A202447A1507C5D7004810BA /* Link.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

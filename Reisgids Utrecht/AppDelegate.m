@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Waypoint.h"
+#import "Link.h"
 
 @implementation AppDelegate
 

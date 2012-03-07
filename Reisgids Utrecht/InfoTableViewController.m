@@ -67,90 +67,122 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    if ([self.waypoint.is_sight boolValue]) {
+        return 2;
+    } else {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    if(section == 0) {
+        return 2;
+    } else {
+        return [self.waypoint.links count];
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if(section == 0) {
+        return nil;
+    } else {
+        return @"Bron en meer info";
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
     static NSString *CellIdentifier;
-    
-    switch (indexPath.row) {
+    switch (indexPath.section) {
         case 0: {
-            CellIdentifier = @"mapCell";
-            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-            
-            MKMapView *map = (MKMapView *)[cell viewWithTag:1];
-            
-            map.layer.cornerRadius = 10.0;
-            
-            Waypoint *display_waypoint;
-            if([self.waypoint.is_sight boolValue]) {
-                display_waypoint = self.waypoint;
-            } else {
-                display_waypoint = [self.waypoint next:self.managedObjectContext];
+            switch (indexPath.row) {
+                case 0: {
+                    CellIdentifier = @"mapCell";
+                    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+                    
+                    MKMapView *map = (MKMapView *)[cell viewWithTag:1];
+                    
+                    map.layer.cornerRadius = 10.0;
+                    
+                    Waypoint *display_waypoint;
+                    if([self.waypoint.is_sight boolValue]) {
+                        display_waypoint = self.waypoint;
+                    } else {
+                        display_waypoint = [self.waypoint next:self.managedObjectContext];
+                    }
+                    
+                    CLLocationCoordinate2D location = CLLocationCoordinate2DMake([display_waypoint.lat floatValue], [display_waypoint.lon floatValue]);
+                    
+                    //map.region = MKCoordinateRegionMakeWithDistance(map.userLocation.location.coordinate, 70, 70);
+                    map.region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.002, 0.002));
+                    
+                    
+                    [map addAnnotation:[[WaypointAnnotation alloc] initWithTitle:display_waypoint.title andCoordinate:location]];  
+                    
+                    
+                    //[map addAnnotation:[[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate]];  
+                    
+                    // NSLog(@"Location on map: %@", [map.userLocation.location description]);
+                    
+                    //    [self zoomToFitMapAnnotations:map];
+                    
+                    //[map removeAnnotation:[map.annotations objectAtIndex:0]];
+                    
+                    
+                    [[NSNotificationCenter defaultCenter] addObserverForName:@"locationUpdate" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
+                        
+                        map.showsUserLocation = YES;
+                        
+                        MKUserLocation *userLocation = map.userLocation;
+                        
+                        
+                        if(userLocation.location!=nil && map.userLocation.location.horizontalAccuracy < 500 && [map.userLocation.location distanceFromLocation:display_waypoint.location] < 10000) { 
+                            // Sometimes the iPhone thinks we're at the equator
+                            WaypointAnnotation *tempAnnotation = [[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate];
+                            
+                            [map addAnnotation:tempAnnotation];  
+                            
+                            [self zoomToFitMapAnnotations:map];
+                            
+                            [map removeAnnotation:tempAnnotation];
+                            
+                            
+                        }
+                        
+                    }];
+                    
+                    break; }
+                case 1: {
+                    CellIdentifier = @"routeCell";
+                    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+                    break;}
+                default: {
+                    break;}
             }
-            
-            CLLocationCoordinate2D location = CLLocationCoordinate2DMake([display_waypoint.lat floatValue], [display_waypoint.lon floatValue]);
-            
-            //map.region = MKCoordinateRegionMakeWithDistance(map.userLocation.location.coordinate, 70, 70);
-            map.region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.002, 0.002));
-            
-            
-            [map addAnnotation:[[WaypointAnnotation alloc] initWithTitle:display_waypoint.title andCoordinate:location]];  
-            
-            
-            //[map addAnnotation:[[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate]];  
-            
-            // NSLog(@"Location on map: %@", [map.userLocation.location description]);
-            
-            //    [self zoomToFitMapAnnotations:map];
-            
-            //[map removeAnnotation:[map.annotations objectAtIndex:0]];
-            
-            
-            [[NSNotificationCenter defaultCenter] addObserverForName:@"locationUpdate" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
-                
-                map.showsUserLocation = YES;
-                
-                MKUserLocation *userLocation = map.userLocation;
-                
-                
-                if(userLocation.location!=nil && map.userLocation.location.horizontalAccuracy < 500 && [map.userLocation.location distanceFromLocation:display_waypoint.location] < 10000) { 
-                    // Sometimes the iPhone thinks we're at the equator
-                    WaypointAnnotation *tempAnnotation = [[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate];
-                    
-                    [map addAnnotation:tempAnnotation];  
-                    
-                    [self zoomToFitMapAnnotations:map];
-                    
-                    [map removeAnnotation:tempAnnotation];
-                    
-                    
-                }
-                
-            }];
 
-        break; }
-case 1: {
-            CellIdentifier = @"routeCell";
+        }
+            break;
+        case 1: {
+            CellIdentifier = @"linkCell";
             cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    break;}
-default: {
-    break;}
+            
+            NSArray *links = [self.waypoint.links sortedArrayUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"identifier" ascending:NO]]];
+            
+            cell.textLabel.text = [[links objectAtIndex:indexPath.row] valueForKey:@"title"];
+        }
+            
+        default:
+            break;
     }
-    
+     
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0 && indexPath.section ==0) {
         return 151;
     } else {
         return 43;
@@ -237,9 +269,23 @@ default: {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSString *latlong = [NSString stringWithFormat:@"%f,%f", self.waypoint.location.coordinate.latitude, self.waypoint.location.coordinate.longitude];
+    NSString *url;
     
-    NSString *url = [NSString stringWithFormat:@"http://maps.google.com/maps?daddr=%@&saddr=%@&dirflg=w", [latlong stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [[LocalizedCurrentLocation currentLocationStringForCurrentLanguage] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ];
+    if(indexPath.section == 0) {
+        Waypoint *display_waypoint;
+        if([self.waypoint.is_sight boolValue]) {
+            display_waypoint = self.waypoint;
+        } else {
+            display_waypoint = [self.waypoint next:self.managedObjectContext];
+        }
+        NSString *latlong = [NSString stringWithFormat:@"%f,%f", display_waypoint.location.coordinate.latitude, display_waypoint.location.coordinate.longitude];
+    
+        url = [NSString stringWithFormat:@"http://maps.google.com/maps?daddr=%@&saddr=%@&dirflg=w", [latlong stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [[LocalizedCurrentLocation currentLocationStringForCurrentLanguage] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ];
+    } else {
+        NSArray *links = [self.waypoint.links sortedArrayUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"identifier" ascending:NO]]];
+        
+        url = [[links objectAtIndex:indexPath.row] valueForKey:@"url"];
+    }
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
     

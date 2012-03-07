@@ -22,6 +22,7 @@
 @property (nonatomic, retain) NSString * intro;
 @property (nonatomic, retain) NSString * picture_name;
 @property (nonatomic, retain) NSNumber * is_sight;
+@property (nonatomic, retain) NSSet * links;
 
 +(Waypoint *)findByPosition:(NSNumber *)position managedObjectContext:(NSManagedObjectContext *)moc;
 

@@ -20,6 +20,7 @@
 @dynamic intro;
 @dynamic picture_name;
 @dynamic is_sight;
+@dynamic links;
 
 +(Waypoint *)findByPosition:(NSNumber *)position managedObjectContext:(NSManagedObjectContext *)moc {
     NSFetchRequest * fetch = [[NSFetchRequest alloc] init];

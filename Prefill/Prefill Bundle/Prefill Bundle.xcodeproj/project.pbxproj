@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A202447D1507C5E1004810BA /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = A202447C1507C5E1004810BA /* Link.m */; };
 		A2AE637615064E6300AE44EF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE637515064E6300AE44EF /* CoreData.framework */; };
 		A2AE637815064E6300AE44EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE637715064E6300AE44EF /* Foundation.framework */; };
 		A2AE637B15064E6300AE44EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE637A15064E6300AE44EF /* main.m */; };
@@ -39,6 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A202447B1507C5E1004810BA /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Link.h; path = "../../../Reisgids Utrecht/Link.h"; sourceTree = "<group>"; };
+		A202447C1507C5E1004810BA /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Link.m; path = "../../../Reisgids Utrecht/Link.m"; sourceTree = "<group>"; };
 		A2AE637115064E6300AE44EF /* Prefill Bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Prefill Bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AE637515064E6300AE44EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A2AE637715064E6300AE44EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +108,8 @@
 				A2AE639215064F9000AE44EF /* Model.xcdatamodeld */,
 				A2AE6397150652CA00AE44EF /* Waypoint.h */,
 				A2AE6398150652CA00AE44EF /* Waypoint.m */,
+				A202447B1507C5E1004810BA /* Link.h */,
+				A202447C1507C5E1004810BA /* Link.m */,
 				A2AE637A15064E6300AE44EF /* main.m */,
 				A2AE638115064E6300AE44EF /* Prefill_Bundle.1 */,
 				A2AE637C15064E6300AE44EF /* Supporting Files */,
@@ -174,6 +179,7 @@
 			files = (
 				A2AE637B15064E6300AE44EF /* main.m in Sources */,
 				A2AE639415064F9000AE44EF /* Model.xcdatamodeld in Sources */,
+				A202447D1507C5E1004810BA /* Link.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
