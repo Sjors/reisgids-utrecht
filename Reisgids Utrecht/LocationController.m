@@ -10,6 +10,7 @@
 #import "Waypoint.h"
 #import "AppDelegate.h"
 #import "WaypointViewController.h"
+#import <AudioToolbox/AudioServices.h>
 
 @implementation LocationController
 
@@ -103,6 +104,7 @@
             // Flip the page is we are within range of the next waypoint
             if (distance < [nextWaypoint.range intValue]) {
                 [self.rootViewController turnToPageForWaypoint:nextWaypoint];
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             }
             
         } else {

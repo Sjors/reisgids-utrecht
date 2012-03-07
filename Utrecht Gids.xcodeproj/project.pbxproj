@@ -78,6 +78,7 @@
 		A2FD8D3815076DCE003D2270 /* 29@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2FD8D0615076DCE003D2270 /* 29@2x.jpg */; };
 		A2FD8D3915076DCE003D2270 /* 31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2FD8D0715076DCE003D2270 /* 31.jpg */; };
 		A2FD8D3A15076DCE003D2270 /* 31@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2FD8D0815076DCE003D2270 /* 31@2x.jpg */; };
+		A2FD8D3C15077BFB003D2270 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +164,7 @@
 		A2FD8D0615076DCE003D2270 /* 29@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "29@2x.jpg"; path = "Photos/29@2x.jpg"; sourceTree = "<group>"; };
 		A2FD8D0715076DCE003D2270 /* 31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 31.jpg; path = Photos/31.jpg; sourceTree = "<group>"; };
 		A2FD8D0815076DCE003D2270 /* 31@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "31@2x.jpg"; path = "Photos/31@2x.jpg"; sourceTree = "<group>"; };
+		A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2FD8D3C15077BFB003D2270 /* AudioToolbox.framework in Frameworks */,
 				A262749714F7E25D007304C2 /* MapKit.framework in Frameworks */,
 				A29BEF3414F3DF6500C36818 /* CoreLocation.framework in Frameworks */,
 				A287E88814F2596E00807435 /* CoreData.framework in Frameworks */,
@@ -204,6 +207,7 @@
 		A25EE1D514F163F600A81707 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */,
 				A262749614F7E25D007304C2 /* MapKit.framework */,
 				A29BEF3314F3DF6500C36818 /* CoreLocation.framework */,
 				A287E88714F2596E00807435 /* CoreData.framework */,
