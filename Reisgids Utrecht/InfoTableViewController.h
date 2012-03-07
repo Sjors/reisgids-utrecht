@@ -15,5 +15,6 @@
 }
 
 @property (nonatomic, strong) Waypoint *waypoint;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end

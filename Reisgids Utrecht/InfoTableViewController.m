@@ -9,6 +9,8 @@
 #import "InfoTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "WaypointAnnotation.h"
+#import "AppDelegate.h"
+#import "LocalizedCurrentLocation.h"
 
 @interface InfoTableViewController ()
 
@@ -17,6 +19,7 @@
 @implementation InfoTableViewController
 
 @synthesize waypoint=_waypoint;
+@synthesize managedObjectContext=_managedObjectContext;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
 
     self.title = self.waypoint.title;
 }
@@ -67,45 +72,90 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"mapCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell;
+    static NSString *CellIdentifier;
     
-    MKMapView *map = (MKMapView *)[cell viewWithTag:1];
-    
-    map.layer.cornerRadius = 10.0;
-    
-    CLLocationCoordinate2D location = CLLocationCoordinate2DMake([self.waypoint.lat floatValue], [self.waypoint.lon floatValue]);
-    
-    //map.region = MKCoordinateRegionMakeWithDistance(map.userLocation.location.coordinate, 70, 70);
-    map.region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.002, 0.002));
-        
+    switch (indexPath.row) {
+        case 0: {
+            CellIdentifier = @"mapCell";
+            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            
+            MKMapView *map = (MKMapView *)[cell viewWithTag:1];
+            
+            map.layer.cornerRadius = 10.0;
+            
+            Waypoint *display_waypoint;
+            if([self.waypoint.is_sight boolValue]) {
+                display_waypoint = self.waypoint;
+            } else {
+                display_waypoint = [self.waypoint next:self.managedObjectContext];
+            }
+            
+            CLLocationCoordinate2D location = CLLocationCoordinate2DMake([display_waypoint.lat floatValue], [display_waypoint.lon floatValue]);
+            
+            //map.region = MKCoordinateRegionMakeWithDistance(map.userLocation.location.coordinate, 70, 70);
+            map.region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.002, 0.002));
+            
+            
+            [map addAnnotation:[[WaypointAnnotation alloc] initWithTitle:display_waypoint.title andCoordinate:location]];  
+            
+            
+            //[map addAnnotation:[[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate]];  
+            
+            // NSLog(@"Location on map: %@", [map.userLocation.location description]);
+            
+            //    [self zoomToFitMapAnnotations:map];
+            
+            //[map removeAnnotation:[map.annotations objectAtIndex:0]];
+            
+            
+            [[NSNotificationCenter defaultCenter] addObserverForName:@"locationUpdate" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
+                
+                map.showsUserLocation = YES;
+                
+                MKUserLocation *userLocation = map.userLocation;
+                
+                
+                if(userLocation.location!=nil && map.userLocation.location.horizontalAccuracy < 500 && [map.userLocation.location distanceFromLocation:display_waypoint.location] < 10000) { 
+                    // Sometimes the iPhone thinks we're at the equator
+                    WaypointAnnotation *tempAnnotation = [[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate];
+                    
+                    [map addAnnotation:tempAnnotation];  
+                    
+                    [self zoomToFitMapAnnotations:map];
+                    
+                    [map removeAnnotation:tempAnnotation];
+                    
+                    
+                }
+                
+            }];
 
-    [map addAnnotation:[[WaypointAnnotation alloc] initWithTitle:self.waypoint.title andCoordinate:location]];  
+        break; }
+case 1: {
+            CellIdentifier = @"routeCell";
+            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    break;}
+default: {
+    break;}
+    }
     
-    
-    //[map addAnnotation:[[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate]];  
-    
-    // NSLog(@"Location on map: %@", [map.userLocation.location description]);
-    
-//    [self zoomToFitMapAnnotations:map];
-    
-    //[map removeAnnotation:[map.annotations objectAtIndex:0]];
-
-    
-//   [[NSNotificationCenter defaultCenter] addObserverForName:@"locationUpdate" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
-//       
-//        [map addAnnotation:[[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate]];  
-//       
-//       [self zoomToFitMapAnnotations:map];
-//
-//   }];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 151;
+    } else {
+        return 43;
+    }
+    
 }
 
 // http://stackoverflow.com/questions/1336370/positioning-mkmapview-to-show-multiple-annotations-at-once
@@ -186,13 +236,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    
+    NSString *latlong = [NSString stringWithFormat:@"%f,%f", self.waypoint.location.coordinate.latitude, self.waypoint.location.coordinate.longitude];
+    
+    NSString *url = [NSString stringWithFormat:@"http://maps.google.com/maps?daddr=%@&saddr=%@&dirflg=w", [latlong stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [[LocalizedCurrentLocation currentLocationStringForCurrentLanguage] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
 }
 
 @end

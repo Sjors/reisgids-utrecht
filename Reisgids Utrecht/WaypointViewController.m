@@ -47,7 +47,6 @@
     pageControl.currentPage = self.currentPage / 3;
     pageControl.numberOfPages = self.numberOfPages / 3;
     
-    infoButton.hidden = ![self.waypoint.is_sight boolValue];
 }
 
 - (void)viewDidUnload
