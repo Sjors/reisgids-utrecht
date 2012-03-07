@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * lat;
 @property (nonatomic, retain) NSNumber * lon;
+@property (nonatomic, retain) NSNumber * range;
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSNumber * position;
 @property (nonatomic, retain) NSString * title;

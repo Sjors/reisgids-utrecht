@@ -107,6 +107,7 @@ int main(int argc, const char * argv[])
             Waypoint *waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:context];
             waypoint.identifier = [waypoint_data valueForKey:@"id"];
             waypoint.position = [waypoint_data valueForKey:@"position"];
+            waypoint.range = [waypoint_data valueForKey:@"range"];
             waypoint.title = [waypoint_data valueForKey:@"title"];
             waypoint.intro = [waypoint_data valueForKey:@"intro"];
             //waypoint.picture_name = @"Spoorwegmuseum";    

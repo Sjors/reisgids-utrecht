@@ -43,7 +43,7 @@
             Waypoint *nextWaypoint = [waypoint next:self.managedObjectContext];
             
             if(nextWaypoint != nil && [waypoint.location distanceFromLocation:nextWaypoint.location] > 50) {
-                self.locationManager.distanceFilter = 30;
+                self.locationManager.distanceFilter = [nextWaypoint.range intValue];
                 [self.locationManager startUpdatingLocation];
             } else if (nextWaypoint == nil) {
                 // End of the tour
@@ -100,8 +100,8 @@
             
             // What do we do with it
             
-            // Flip the page is we are less than 30 meters from the next waypoint
-            if (distance < 30) {
+            // Flip the page is we are within range of the next waypoint
+            if (distance < [nextWaypoint.range intValue]) {
                 [self.rootViewController turnToPageForWaypoint:nextWaypoint];
             }
             

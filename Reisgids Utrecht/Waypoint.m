@@ -15,6 +15,7 @@
 @dynamic lon;
 @dynamic position;
 @dynamic identifier;
+@dynamic range;
 @dynamic title;
 @dynamic intro;
 @dynamic picture_name;
