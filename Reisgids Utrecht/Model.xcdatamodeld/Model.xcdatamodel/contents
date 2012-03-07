@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1170" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Waypoint" representedClassName="Waypoint" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="intro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_sight" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="lat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="lon" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="picture_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>

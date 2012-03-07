@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2AE637615064E6300AE44EF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE637515064E6300AE44EF /* CoreData.framework */; };
+		A2AE637815064E6300AE44EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE637715064E6300AE44EF /* Foundation.framework */; };
+		A2AE637B15064E6300AE44EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE637A15064E6300AE44EF /* main.m */; };
+		A2AE638215064E6300AE44EF /* Prefill_Bundle.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2AE638115064E6300AE44EF /* Prefill_Bundle.1 */; };
+		A2AE639415064F9000AE44EF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2AE639215064F9000AE44EF /* Model.xcdatamodeld */; };
+		A2F1A5CB1506691500A0688F /* waypoints.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2F1A5C7150667F700A0688F /* waypoints.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2AE636F15064E6300AE44EF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				A2AE638215064E6300AE44EF /* Prefill_Bundle.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A2F1A5CA1506690A00A0688F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				A2F1A5CB1506691500A0688F /* waypoints.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A2AE637115064E6300AE44EF /* Prefill Bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Prefill Bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AE637515064E6300AE44EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A2AE637715064E6300AE44EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A2AE637A15064E6300AE44EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2AE637D15064E6300AE44EF /* Prefill Bundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prefill Bundle-Prefix.pch"; sourceTree = "<group>"; };
+		A2AE638115064E6300AE44EF /* Prefill_Bundle.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Prefill_Bundle.1; sourceTree = "<group>"; };
+		A2AE639315064F9000AE44EF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A2AE6397150652CA00AE44EF /* Waypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Waypoint.h; path = "../../../Reisgids Utrecht/Waypoint.h"; sourceTree = "<group>"; };
+		A2AE6398150652CA00AE44EF /* Waypoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Waypoint.m; path = "../../../Reisgids Utrecht/Waypoint.m"; sourceTree = "<group>"; };
+		A2F1A5C7150667F700A0688F /* waypoints.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = waypoints.plist; path = "Prefill Bundle/waypoints.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2AE636E15064E6300AE44EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AE637615064E6300AE44EF /* CoreData.framework in Frameworks */,
+				A2AE637815064E6300AE44EF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A26A87511506638700EF5708 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2F1A5C7150667F700A0688F /* waypoints.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A2AE636615064E6300AE44EF = {
+			isa = PBXGroup;
+			children = (
+				A26A87511506638700EF5708 /* Resources */,
+				A2AE637915064E6300AE44EF /* Prefill Bundle */,
+				A2AE637415064E6300AE44EF /* Frameworks */,
+				A2AE637215064E6300AE44EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2AE637215064E6300AE44EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE637115064E6300AE44EF /* Prefill Bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2AE637415064E6300AE44EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE637515064E6300AE44EF /* CoreData.framework */,
+				A2AE637715064E6300AE44EF /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2AE637915064E6300AE44EF /* Prefill Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE639215064F9000AE44EF /* Model.xcdatamodeld */,
+				A2AE6397150652CA00AE44EF /* Waypoint.h */,
+				A2AE6398150652CA00AE44EF /* Waypoint.m */,
+				A2AE637A15064E6300AE44EF /* main.m */,
+				A2AE638115064E6300AE44EF /* Prefill_Bundle.1 */,
+				A2AE637C15064E6300AE44EF /* Supporting Files */,
+			);
+			path = "Prefill Bundle";
+			sourceTree = "<group>";
+		};
+		A2AE637C15064E6300AE44EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE637D15064E6300AE44EF /* Prefill Bundle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2AE637015064E6300AE44EF /* Prefill Bundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2AE638515064E6300AE44EF /* Build configuration list for PBXNativeTarget "Prefill Bundle" */;
+			buildPhases = (
+				A2AE636D15064E6300AE44EF /* Sources */,
+				A2AE636E15064E6300AE44EF /* Frameworks */,
+				A2AE636F15064E6300AE44EF /* CopyFiles */,
+				A2F1A5CA1506690A00A0688F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Prefill Bundle";
+			productName = "Prefill Bundle";
+			productReference = A2AE637115064E6300AE44EF /* Prefill Bundle */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2AE636815064E6300AE44EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Sjors Provoost";
+			};
+			buildConfigurationList = A2AE636B15064E6300AE44EF /* Build configuration list for PBXProject "Prefill Bundle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A2AE636615064E6300AE44EF;
+			productRefGroup = A2AE637215064E6300AE44EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2AE637015064E6300AE44EF /* Prefill Bundle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2AE636D15064E6300AE44EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AE637B15064E6300AE44EF /* main.m in Sources */,
+				A2AE639415064F9000AE44EF /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A2AE638315064E6300AE44EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A2AE638415064E6300AE44EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A2AE638615064E6300AE44EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefill Bundle/Prefill Bundle-Prefix.pch";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2AE638715064E6300AE44EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefill Bundle/Prefill Bundle-Prefix.pch";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2AE636B15064E6300AE44EF /* Build configuration list for PBXProject "Prefill Bundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AE638315064E6300AE44EF /* Debug */,
+				A2AE638415064E6300AE44EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2AE638515064E6300AE44EF /* Build configuration list for PBXNativeTarget "Prefill Bundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AE638615064E6300AE44EF /* Debug */,
+				A2AE638715064E6300AE44EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2AE639215064F9000AE44EF /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2AE639315064F9000AE44EF /* Model.xcdatamodel */,
+			);
+			currentVersion = A2AE639315064F9000AE44EF /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = "../../../Reisgids Utrecht/Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A2AE636815064E6300AE44EF /* Project object */;
+}

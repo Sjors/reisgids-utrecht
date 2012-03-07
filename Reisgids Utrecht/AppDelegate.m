@@ -18,82 +18,81 @@
     // Override point for customization after application launch.
     
     
-    // This will later be replaced by the code in persistentStoreCoordinator and the prefill bundle, which in turn will get the data from a server.
-    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
-    [fetch setEntity:[NSEntityDescription entityForName:@"Waypoint" inManagedObjectContext:self.managedObjectContext]];
-    
-    NSError *error = nil;
-    NSUInteger count = [self.managedObjectContext countForFetchRequest:fetch error:&error];
-    
-    if(count == 0) {
-        // Insert initial data:
-        Waypoint *waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
-        waypoint.position = [NSNumber numberWithInt:0];
-        waypoint.title = @"Spoorwegmuseum";
-        waypoint.intro = @"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
-        waypoint.picture_name = @"Spoorwegmuseum";    
-        waypoint.is_sight = [NSNumber numberWithBool:YES];
-        waypoint.lat = [NSNumber numberWithFloat:52.088004];
-        waypoint.lon = [NSNumber numberWithFloat:5.130816];
-        waypoint = nil;
-    
-        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
-        waypoint.position = [NSNumber numberWithInt:1];
-        waypoint.title = @"Richting brug";
-        waypoint.intro = @"Met je rug naar het spoorwegmuseum zie je achter de boom al de Dom. Loop rechtdoor en over de brug.";
-        waypoint.picture_name = @"VanafSpoorwegmuseum";   
-        waypoint.lat = [NSNumber numberWithFloat:52.088004];
-        waypoint.lon = [NSNumber numberWithFloat:5.130816];
-        
-        waypoint = nil;
-        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
-        waypoint.position = [NSNumber numberWithInt:2];
-        waypoint.title = @"Volg de stoep naar links";
-        waypoint.intro = @"Geniet van het uitzicht vanaf de brug en over het Lepelenburg. Sla linksaf en volg de stoep aan de rechterkant.";
-        waypoint.picture_name = @"LepelenburgLinksaf";  
-        waypoint.lat = [NSNumber numberWithFloat:52.088729];
-        waypoint.lon = [NSNumber numberWithFloat:5.128502];
-        
-        waypoint = nil;
-        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
-        waypoint.position = [NSNumber numberWithInt:3];
-        waypoint.title = @"Bruntenhof";
-        waypoint.intro = @"Schattige huisjes toch? Loop nu de Schalkwijkstraat door.";
-        waypoint.picture_name = @"Bruntenhof";   
-        waypoint.is_sight = [NSNumber numberWithBool:YES];
-        waypoint.lat = [NSNumber numberWithFloat:52.088128];
-        waypoint.lon = [NSNumber numberWithFloat:5.127861];
-
-        waypoint = nil;
-        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
-        waypoint.position = [NSNumber numberWithInt:4];
-        waypoint.title = @"Rechtsaf langs de Nieuwegracht";
-        waypoint.intro = @"De verleiding is groot om langs de kant van het water te lopen. Weersta die: er ligt nog wel eens hondenpoep.";
-        waypoint.picture_name = @"NieuwegrachtRechtsaf";   
-        waypoint.lat = [NSNumber numberWithFloat:52.087447];
-        waypoint.lon = [NSNumber numberWithFloat:5.126013];
-        
-        waypoint = nil;
-        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
-        waypoint.position = [NSNumber numberWithInt:5];
-        waypoint.title = @"Held op dak";
-        waypoint.intro = @"Aan de overkant zie je een beeld van een sterke man op het dak.";
-        waypoint.picture_name = @"NieuweGrachtManOpDak";   
-        waypoint.is_sight = [NSNumber numberWithBool:YES];
-        waypoint.lat = [NSNumber numberWithFloat:52.08935];
-        waypoint.lon = [NSNumber numberWithFloat:5.124206];
-        
-//        waypoint = nil;
-//        
-//        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
+//    // This will later be replaced by the code in persistentStoreCoordinator and the prefill bundle, which in turn will get the data from a server.
+//    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
+//    [fetch setEntity:[NSEntityDescription entityForName:@"Waypoint" inManagedObjectContext:self.managedObjectContext]];
+//    
+//    NSError *error = nil;
+//    NSUInteger count = [self.managedObjectContext countForFetchRequest:fetch error:&error];
+//    
+//    if(count == 0) {
+//        // Insert initial data:
+//        Waypoint *waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
 //        waypoint.position = [NSNumber numberWithInt:0];
-//        waypoint.title = @"";
-//        waypoint.intro = @"";
-//        waypoint.picture_name = @"";   
-        
-        [self saveContext];
-
-    }
+//        waypoint.title = @"Spoorwegmuseum";
+//        waypoint.intro = @"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+//        waypoint.picture_name = @"Spoorwegmuseum";    
+//        waypoint.is_sight = [NSNumber numberWithBool:YES];
+//        waypoint.lat = [NSNumber numberWithFloat:52.088004];
+//        waypoint.lon = [NSNumber numberWithFloat:5.130816];
+//        waypoint = nil;
+//    
+//        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
+//        waypoint.position = [NSNumber numberWithInt:1];
+//        waypoint.title = @"Richting brug";
+//        waypoint.intro = @"Met je rug naar het spoorwegmuseum zie je achter de boom al de Dom. Loop rechtdoor en over de brug.";
+//        waypoint.picture_name = @"VanafSpoorwegmuseum";   
+//        waypoint.lat = [NSNumber numberWithFloat:52.088004];
+//        waypoint.lon = [NSNumber numberWithFloat:5.130816];
+//        
+//        waypoint = nil;
+//        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
+//        waypoint.position = [NSNumber numberWithInt:2];
+//        waypoint.title = @"Volg de stoep naar links";
+//        waypoint.intro = @"Geniet van het uitzicht vanaf de brug en over het Lepelenburg. Sla linksaf en volg de stoep aan de rechterkant.";
+//        waypoint.picture_name = @"LepelenburgLinksaf";  
+//        waypoint.lat = [NSNumber numberWithFloat:52.088729];
+//        waypoint.lon = [NSNumber numberWithFloat:5.128502];
+//        
+//        waypoint = nil;
+//        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
+//        waypoint.position = [NSNumber numberWithInt:3];
+//        waypoint.title = @"Bruntenhof";
+//        waypoint.intro = @"Schattige huisjes toch? Loop nu de Schalkwijkstraat door.";
+//        waypoint.picture_name = @"Bruntenhof";   
+//        waypoint.is_sight = [NSNumber numberWithBool:YES];
+//        waypoint.lat = [NSNumber numberWithFloat:52.088128];
+//        waypoint.lon = [NSNumber numberWithFloat:5.127861];
+//
+//        waypoint = nil;
+//        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
+//        waypoint.position = [NSNumber numberWithInt:4];
+//        waypoint.title = @"Rechtsaf langs de Nieuwegracht";
+//        waypoint.intro = @"De verleiding is groot om langs de kant van het water te lopen. Weersta die: er ligt nog wel eens hondenpoep.";
+//        waypoint.picture_name = @"NieuwegrachtRechtsaf";   
+//        waypoint.lat = [NSNumber numberWithFloat:52.087447];
+//        waypoint.lon = [NSNumber numberWithFloat:5.126013];
+//        
+//        waypoint = nil;
+//        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
+//        waypoint.position = [NSNumber numberWithInt:5];
+//        waypoint.title = @"Held op dak";
+//        waypoint.intro = @"Aan de overkant zie je een beeld van een sterke man op het dak.";
+//        waypoint.picture_name = @"NieuweGrachtManOpDak";   
+//        waypoint.is_sight = [NSNumber numberWithBool:YES];
+//        waypoint.lat = [NSNumber numberWithFloat:52.08935];
+//        waypoint.lon = [NSNumber numberWithFloat:5.124206];
+//        
+////        waypoint = nil;
+////        
+////        waypoint = [NSEntityDescription insertNewObjectForEntityForName:@"Waypoint"  inManagedObjectContext:self.managedObjectContext];
+////        waypoint.position = [NSNumber numberWithInt:0];
+////        waypoint.title = @"";
+////        waypoint.intro = @"";
+////        waypoint.picture_name = @"";   
+//        
+//        [self saveContext];
+//    }
     
     return YES;
 }
@@ -191,20 +190,20 @@
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"reisgids-utrecht.sqlite"];
     
-//    // Check if file already exists, if not, copy it from bundle:
-//    if(![storeURL checkResourceIsReachableAndReturnError:nil]) {
-//        NSString *prefillStorePath = [[NSBundle mainBundle] pathForResource:@"PrefillBundle" ofType:@"sqlite"];
-//        
-//        NSFileManager *fileManager = [NSFileManager defaultManager];
-//        
-//        NSError *error = nil;
-//        [fileManager copyItemAtPath:prefillStorePath toPath:[storeURL path] error:&error];
-//        
-//        if(error != nil) {
-//            NSLog(@"Error copying database: %@]", [error description]);
-//        }
-//        
-//    }
+    // Check if file already exists, if not, copy it from bundle:
+    if(![storeURL checkResourceIsReachableAndReturnError:nil]) {
+        NSString *prefillStorePath = [[NSBundle mainBundle] pathForResource:@"Prefill Bundle" ofType:@"sqlite"];
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        
+        NSError *error = nil;
+        [fileManager copyItemAtPath:prefillStorePath toPath:[storeURL path] error:&error];
+        
+        if(error != nil) {
+            NSLog(@"Error copying database: %@]", [error description]);
+        }
+        
+    }
     
     
     

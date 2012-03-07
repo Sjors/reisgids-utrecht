@@ -42,10 +42,10 @@
     
     intro.frame = frame;
     
-    picture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", self.waypoint.picture_name]];
+    picture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", self.waypoint.identifier]];
     
-    pageControl.currentPage = self.currentPage;
-    pageControl.numberOfPages = self.numberOfPages;
+    pageControl.currentPage = self.currentPage / 3;
+    pageControl.numberOfPages = self.numberOfPages / 3;
     
     infoButton.hidden = ![self.waypoint.is_sight boolValue];
 }
