@@ -68,9 +68,9 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     if ([self.waypoint.is_sight boolValue]) {
-        return 2;
+        return 3;
     } else {
-        return 1;
+        return 2;
     }
 }
 
@@ -78,16 +78,20 @@
 {
     if(section == 0) {
         return 2;
-    } else {
+    } else if(section == 1) {
         return [self.waypoint.links count];
+    } else {
+        return 1;
     }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if(section == 0) {
-        return nil;
-    } else {
+        return @"Plattegrond";
+    } else if(section == 1) {
         return @"Bron en meer info";
+    } else {
+        return nil;
     }
 }
 
@@ -115,7 +119,7 @@
                     
                     CLLocationCoordinate2D location = CLLocationCoordinate2DMake([display_waypoint.lat floatValue], [display_waypoint.lon floatValue]);
                     
-                    //map.region = MKCoordinateRegionMakeWithDistance(map.userLocation.location.coordinate, 70, 70);
+
                     map.region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.002, 0.002));
                     
                     
@@ -138,15 +142,23 @@
                         MKUserLocation *userLocation = map.userLocation;
                         
                         
-                        if(userLocation.location!=nil && map.userLocation.location.horizontalAccuracy < 500 && [map.userLocation.location distanceFromLocation:display_waypoint.location] < 10000) { 
-                            // Sometimes the iPhone thinks we're at the equator
-                            WaypointAnnotation *tempAnnotation = [[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate];
+                        if(userLocation.location!=nil && map.userLocation.location.horizontalAccuracy < 500 ) {
                             
-                            [map addAnnotation:tempAnnotation];  
+                            if ([map.userLocation.location distanceFromLocation:display_waypoint.location] < 1500) {
                             
-                            [self zoomToFitMapAnnotations:map];
-                            
-                            [map removeAnnotation:tempAnnotation];
+                                // Sometimes the iPhone thinks we're at the equator
+                                WaypointAnnotation *tempAnnotation = [[WaypointAnnotation alloc] initWithTitle:@"You are here" andCoordinate:map.userLocation.location.coordinate];
+                                
+                                [map addAnnotation:tempAnnotation];  
+                                
+                                [self zoomToFitMapAnnotations:map];
+                                
+                                [map removeAnnotation:tempAnnotation];
+                            } else {
+                                // User is probably at home
+                                [map setRegion:MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.005, 0.005)) animated:YES]; 
+                                
+                            }
                             
                             
                         }
@@ -171,6 +183,13 @@
             NSArray *links = [self.waypoint.links sortedArrayUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"identifier" ascending:NO]]];
             
             cell.textLabel.text = [[links objectAtIndex:indexPath.row] valueForKey:@"title"];
+            break;
+        }
+            
+        case 2: {
+            CellIdentifier = @"aboutCell";
+            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            break;
         }
             
         default:
@@ -183,7 +202,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0 && indexPath.section ==0) {
-        return 151;
+        return 150;
     } else {
         return 43;
     }
@@ -192,7 +211,7 @@
 
 // http://stackoverflow.com/questions/1336370/positioning-mkmapview-to-show-multiple-annotations-at-once
 - (void)zoomToFitMapAnnotations:(MKMapView *)mapView { 
-    if ([mapView.annotations count] == 0) return; 
+    if ([mapView.annotations count] < 2) return; 
     
     CLLocationCoordinate2D topLeftCoord; 
     topLeftCoord.latitude = -90; 
@@ -271,7 +290,7 @@
     
     NSString *url;
     
-    if(indexPath.section == 0) {
+    if(indexPath.section == 0 && indexPath.row == 1) {
         Waypoint *display_waypoint;
         if([self.waypoint.is_sight boolValue]) {
             display_waypoint = self.waypoint;
@@ -281,7 +300,7 @@
         NSString *latlong = [NSString stringWithFormat:@"%f,%f", display_waypoint.location.coordinate.latitude, display_waypoint.location.coordinate.longitude];
     
         url = [NSString stringWithFormat:@"http://maps.google.com/maps?daddr=%@&saddr=%@&dirflg=w", [latlong stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [[LocalizedCurrentLocation currentLocationStringForCurrentLanguage] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ];
-    } else {
+    } else if (indexPath.section == 1) {
         NSArray *links = [self.waypoint.links sortedArrayUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"identifier" ascending:NO]]];
         
         url = [[links objectAtIndex:indexPath.row] valueForKey:@"url"];

@@ -18,6 +18,8 @@
     IBOutlet UIButton *infoButton;
     
     IBOutlet UIPageControl *pageControl;
+    
+    IBOutlet UIView *explanationView;
 }
 
 

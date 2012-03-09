@@ -22,12 +22,23 @@
 @property (nonatomic, retain) NSString * intro;
 @property (nonatomic, retain) NSString * picture_name;
 @property (nonatomic, retain) NSNumber * is_sight;
+@property (nonatomic, retain) NSDate * last_visited_at;
 @property (nonatomic, retain) NSSet * links;
+
++(NSArray *)allSightsAfter:(Waypoint *)currentWaypoint managedObjectContext:(NSManagedObjectContext *)moc;
+
++(NSArray *)allSightsBefore:(Waypoint *)currentWaypoint managedObjectContext:(NSManagedObjectContext *)moc;
+
 
 +(Waypoint *)findByPosition:(NSNumber *)position managedObjectContext:(NSManagedObjectContext *)moc;
 
 -(CLLocation *)location;
 
 -(Waypoint *)next:(NSManagedObjectContext *)moc;
+
++(Waypoint *)findNearestWaypointInRangeStartingWith:(Waypoint *)currentWaypoint location:(CLLocation *)location managedObjectContext:(NSManagedObjectContext *)moc;
+
+-(void)markVisited:(NSManagedObjectContext *)moc;
+
 
 @end

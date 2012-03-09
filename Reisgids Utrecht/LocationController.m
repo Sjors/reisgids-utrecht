@@ -43,13 +43,19 @@
 
             Waypoint *nextWaypoint = [waypoint next:self.managedObjectContext];
             
-            if(nextWaypoint != nil && [waypoint.location distanceFromLocation:nextWaypoint.location] > 50) {
+            int distance;
+            if(nextWaypoint != nil) {
+                distance = [waypoint.location distanceFromLocation:nextWaypoint.location];
+                NSLog(@"Distance between waypoints: %d", distance);
+            }
+            
+            if(nextWaypoint != nil && distance > 65) { // Spoorwegmuseum en station Maliebaan liggen nu 61 meter uit elkaar
                 self.locationManager.distanceFilter = [nextWaypoint.range intValue];
                 [self.locationManager startUpdatingLocation];
             } else if (nextWaypoint == nil) {
                 // End of the tour
                 [self.locationManager stopUpdatingLocation];
-            } else if ([waypoint.location distanceFromLocation:nextWaypoint.location] <= 50) {
+            } else if (distance <= 65) {
                 // We're at a sight where the user manually needs to flip the page to continue his tour.  
 
                 [self.locationManager stopUpdatingLocation];
@@ -82,10 +88,23 @@
     // Check if it's recent (2 minutes)
     if([newLocation.timestamp timeIntervalSinceNow] < -120) return;
     
+
+    
+    
     // Figure out why we need it...
     
     // Which waypoint is the user looking at?
     Waypoint *currentWaypoint = ((WaypointViewController *)[self.rootViewController.pageViewController.viewControllers objectAtIndex:0]).waypoint;
+    
+    
+    // Should we mark any waypoint as visited?
+    Waypoint *nearestWaypointInRange = [Waypoint findNearestWaypointInRangeStartingWith:currentWaypoint location:newLocation managedObjectContext:self.managedObjectContext];
+    
+    if(nearestWaypointInRange!=nil && ( [nearestWaypointInRange.last_visited_at compare:[[NSDate date] dateByAddingTimeInterval:-3600]] == NSOrderedAscending || nearestWaypointInRange.last_visited_at == nil)) {
+        [nearestWaypointInRange markVisited:self.managedObjectContext];
+    }
+    
+    
     
     if(applicationMode == kApplicationModeInfoScreen) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"locationUpdate" object:nil userInfo:nil];

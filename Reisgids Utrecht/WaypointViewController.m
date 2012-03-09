@@ -47,6 +47,19 @@
     pageControl.currentPage = self.currentPage / 3;
     pageControl.numberOfPages = self.numberOfPages / 3;
     
+    // Monitor when to show "More information sticky"
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"TenSecondsAfterLaunch" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
+        
+        explanationView.hidden = NO;
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
+            explanationView.hidden = YES;
+
+            
+        });
+    }] ;
+
+    
 }
 
 - (void)viewDidUnload
@@ -86,7 +99,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"info"]  ) {
+    if ([[segue identifier] isEqualToString:@"info"] || [[segue identifier] isEqualToString:@"infoFromExplanationView"] || [[segue identifier] isEqualToString:@"infoLargerArea"] ) {
         InfoTableViewController *vc = (InfoTableViewController *)((UINavigationController *)segue.destinationViewController).topViewController;
         vc.waypoint = self.waypoint;
     }

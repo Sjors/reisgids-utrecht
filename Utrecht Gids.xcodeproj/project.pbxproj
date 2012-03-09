@@ -91,6 +91,7 @@
 		A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A287E88014F2561300807435 /* Model.xcdatamodeld */; };
 		A287E88614F2585E00807435 /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A287E88514F2585E00807435 /* Waypoint.m */; };
 		A287E88814F2596E00807435 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287E88714F2596E00807435 /* CoreData.framework */; };
+		A29A3DCC150A754000797851 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29A3DCB150A754000797851 /* AboutViewController.m */; };
 		A29BEF3414F3DF6500C36818 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29BEF3314F3DF6500C36818 /* CoreLocation.framework */; };
 		A29BEF3814F3E00500C36818 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29BEF3714F3E00500C36818 /* LocationController.m */; };
 		A2ABFE5E14F27C8C00550070 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5C14F27C8C00550070 /* Icon.png */; };
@@ -196,6 +197,8 @@
 		A287E88714F2596E00807435 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A298D48114F2825F00ECB06C /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = nl; path = "/Users/sjors/Dropbox/Reisgids/iPhone/Reisgids Utrecht/nl.lproj/MainStoryboard.storyboard"; sourceTree = "<absolute>"; };
 		A298D48214F2825F00ECB06C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "/Users/sjors/Dropbox/Reisgids/iPhone/Reisgids Utrecht/nl.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		A29A3DCA150A754000797851 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		A29A3DCB150A754000797851 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		A29BEF3314F3DF6500C36818 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A29BEF3614F3E00500C36818 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		A29BEF3714F3E00500C36818 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 				A262749314F7E15C007304C2 /* InfoTableViewController.m */,
 				A2C799A614F7F127000D197E /* WaypointAnnotation.h */,
 				A2C799A714F7F127000D197E /* WaypointAnnotation.m */,
+				A29A3DCA150A754000797851 /* AboutViewController.h */,
+				A29A3DCB150A754000797851 /* AboutViewController.m */,
 			);
 			path = "Reisgids Utrecht";
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 				A2C799A814F7F127000D197E /* WaypointAnnotation.m in Sources */,
 				A2BED8C81507C01C007A20B3 /* LocalizedCurrentLocation.m in Sources */,
 				A202447A1507C5D7004810BA /* Link.m in Sources */,
+				A29A3DCC150A754000797851 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
