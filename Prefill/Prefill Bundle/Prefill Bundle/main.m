@@ -122,6 +122,9 @@ int main(int argc, const char * argv[])
                 link.identifier = [link_data valueForKey:@"id"];
                 link.title = [link_data valueForKey:@"title"];
                 link.url = [link_data valueForKey:@"url"];
+                if([link_data valueForKey:@"match"] != nil && ![(NSString *)[link_data valueForKey:@"match"] isEqualToString:@""]) {
+                    link.match = [link_data valueForKey:@"match"];
+                }
             }
         }
         

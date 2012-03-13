@@ -15,6 +15,7 @@
 @dynamic identifier;
 @dynamic title;
 @dynamic url;
+@dynamic match;
 @dynamic waypoint;
 
 @end

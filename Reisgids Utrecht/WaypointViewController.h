@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Waypoint.h"
+#import "TTTAttributedLabel.h"
 
-@interface WaypointViewController : UIViewController {
+
+@interface WaypointViewController : UIViewController <TTTAttributedLabelDelegate> {
     
     IBOutlet UILabel *waypointTitle;
-    IBOutlet UILabel *intro;
+    IBOutlet TTTAttributedLabel *intro;
     IBOutlet UIImageView *picture;
     
     IBOutlet UIButton *infoButton;

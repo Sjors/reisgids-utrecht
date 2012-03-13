@@ -8,6 +8,7 @@
 
 #import "WaypointViewController.h"
 #import "InfoTableViewController.h"
+#import "Link.h"
 
 @implementation WaypointViewController
 
@@ -30,17 +31,34 @@
     waypointTitle.text = self.waypoint.title;
     waypointTitle.accessibilityLabel = self.waypoint.title;
 
-    intro.text = self.waypoint.intro;
     
     // Top align text
-    CGSize maximumSize = CGSizeMake(280, 165);
-    CGSize stringSize = [self.waypoint.intro sizeWithFont:[UIFont systemFontOfSize:17.0] 
-                                   constrainedToSize:maximumSize 
-                                       lineBreakMode:intro.lineBreakMode];
+//    CGSize maximumSize = CGSizeMake(280, 165);
+//    CGSize stringSize = [self.waypoint.intro sizeWithFont:[UIFont systemFontOfSize:17.0] 
+//                                   constrainedToSize:maximumSize 
+//                                       lineBreakMode:intro.lineBreakMode];
+//    
+//    CGRect frame = CGRectMake(20, 61, 280, stringSize.height); // 61
+//    
+//    intro.frame = frame;
     
-    CGRect frame = CGRectMake(20, 61, 280, stringSize.height);
+    intro.delegate = self;
     
-    intro.frame = frame;
+    intro.lineBreakMode = UILineBreakModeWordWrap;
+    intro.numberOfLines = 8;
+    
+    intro.text = self.waypoint.intro;
+    
+    intro.verticalAlignment = TTTAttributedLabelVerticalAlignmentTop;
+
+    for (Link *link in self.waypoint.links) {
+        if (link.match != nil) {
+            NSRange range = [intro.text rangeOfString:link.match];
+            [intro addLinkToURL:[NSURL URLWithString:link.url] withRange:range];
+        }
+
+    }
+
     
     picture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", self.waypoint.identifier]];
     
@@ -60,6 +78,10 @@
     }] ;
 
     
+}
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 - (void)viewDidUnload

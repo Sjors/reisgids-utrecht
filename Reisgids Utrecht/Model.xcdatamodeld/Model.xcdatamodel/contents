@@ -2,6 +2,7 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Link" representedClassName="Link" syncable="YES">
         <attribute name="identifier" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="match" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="url" attributeType="String" syncable="YES"/>
         <relationship name="waypoint" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="links" inverseEntity="Waypoint" syncable="YES"/>
@@ -19,7 +20,7 @@
         <relationship name="links" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Link" inverseName="waypoint" inverseEntity="Link" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Link" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Link" positionX="160" positionY="192" width="128" height="120"/>
         <element name="Waypoint" positionX="160" positionY="192" width="128" height="195"/>
     </elements>
 </model>

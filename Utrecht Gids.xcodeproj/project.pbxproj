@@ -92,6 +92,8 @@
 		A287E88614F2585E00807435 /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A287E88514F2585E00807435 /* Waypoint.m */; };
 		A287E88814F2596E00807435 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287E88714F2596E00807435 /* CoreData.framework */; };
 		A29A3DCC150A754000797851 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29A3DCB150A754000797851 /* AboutViewController.m */; };
+		A29B5EFD150F4C92008A0C59 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29B5EFC150F4C92008A0C59 /* CoreText.framework */; };
+		A29B5F03150F4D41008A0C59 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A29B5F02150F4D41008A0C59 /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
 		A29BEF3414F3DF6500C36818 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29BEF3314F3DF6500C36818 /* CoreLocation.framework */; };
 		A29BEF3814F3E00500C36818 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29BEF3714F3E00500C36818 /* LocationController.m */; };
 		A2ABFE5E14F27C8C00550070 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5C14F27C8C00550070 /* Icon.png */; };
@@ -199,6 +201,9 @@
 		A298D48214F2825F00ECB06C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "/Users/sjors/Dropbox/Reisgids/iPhone/Reisgids Utrecht/nl.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
 		A29A3DCA150A754000797851 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		A29A3DCB150A754000797851 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		A29B5EFC150F4C92008A0C59 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A29B5F01150F4D41008A0C59 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		A29B5F02150F4D41008A0C59 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		A29BEF3314F3DF6500C36818 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A29BEF3614F3E00500C36818 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		A29BEF3714F3E00500C36818 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
@@ -217,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29B5EFD150F4C92008A0C59 /* CoreText.framework in Frameworks */,
 				A2FD8D3C15077BFB003D2270 /* AudioToolbox.framework in Frameworks */,
 				A262749714F7E25D007304C2 /* MapKit.framework in Frameworks */,
 				A29BEF3414F3DF6500C36818 /* CoreLocation.framework in Frameworks */,
@@ -236,6 +242,7 @@
 				A25EE1DC14F163F600A81707 /* Reisgids Utrecht */,
 				A25EE1DD14F163F600A81707 /* Supporting Files */,
 				A2ABFE5B14F27C6700550070 /* Resources */,
+				A29B5EFF150F4CE4008A0C59 /* External */,
 				A25EE1D514F163F600A81707 /* Frameworks */,
 				A25EE1D314F163F600A81707 /* Products */,
 			);
@@ -252,6 +259,7 @@
 		A25EE1D514F163F600A81707 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A29B5EFC150F4C92008A0C59 /* CoreText.framework */,
 				A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */,
 				A262749614F7E25D007304C2 /* MapKit.framework */,
 				A29BEF3314F3DF6500C36818 /* CoreLocation.framework */,
@@ -379,6 +387,23 @@
 				A2292E0C15094A5E00570A1A /* 38@2x.jpg */,
 			);
 			name = Photos;
+			sourceTree = "<group>";
+		};
+		A29B5EFF150F4CE4008A0C59 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				A29B5F00150F4CF7008A0C59 /* TTTAttributedLabel */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		A29B5F00150F4CF7008A0C59 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				A29B5F01150F4D41008A0C59 /* TTTAttributedLabel.h */,
+				A29B5F02150F4D41008A0C59 /* TTTAttributedLabel.m */,
+			);
+			name = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 		A2ABFE5B14F27C6700550070 /* Resources */ = {
@@ -539,6 +564,7 @@
 				A2BED8C81507C01C007A20B3 /* LocalizedCurrentLocation.m in Sources */,
 				A202447A1507C5D7004810BA /* Link.m in Sources */,
 				A29A3DCC150A754000797851 /* AboutViewController.m in Sources */,
+				A29B5F03150F4D41008A0C59 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

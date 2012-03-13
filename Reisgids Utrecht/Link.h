@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * url;
+@property (nonatomic, retain) NSString * match;
 @property (nonatomic, retain) Waypoint *waypoint;
 
 @end
