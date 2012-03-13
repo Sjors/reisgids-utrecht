@@ -359,6 +359,31 @@ Met je aankoop ondersteun je deze visie en kan ik die verder uitwerken: dankjewe
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Privacy" id="aaa-Xx-Naw">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="470" id="sN6-oR-i3X">
+                                        <rect key="frame" x="0.0" y="1600" width="320" height="472"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="469"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumFontSize="10" id="J9Z-rb-7Pu">
+                                                    <rect key="frame" x="20" y="2" width="260" height="458"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <mutableString key="text">Net als een menselijke gids, leert deze gids - en zijn makers - van je ervaring. Om dit te bereiken, worden sommige gegevens centraal bewaard.
+Dit gebeurt anoniem, in de zin dat de makers je identiteit niet kunnen achterhalen, maar opsporingsdiensten wellicht wel. Het is eenvoudig uit te schakelen in het Instellingen scherm van je iPhone onder het kopje "Gids Utrecht". Het gaat onder meer om de plek waar je voor eerst de applicatie gebruikt (afgerond op kilometers als het buiten de route ligt), op welke volgorde en tempo je de route doorloopt, wanneer je verdwaalt (maar niet waarheen), welke informatie je interessant vindt en hoe de batterij het volhoudt.
+</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="6zN-fn-cCa" id="wWm-4F-BaB"/>
