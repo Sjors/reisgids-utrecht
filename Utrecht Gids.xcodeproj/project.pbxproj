@@ -96,6 +96,8 @@
 		A29B5F03150F4D41008A0C59 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A29B5F02150F4D41008A0C59 /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
 		A29BEF3414F3DF6500C36818 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29BEF3314F3DF6500C36818 /* CoreLocation.framework */; };
 		A29BEF3814F3E00500C36818 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29BEF3714F3E00500C36818 /* LocationController.m */; };
+		A29FA1AD150FED3D00C900C2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A29FA1AB150FED3D00C900C2 /* Default.png */; };
+		A29FA1AE150FED3D00C900C2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A29FA1AC150FED3D00C900C2 /* Default@2x.png */; };
 		A2ABFE5E14F27C8C00550070 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5C14F27C8C00550070 /* Icon.png */; };
 		A2ABFE5F14F27C8C00550070 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ABFE5D14F27C8C00550070 /* Icon@2x.png */; };
 		A2AE63961506504300AE44EF /* Prefill Bundle.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A2AE63951506504300AE44EF /* Prefill Bundle.sqlite */; };
@@ -207,6 +209,8 @@
 		A29BEF3314F3DF6500C36818 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A29BEF3614F3E00500C36818 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		A29BEF3714F3E00500C36818 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		A29FA1AB150FED3D00C900C2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A29FA1AC150FED3D00C900C2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A2ABFE5C14F27C8C00550070 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		A2ABFE5D14F27C8C00550070 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		A2AE63951506504300AE44EF /* Prefill Bundle.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Prefill Bundle.sqlite"; path = "Prefill/Prefill Bundle/build/Debug/Prefill Bundle.sqlite"; sourceTree = "<group>"; };
@@ -409,6 +413,8 @@
 		A2ABFE5B14F27C6700550070 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A29FA1AB150FED3D00C900C2 /* Default.png */,
+				A29FA1AC150FED3D00C900C2 /* Default@2x.png */,
 				A2AE63951506504300AE44EF /* Prefill Bundle.sqlite */,
 				A25EE1F914F1794500A81707 /* Photos */,
 				A2ABFE5C14F27C8C00550070 /* Icon.png */,
@@ -541,6 +547,8 @@
 				A2292E4E15094A5E00570A1A /* 37@2x.jpg in Resources */,
 				A2292E4F15094A5E00570A1A /* 38.jpg in Resources */,
 				A2292E5015094A5E00570A1A /* 38@2x.jpg in Resources */,
+				A29FA1AD150FED3D00C900C2 /* Default.png in Resources */,
+				A29FA1AE150FED3D00C900C2 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
