@@ -8,6 +8,7 @@
         <relationship name="waypoint" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="links" inverseEntity="Waypoint" syncable="YES"/>
     </entity>
     <entity name="Waypoint" representedClassName="Waypoint" syncable="YES">
+        <attribute name="gps" attributeType="Boolean" syncable="YES"/>
         <attribute name="identifier" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="intro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_sight" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
@@ -20,7 +21,7 @@
         <relationship name="links" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Link" inverseName="waypoint" inverseEntity="Link" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Link" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="Waypoint" positionX="160" positionY="192" width="128" height="195"/>
+        <element name="Link" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Waypoint" positionX="160" positionY="192" width="128" height="210"/>
     </elements>
 </model>

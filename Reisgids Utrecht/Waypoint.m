@@ -16,6 +16,7 @@
 @dynamic position;
 @dynamic identifier;
 @dynamic range;
+@dynamic gps;
 @dynamic last_visited_at;
 @dynamic title;
 @dynamic intro;

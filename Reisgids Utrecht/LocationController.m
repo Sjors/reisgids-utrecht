@@ -29,53 +29,39 @@
         self.locationManager.delegate = self;
         self.locationManager.purpose = @"De gids werkt ook zonder, maar kan je beter helpen met navigeren en voorbereiden als je locatie bekend is.";
         
+        // First application run: get location
+        self.locationManager.distanceFilter = 300;
+        [self.locationManager startUpdatingLocation];
+        
         // Monitor when the user or system turns the page:
         [[NSNotificationCenter defaultCenter] addObserverForName:@"pageTurned" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
-            
-            applicationMode = kApplicationModeDefault;
-            
+                        
             Waypoint *waypoint = [Waypoint findByPosition:[notif.userInfo objectForKey:@"waypoint_pos"] managedObjectContext:self.managedObjectContext];
             
-            // NSLog(@"Turned the page to waypoint %@", waypoint.position);
-
-            // Start monitoring location when user views a waypoint and the 
-            // next waypoint is more than 50 meters away.
-
             Waypoint *nextWaypoint = [waypoint next:self.managedObjectContext];
             
-            int distance;
-            if(nextWaypoint != nil) {
-                distance = [waypoint.location distanceFromLocation:nextWaypoint.location];
-                NSLog(@"Distance between waypoints: %d", distance);
-            }
-            
-            if(nextWaypoint != nil && distance > 65) { // Spoorwegmuseum en station Maliebaan liggen nu 61 meter uit elkaar
-                self.locationManager.distanceFilter = [nextWaypoint.range intValue];
-                [self.locationManager startUpdatingLocation];
+            if([waypoint.gps boolValue] && nextWaypoint != nil) {
+               self.locationManager.distanceFilter = [nextWaypoint.range intValue];
+               [self.locationManager startUpdatingLocation];
+                NSLog(@"GPS on");
             } else if (nextWaypoint == nil) {
                 // End of the tour
                 [self.locationManager stopUpdatingLocation];
-            } else if (distance <= 65) {
-                // We're at a sight where the user manually needs to flip the page to continue his tour.  
-
-                [self.locationManager stopUpdatingLocation];
+                NSLog(@"GPS off");
             } else {
-                NSLog(@"This shoudn't happen");
-            }
-            
-            
-            
+                // We're at a sight where the user manually needs to flip the page to continue his tour.  
+                [self.locationManager stopUpdatingLocation];
+                NSLog(@"GPS off");
+            }            
         }] ;
         
         
-        // Monitor when the user flips to info view
-        [[NSNotificationCenter defaultCenter] addObserverForName:@"infoScreen" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
-            
-            applicationMode = kApplicationModeInfoScreen;
-         
-            self.locationManager.distanceFilter = 500;
-            [self.locationManager startUpdatingLocation];
-        }] ;
+//        // Monitor when the user flips to info view
+//        [[NSNotificationCenter defaultCenter] addObserverForName:@"infoScreen" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
+//                     
+//            self.locationManager.distanceFilter = 500;
+//            [self.locationManager startUpdatingLocation];
+//        }] ;
     };
     
     return self;
@@ -88,11 +74,6 @@
     // Check if it's recent (2 minutes)
     if([newLocation.timestamp timeIntervalSinceNow] < -120) return;
     
-
-    
-    
-    // Figure out why we need it...
-    
     // Which waypoint is the user looking at?
     Waypoint *currentWaypoint = ((WaypointViewController *)[self.rootViewController.pageViewController.viewControllers objectAtIndex:0]).waypoint;
     
@@ -102,37 +83,13 @@
     
     if(nearestWaypointInRange!=nil && ( [nearestWaypointInRange.last_visited_at compare:[[NSDate date] dateByAddingTimeInterval:-3600]] == NSOrderedAscending || nearestWaypointInRange.last_visited_at == nil)) {
         [nearestWaypointInRange markVisited:self.managedObjectContext];
-    }
-    
-    
-    
-    if(applicationMode == kApplicationModeInfoScreen) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"locationUpdate" object:nil userInfo:nil];
-    } else {
-    
-        // How far are we from the next waypoint?
-        Waypoint *nextWaypoint = [currentWaypoint next:self.managedObjectContext];
         
-        if(nextWaypoint != nil) {
-            NSInteger distance = [newLocation distanceFromLocation:nextWaypoint.location];
-            
-            NSLog(@"Distance to next waypoint: %d meters.", distance);
-            
-            // What do we do with it
-            
-            // Flip the page is we are within range of the next waypoint
-            if (distance < [nextWaypoint.range intValue]) {
-                [self.rootViewController turnToPageForWaypoint:nextWaypoint];
-                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-            }
-            
-        } else {
-            NSLog(@"We're already at the last waypoint. This shouldn't happen.");
-        }
+        // Turn page to that waypoint:
+        [self.rootViewController turnToPageForWaypoint:nearestWaypointInRange];
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"pageTurned" object:nil userInfo:[NSDictionary dictionaryWithObject:nearestWaypointInRange.position forKey:@"waypoint_pos"]];
     }
-
-    
     
 }
 

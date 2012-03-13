@@ -45,7 +45,7 @@
     intro.delegate = self;
     
     intro.lineBreakMode = UILineBreakModeWordWrap;
-    intro.numberOfLines = 8;
+    intro.numberOfLines = 10;
     
     intro.text = self.waypoint.intro;
     
@@ -56,9 +56,7 @@
             NSRange range = [intro.text rangeOfString:link.match];
             [intro addLinkToURL:[NSURL URLWithString:link.url] withRange:range];
         }
-
     }
-
     
     picture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", self.waypoint.identifier]];
     

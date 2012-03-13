@@ -10,13 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import "RootViewController.h"
 
-#define kApplicationModeDefault 0
-#define kApplicationModeInfoScreen 1
-
 @class RootViewController;
 
 @interface LocationController : NSObject <CLLocationManagerDelegate> {
-    NSInteger applicationMode;
 }
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;

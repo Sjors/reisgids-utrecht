@@ -22,6 +22,7 @@
 @property (nonatomic, retain) NSString * intro;
 @property (nonatomic, retain) NSString * picture_name;
 @property (nonatomic, retain) NSNumber * is_sight;
+@property (nonatomic, retain) NSNumber * gps;
 @property (nonatomic, retain) NSDate * last_visited_at;
 @property (nonatomic, retain) NSSet * links;
 
