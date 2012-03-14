@@ -16,8 +16,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     
+    // Set the application defaults on first launch
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    if([defaults valueForKey:@"logActivity"] == nil) {
+        NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"YES" forKey:@"logActivity"];
+        [defaults registerDefaults:appDefaults];
+        [defaults synchronize];
+    }
+    
+    // Analytics (Mixpanel)
+    if([defaults boolForKey:@"logActivity"]) {
+#ifdef DEBUG
+        mixpanel = [MixpanelAPI sharedAPIWithToken:@"60f7d9a9f202586a0d96a63b155337a8"];
+#else 
+        mixpanel = [MixpanelAPI sharedAPIWithToken:@"2c4aba7e3b7f4b125fb9326dc74fa6ba"];
+#endif
+        
+        [mixpanel track:@"firstLaunch"];
+    }
     
 //    // This will later be replaced by the code in persistentStoreCoordinator and the prefill bundle, which in turn will get the data from a server.
 //    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
@@ -109,6 +127,12 @@
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([defaults boolForKey:@"logActivity"]) {
+        [mixpanel flush]; // Uploads datapoints to the Mixpanel Server.
+    }
+
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -209,6 +233,12 @@
             NSLog(@"Error copying database: %@]", [error description]);
         }
         
+        // Analytics (Mixpanel)
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        if([defaults boolForKey:@"logActivity"]) {
+            mixpanel = [MixpanelAPI sharedAPI];
+            [mixpanel track:@"firstLaunch"];
+        }
     }
     
     

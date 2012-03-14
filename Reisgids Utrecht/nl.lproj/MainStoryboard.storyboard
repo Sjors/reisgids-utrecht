@@ -255,23 +255,23 @@ Na de beschrijving staat aangegeven hoe je naar het volgende punt kan lopen. Zod
                             </tableViewSection>
                             <tableViewSection headerTitle="Visie" id="O3M-LH-ORF">
                                 <cells>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="600" id="rr5-zV-zph">
-                                        <rect key="frame" x="0.0" y="613" width="320" height="602"/>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="590" id="rr5-zV-zph">
+                                        <rect key="frame" x="0.0" y="613" width="320" height="592"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="599"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="589"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" lineBreakMode="wordWrap" numberOfLines="37" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="0iW-4a-Ooj">
                                                     <rect key="frame" x="20" y="0.0" width="260" height="599"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">Ik reis veel en gebruik daarbij zowel papieren gidsen als mijn iPhone. Deze app is mijn poging het goede van papieren gidsen te combineren met de mogelijkheden die een smartphone biedt. 
+                                                    <mutableString key="text">Ik reis veel en gebruik daarbij zowel papieren gidsen als mijn iPhone. Deze app is mijn poging het goede van papieren gidsen te combineren met de mogelijkheden die een smartphone biedt. 
 
 Als je goed zoekt is er een schat aan informatie over steden op internet te vinden. Over elk gebouw is wel wat te lezen, de hele geschiedenis staat op Wikipedia en je kan de halve bevolking op Twitter volgen. Maar dat is allemaal veel te veel als je ergens nieuw bent. 
 
 De ideale papieren gids maakt een voorselectie voor je en neemt je bij de hand. Hij maakt je vooraf al lekker voor wat komen gaat en dient achteraf als mooi aandenken.
 
-Met je aankoop ondersteun je deze visie en kan ik die verder uitwerken: dankjewel!</string>
+Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankjewel!</mutableString>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -285,7 +285,7 @@ Met je aankoop ondersteun je deze visie en kan ik die verder uitwerken: dankjewe
                             <tableViewSection headerTitle="Dankwoord" id="kVY-9Z-Xf7">
                                 <cells>
                                     <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="155" id="LDN-ku-Hpu">
-                                        <rect key="frame" x="0.0" y="1261" width="320" height="157"/>
+                                        <rect key="frame" x="0.0" y="1251" width="320" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="154"/>
@@ -308,7 +308,7 @@ Met je aankoop ondersteun je deze visie en kan ik die verder uitwerken: dankjewe
                             <tableViewSection headerTitle="Feedback" id="6UH-zu-t1l">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MLG-dp-S2d" detailTextLabel="YYY-gp-WzK" rowHeight="44" style="IBUITableViewCellStyleSubtitle" id="Zr6-p7-KFO">
-                                        <rect key="frame" x="0.0" y="1464" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="1454" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -333,7 +333,7 @@ Met je aankoop ondersteun je deze visie en kan ik die verder uitwerken: dankjewe
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Ywq-zE-rKX" detailTextLabel="Yc1-t9-eQp" rowHeight="44" style="IBUITableViewCellStyleSubtitle" id="aUb-e4-lsg">
-                                        <rect key="frame" x="0.0" y="1509" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="1499" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -361,19 +361,17 @@ Met je aankoop ondersteun je deze visie en kan ik die verder uitwerken: dankjewe
                             </tableViewSection>
                             <tableViewSection headerTitle="Privacy" id="aaa-Xx-Naw">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="470" id="sN6-oR-i3X">
-                                        <rect key="frame" x="0.0" y="1600" width="320" height="472"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="350" id="sN6-oR-i3X">
+                                        <rect key="frame" x="0.0" y="1590" width="320" height="352"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="469"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="349"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumFontSize="10" id="J9Z-rb-7Pu">
-                                                    <rect key="frame" x="20" y="2" width="260" height="458"/>
+                                                    <rect key="frame" x="20" y="2" width="260" height="344"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <mutableString key="text">Net als een menselijke gids, leert deze gids - en zijn makers - van je ervaring. Om dit te bereiken, worden sommige gegevens centraal bewaard.
-Dit gebeurt anoniem, in de zin dat de makers je identiteit niet kunnen achterhalen, maar opsporingsdiensten wellicht wel. Het is eenvoudig uit te schakelen in het Instellingen scherm van je iPhone onder het kopje "Gids Utrecht". Het gaat onder meer om de plek waar je voor eerst de applicatie gebruikt (afgerond op kilometers als het buiten de route ligt), op welke volgorde en tempo je de route doorloopt, wanneer je verdwaalt (maar niet waarheen), welke informatie je interessant vindt en hoe de batterij het volhoudt.
-</mutableString>
+                                                    <string key="text">Net als een menselijke gids, leert deze gids - en zijn makers - van je ervaring. Om dit te bereiken, worden sommige gegevens centraal bewaard. Dit gebeurt anoniem, in de zin dat de makers je identiteit niet kunnen achterhalen, maar opsporingsdiensten wellicht wel. Het is eenvoudig uit te schakelen in het Instellingen scherm van je iPhone onder het kopje "Gids Utrecht". Het gaat onder meer om  hoe je de route doorloopt en welke informatie je interessant vindt.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -557,6 +555,31 @@ Dit gebeurt anoniem, in de zin dat de makers je identiteit niet kunnen achterhal
     <resources>
         <image name="1.jpg" width="319" height="213"/>
     </resources>
+    <classes>
+        <class className="AboutViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
+        </class>
+        <class className="InfoTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoTableViewController.h"/>
+        </class>
+        <class className="RootViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
+        </class>
+        <class className="TTTAttributedLabel" superclassName="UILabel">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTTAttributedLabel.h"/>
+        </class>
+        <class className="WaypointViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WaypointViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="explanationView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="intro" candidateClass="TTTAttributedLabel"/>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="waypointTitle" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

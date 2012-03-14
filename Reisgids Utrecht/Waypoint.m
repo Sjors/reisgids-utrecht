@@ -7,6 +7,7 @@
 //
 
 #import "Waypoint.h"
+#import "MixpanelAPI.h"
 
 
 @implementation Waypoint
@@ -150,6 +151,15 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    
+    if([defaults boolForKey:@"logActivity"]) {
+        [mixpanel track:@"visitSight" properties:[NSDictionary dictionaryWithObjectsAndKeys:self.identifier, @"id", self.title, @"title", nil]];
+    }
+    
+
 
 }
 

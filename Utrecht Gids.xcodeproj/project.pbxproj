@@ -76,6 +76,13 @@
 		A2292E4E15094A5E00570A1A /* 37@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2292E0A15094A5E00570A1A /* 37@2x.jpg */; };
 		A2292E4F15094A5E00570A1A /* 38.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2292E0B15094A5E00570A1A /* 38.jpg */; };
 		A2292E5015094A5E00570A1A /* 38@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2292E0C15094A5E00570A1A /* 38@2x.jpg */; };
+		A25CD18315109EE6006B2946 /* MPCJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD17715109EE6006B2946 /* MPCJSONDataSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
+		A25CD18415109EE6006B2946 /* MPCJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD17915109EE6006B2946 /* MPCJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A25CD18515109EE6006B2946 /* MPCSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD17B15109EE6006B2946 /* MPCSerializedJSONData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A25CD18615109EE6006B2946 /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD17E15109EE6006B2946 /* NSData+MPBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A25CD18715109EE6006B2946 /* MixpanelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD18015109EE6006B2946 /* MixpanelAPI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A25CD18815109EE6006B2946 /* MixpanelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD18215109EE6006B2946 /* MixpanelEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A25CD1941510A158006B2946 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A25CD1931510A158006B2946 /* Settings.bundle */; };
 		A25EE1D714F163F600A81707 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EE1D614F163F600A81707 /* UIKit.framework */; };
 		A25EE1D914F163F600A81707 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EE1D814F163F600A81707 /* Foundation.framework */; };
 		A25EE1DB14F163F600A81707 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EE1DA14F163F600A81707 /* CoreGraphics.framework */; };
@@ -177,6 +184,19 @@
 		A2292E0A15094A5E00570A1A /* 37@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "37@2x.jpg"; path = "Photos/37@2x.jpg"; sourceTree = "<group>"; };
 		A2292E0B15094A5E00570A1A /* 38.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 38.jpg; path = Photos/38.jpg; sourceTree = "<group>"; };
 		A2292E0C15094A5E00570A1A /* 38@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "38@2x.jpg"; path = "Photos/38@2x.jpg"; sourceTree = "<group>"; };
+		A25CD17615109EE6006B2946 /* MPCJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONDataSerializer.h; sourceTree = "<group>"; };
+		A25CD17715109EE6006B2946 /* MPCJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONDataSerializer.m; sourceTree = "<group>"; };
+		A25CD17815109EE6006B2946 /* MPCJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONSerializer.h; sourceTree = "<group>"; };
+		A25CD17915109EE6006B2946 /* MPCJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONSerializer.m; sourceTree = "<group>"; };
+		A25CD17A15109EE6006B2946 /* MPCSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCSerializedJSONData.h; sourceTree = "<group>"; };
+		A25CD17B15109EE6006B2946 /* MPCSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCSerializedJSONData.m; sourceTree = "<group>"; };
+		A25CD17D15109EE6006B2946 /* NSData+MPBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MPBase64.h"; sourceTree = "<group>"; };
+		A25CD17E15109EE6006B2946 /* NSData+MPBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MPBase64.m"; sourceTree = "<group>"; };
+		A25CD17F15109EE6006B2946 /* MixpanelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixpanelAPI.h; sourceTree = "<group>"; };
+		A25CD18015109EE6006B2946 /* MixpanelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixpanelAPI.m; sourceTree = "<group>"; };
+		A25CD18115109EE6006B2946 /* MixpanelEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixpanelEvent.h; sourceTree = "<group>"; };
+		A25CD18215109EE6006B2946 /* MixpanelEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixpanelEvent.m; sourceTree = "<group>"; };
+		A25CD1931510A158006B2946 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A25EE1D214F163F600A81707 /* Utrecht Gids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Utrecht Gids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25EE1D614F163F600A81707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A25EE1D814F163F600A81707 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -240,6 +260,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A25CD17315109EE6006B2946 /* MPLib */ = {
+			isa = PBXGroup;
+			children = (
+				A25CD17415109EE6006B2946 /* lib */,
+				A25CD17F15109EE6006B2946 /* MixpanelAPI.h */,
+				A25CD18015109EE6006B2946 /* MixpanelAPI.m */,
+				A25CD18115109EE6006B2946 /* MixpanelEvent.h */,
+				A25CD18215109EE6006B2946 /* MixpanelEvent.m */,
+			);
+			name = MPLib;
+			path = Submodules/Mixpanel/MPLib;
+			sourceTree = "<group>";
+		};
+		A25CD17415109EE6006B2946 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A25CD17515109EE6006B2946 /* JSON */,
+				A25CD17C15109EE6006B2946 /* NSData_Base64 */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		A25CD17515109EE6006B2946 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A25CD17615109EE6006B2946 /* MPCJSONDataSerializer.h */,
+				A25CD17715109EE6006B2946 /* MPCJSONDataSerializer.m */,
+				A25CD17815109EE6006B2946 /* MPCJSONSerializer.h */,
+				A25CD17915109EE6006B2946 /* MPCJSONSerializer.m */,
+				A25CD17A15109EE6006B2946 /* MPCSerializedJSONData.h */,
+				A25CD17B15109EE6006B2946 /* MPCSerializedJSONData.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		A25CD17C15109EE6006B2946 /* NSData_Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				A25CD17D15109EE6006B2946 /* NSData+MPBase64.h */,
+				A25CD17E15109EE6006B2946 /* NSData+MPBase64.m */,
+			);
+			path = NSData_Base64;
+			sourceTree = "<group>";
+		};
 		A25EE1C714F163F600A81707 = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +377,7 @@
 				A25EE1DF14F163F600A81707 /* InfoPlist.strings */,
 				A25EE1E214F163F600A81707 /* main.m */,
 				A25EE1E414F163F700A81707 /* Utrecht Gids-Prefix.pch */,
+				A25CD1931510A158006B2946 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			path = "Reisgids Utrecht";
@@ -396,6 +461,7 @@
 		A29B5EFF150F4CE4008A0C59 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				A25CD17315109EE6006B2946 /* MPLib */,
 				A29B5F00150F4CF7008A0C59 /* TTTAttributedLabel */,
 			);
 			name = External;
@@ -549,6 +615,7 @@
 				A2292E5015094A5E00570A1A /* 38@2x.jpg in Resources */,
 				A29FA1AD150FED3D00C900C2 /* Default.png in Resources */,
 				A29FA1AE150FED3D00C900C2 /* Default@2x.png in Resources */,
+				A25CD1941510A158006B2946 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +640,12 @@
 				A202447A1507C5D7004810BA /* Link.m in Sources */,
 				A29A3DCC150A754000797851 /* AboutViewController.m in Sources */,
 				A29B5F03150F4D41008A0C59 /* TTTAttributedLabel.m in Sources */,
+				A25CD18315109EE6006B2946 /* MPCJSONDataSerializer.m in Sources */,
+				A25CD18415109EE6006B2946 /* MPCJSONSerializer.m in Sources */,
+				A25CD18515109EE6006B2946 /* MPCSerializedJSONData.m in Sources */,
+				A25CD18615109EE6006B2946 /* NSData+MPBase64.m in Sources */,
+				A25CD18715109EE6006B2946 /* MixpanelAPI.m in Sources */,
+				A25CD18815109EE6006B2946 /* MixpanelEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +706,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "APP_STORE=1";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -678,6 +752,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sjors Provoost";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "AD_HOC=1";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

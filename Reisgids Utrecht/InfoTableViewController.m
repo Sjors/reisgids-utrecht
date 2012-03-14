@@ -11,6 +11,7 @@
 #import "WaypointAnnotation.h"
 #import "AppDelegate.h"
 #import "LocalizedCurrentLocation.h"
+#import "Link.h"
 
 @interface InfoTableViewController ()
 
@@ -40,7 +41,20 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"infoScreen" object:nil userInfo:nil];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    
+    if([defaults boolForKey:@"logActivity"]) {
+        NSString *title = self.waypoint.title;
+        NSNumber *identifier = self.waypoint.identifier;
+        
+        [mixpanel track:@"info" properties:[NSDictionary dictionaryWithObjectsAndKeys:identifier, @"id", title, @"title", nil]];
+        
+    }
 }
 
 - (void)viewDidUnload
@@ -290,6 +304,9 @@
     
     NSString *url;
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    
     if(indexPath.section == 0 && indexPath.row == 1) {
         Waypoint *display_waypoint;
         if([self.waypoint.is_sight boolValue]) {
@@ -300,10 +317,23 @@
         NSString *latlong = [NSString stringWithFormat:@"%f,%f", display_waypoint.location.coordinate.latitude, display_waypoint.location.coordinate.longitude];
     
         url = [NSString stringWithFormat:@"http://maps.google.com/maps?daddr=%@&saddr=%@&dirflg=w", [latlong stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [[LocalizedCurrentLocation currentLocationStringForCurrentLanguage] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ];
+
+        
+        
+        if([defaults boolForKey:@"logActivity"]) {
+            [mixpanel track:@"directions" properties:[NSDictionary dictionaryWithObjectsAndKeys:self.waypoint.identifier, @"id", self.waypoint.title, @"title", nil]];
+        }
     } else if (indexPath.section == 1) {
         NSArray *links = [self.waypoint.links sortedArrayUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"identifier" ascending:NO]]];
         
-        url = [[links objectAtIndex:indexPath.row] valueForKey:@"url"];
+        Link *link = [links objectAtIndex:indexPath.row];
+        
+        url = link.url;
+        
+        if([defaults boolForKey:@"logActivity"]) {
+            [mixpanel track:@"link" properties:[NSDictionary dictionaryWithObjectsAndKeys:link.identifier, @"id", link.title, @"title", nil]];
+        }
+        
     }
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
