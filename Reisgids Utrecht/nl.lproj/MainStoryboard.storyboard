@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="12">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="12">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Waypoint View Controller-->
         <scene sceneID="8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="WaypointViewController" id="5" customClass="WaypointViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -20,16 +18,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="Spoorwegmuseum" lineBreakMode="tailTruncation" minimumFontSize="10" id="geZ-HT-KWF" userLabel="Title">
-                                <rect key="frame" x="20" y="11" width="249" height="42"/>
+                                <rect key="frame" x="20" y="11" width="249" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" lineBreakMode="tailTruncation" numberOfLines="9" minimumFontSize="10" id="BKA-LA-xLU" userLabel="Intro" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="20" y="61" width="280" height="165"/>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" lineBreakMode="tailTruncation" numberOfLines="9" minimumFontSize="10" id="BKA-LA-xLU" userLabel="Intro" customClass="TTTAttributedLabel">
+                                <rect key="frame" x="20" y="49" width="280" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -41,7 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="t1p-lm-Spy">
-                                <rect key="frame" x="280" y="22" width="18" height="19"/>
+                                <rect key="frame" x="282" y="16" width="18" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal">
@@ -56,7 +55,7 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" id="oXb-bv-vPb">
-                                <rect key="frame" x="140" y="11" width="170" height="42"/>
+                                <rect key="frame" x="140" y="5" width="170" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Meer informatie:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="uGN-lK-sSj">
@@ -85,7 +84,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="0.80511519160583944" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QDp-zh-aGS">
-                                <rect key="frame" x="240" y="0.0" width="80" height="80"/>
+                                <rect key="frame" x="243" y="0.0" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
@@ -105,19 +104,19 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="infoButton" destination="t1p-lm-Spy" id="7SI-6x-A30"/>
-                        <outlet property="intro" destination="BKA-LA-xLU" id="9by-y6-Ik6"/>
+                        <outlet property="intro" destination="BKA-LA-xLU" id="gFS-E5-WdT"/>
                         <outlet property="pageControl" destination="Jkj-zZ-PLk" id="eq0-4m-Tg6"/>
                         <outlet property="picture" destination="5tD-kR-wjg" id="TfJ-kY-wKV"/>
                         <outlet property="waypointTitle" destination="geZ-HT-KWF" id="wb6-Bi-iIY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="476"/>
         </scene>
         <!--About View Controller - Over deze app-->
         <scene sceneID="Y5T-7w-OYL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pmg-OY-Nie" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="6zN-fn-cCa" customClass="AboutViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="NXL-TP-WIR">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -265,13 +264,13 @@ Na de beschrijving staat aangegeven hoe je naar het volgende punt kan lopen. Zod
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" lineBreakMode="wordWrap" numberOfLines="37" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="0iW-4a-Ooj">
                                                     <rect key="frame" x="20" y="0.0" width="260" height="599"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <mutableString key="text">Ik reis veel en gebruik daarbij zowel papieren gidsen als mijn iPhone. Deze app is mijn poging het goede van papieren gidsen te combineren met de mogelijkheden die een smartphone biedt. 
+                                                    <string key="text">Ik reis veel en gebruik daarbij zowel papieren gidsen als mijn iPhone. Deze app is mijn poging het goede van papieren gidsen te combineren met de mogelijkheden die een smartphone biedt. 
 
 Als je goed zoekt is er een schat aan informatie over steden op internet te vinden. Over elk gebouw is wel wat te lezen, de hele geschiedenis staat op Wikipedia en je kan de halve bevolking op Twitter volgen. Maar dat is allemaal veel te veel als je ergens nieuw bent. 
 
 De ideale papieren gids maakt een voorselectie voor je en neemt je bij de hand. Hij maakt je vooraf al lekker voor wat komen gaat en dient achteraf als mooi aandenken.
 
-Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankjewel!</mutableString>
+Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankjewel!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -391,13 +390,13 @@ Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankj
                     <navigationItem key="navigationItem" title="Over deze app" id="1Bg-He-Vqj"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pmg-OY-Nie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2030" y="504"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CTc-0a-Aol">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1hc-SH-Pb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="oOw-yr-gfZ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="kNA-HY-1KZ">
                         <autoresizingMask key="autoresizingMask"/>
@@ -406,13 +405,13 @@ Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankj
                         <segue destination="WTT-DZ-Kbf" kind="relationship" relationship="rootViewController" id="VCb-Lo-Pbw"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hc-SH-Pb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1191" y="449"/>
         </scene>
         <!--Info Table View Controller - Spoorwegmuseum-->
         <scene sceneID="gi6-0Y-K9Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rTO-Jx-FSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="WTT-DZ-Kbf" customClass="InfoTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="43" sectionHeaderHeight="10" sectionFooterHeight="10" id="KtQ-C2-O7N">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -509,13 +508,13 @@ Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankj
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTO-Jx-FSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1570" y="504"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="15">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <viewController id="12" customClass="RootViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="13">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -523,6 +522,7 @@ Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankj
                     </view>
                     <navigationItem key="navigationItem" id="Rb3-Ml-QxS"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="tWH-Lj-l7u" detailTextLabel="BuP-tO-c03" rowHeight="44" style="IBUITableViewCellStyleSubtitle" id="uGS-uX-tAI">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                     <autoresizingMask key="autoresizingMask"/>
@@ -553,7 +553,7 @@ Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankj
         </scene>
     </scenes>
     <resources>
-        <image name="1.jpg" width="319" height="213"/>
+        <image name="1.jpg" width="320" height="213"/>
     </resources>
     <classes>
         <class className="AboutViewController" superclassName="UITableViewController">
@@ -561,6 +561,9 @@ Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankj
         </class>
         <class className="InfoTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="done:"/>
+            </relationships>
         </class>
         <class className="RootViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
@@ -573,7 +576,7 @@ Met je aankoop ondersteun je deze visie en kunnen we die verder uitwerken: dankj
             <relationships>
                 <relationship kind="outlet" name="explanationView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="intro" candidateClass="TTTAttributedLabel"/>
+                <relationship kind="outlet" name="intro" candidateClass="UIView"/>
                 <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
                 <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="waypointTitle" candidateClass="UILabel"/>

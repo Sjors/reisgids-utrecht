@@ -41,17 +41,17 @@
             Waypoint *nextWaypoint = [waypoint next:self.managedObjectContext];
             
             if([waypoint.gps boolValue] && nextWaypoint != nil) {
-               self.locationManager.distanceFilter = [nextWaypoint.range intValue];
+               self.locationManager.distanceFilter = MAX([nextWaypoint.range intValue],30);
                [self.locationManager startUpdatingLocation];
-                NSLog(@"GPS on");
+//                NSLog(@"GPS on");
             } else if (nextWaypoint == nil) {
                 // End of the tour
                 [self.locationManager stopUpdatingLocation];
-                NSLog(@"GPS off");
+//                NSLog(@"GPS off");
             } else {
                 // We're at a sight where the user manually needs to flip the page to continue his tour.  
                 [self.locationManager stopUpdatingLocation];
-                NSLog(@"GPS off");
+//                NSLog(@"GPS off");
             }            
         }] ;
         
@@ -69,7 +69,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     
-    NSLog(@"We're here: %@", [newLocation description]);
+    //NSLog(@"We're here: %@", [newLocation description]);
     
     // Check if it's recent (2 minutes)
     if([newLocation.timestamp timeIntervalSinceNow] < -120) return;
@@ -85,7 +85,9 @@
         [nearestWaypointInRange markVisited:self.managedObjectContext];
         
         // Turn page to that waypoint:
-        [self.rootViewController turnToPageForWaypoint:nearestWaypointInRange];
+        if([nearestWaypointInRange.identifier intValue] != [currentWaypoint.identifier intValue]) {
+            [self.rootViewController turnToPageForWaypoint:nearestWaypointInRange];
+        }
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"pageTurned" object:nil userInfo:[NSDictionary dictionaryWithObject:nearestWaypointInRange.position forKey:@"waypoint_pos"]];

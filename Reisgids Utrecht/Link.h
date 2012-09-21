@@ -19,4 +19,8 @@
 @property (nonatomic, retain) NSString * match;
 @property (nonatomic, retain) Waypoint *waypoint;
 
++(Link *)findById:(NSNumber *)identifier managedObjectContext:(NSManagedObjectContext *)moc;
++(Link *)findByUrl:(NSURL *)url managedObjectContext:(NSManagedObjectContext *)moc;
+
+
 @end

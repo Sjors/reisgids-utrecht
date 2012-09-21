@@ -14,7 +14,9 @@
 @interface WaypointViewController : UIViewController <TTTAttributedLabelDelegate> {
     
     IBOutlet UILabel *waypointTitle;
-    IBOutlet TTTAttributedLabel *intro;
+//    IBOutlet TTTAttributedLabel *intro;
+    IBOutlet UIView *intro;
+
     IBOutlet UIImageView *picture;
     
     IBOutlet UIButton *infoButton;

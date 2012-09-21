@@ -26,11 +26,11 @@
 @property (nonatomic, retain) NSDate * last_visited_at;
 @property (nonatomic, retain) NSSet * links;
 
-+(NSArray *)allSightsAfter:(Waypoint *)currentWaypoint managedObjectContext:(NSManagedObjectContext *)moc;
++(NSArray *)allWaypointsAfter:(Waypoint *)currentWaypoint managedObjectContext:(NSManagedObjectContext *)moc;
 
-+(NSArray *)allSightsBefore:(Waypoint *)currentWaypoint managedObjectContext:(NSManagedObjectContext *)moc;
++(NSArray *)allWaypointsBefore:(Waypoint *)currentWaypoint managedObjectContext:(NSManagedObjectContext *)moc;
 
-
++(Waypoint *)findById:(NSNumber *)identifier managedObjectContext:(NSManagedObjectContext *)moc;
 +(Waypoint *)findByPosition:(NSNumber *)position managedObjectContext:(NSManagedObjectContext *)moc;
 
 -(CLLocation *)location;

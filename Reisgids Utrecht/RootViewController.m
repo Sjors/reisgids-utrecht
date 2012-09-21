@@ -54,26 +54,55 @@
 
     [self.pageViewController didMoveToParentViewController:self];    
 
-    // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
-    self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
+    // iOs 5 specific:
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 6.0) {
+        // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
+        self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
+    }
+    
+
     
     self.locationController = [[LocationController alloc] initWithRootViewController:self];
     
-    // Allow user to tap on info button
-    for (UIGestureRecognizer *gR in self.view.gestureRecognizers) {
-        gR.delegate = self;
+    // iOs 5 specific:
+     if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 6.0) {        
+        for (UIGestureRecognizer *gR in self.view.gestureRecognizers) {
+            gR.delegate = self;
+        }
+    } else {
+        // http://stackoverflow.com/a/10467686/313633
+        // Disable tap gesture; only swipe.
+                
+        UIGestureRecognizer* tapRecognizer = nil;
+        for (UIGestureRecognizer* recognizer in self.pageViewController.gestureRecognizers) {
+            if ( [recognizer isKindOfClass:[UITapGestureRecognizer class]] ) {
+                tapRecognizer = recognizer;
+                break;
+            }
+        }
+        
+        if ( tapRecognizer ) {
+            [self.view removeGestureRecognizer:tapRecognizer];
+            [self.pageViewController.view removeGestureRecognizer:tapRecognizer];
+        }
     }
     
 }
 
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
-        CGPoint touchPoint = [touch locationInView:self.view];
-        if (touchPoint.x > 50 && touchPoint.x < 430) {//Let the buttons in the middle of the top bar receive the touch
-            return NO;
+     if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 6.0) {
+        if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
+            CGPoint touchPoint = [touch locationInView:self.view];
+            if (touchPoint.x > 50 && touchPoint.x < 430) {//Let the buttons in the middle of the top bar receive the touch
+                return NO;
+            }
         }
+        return YES;
+    } else {
+        return YES; // The default according to documentation
     }
-    return YES;
+    
+
 }
 
 -(void)turnToPageForWaypoint:(Waypoint *)waypoint {

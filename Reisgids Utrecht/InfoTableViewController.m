@@ -314,9 +314,53 @@
         } else {
             display_waypoint = [self.waypoint next:self.managedObjectContext];
         }
-        NSString *latlong = [NSString stringWithFormat:@"%f,%f", display_waypoint.location.coordinate.latitude, display_waypoint.location.coordinate.longitude];
-    
-        url = [NSString stringWithFormat:@"http://maps.google.com/maps?daddr=%@&saddr=%@&dirflg=w", [latlong stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [[LocalizedCurrentLocation currentLocationStringForCurrentLanguage] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ];
+        
+        // Detect if we have iOs 6 or later:
+        Class itemClass = [MKMapItem class];
+        if (itemClass && [itemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {
+            // iOs 6 or newer, use Apple maps
+            
+            NSDictionary *addressDict = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                         @"NL", @"CountryCode",
+                                         @"Utrecht", @"City",
+                                         nil];
+            
+            CLLocationCoordinate2D location = display_waypoint.location.coordinate;
+            
+            MKPlacemark *destinationP = [[MKPlacemark alloc] initWithCoordinate:location addressDictionary:addressDict];
+            
+            MKMapItem *destination = [[MKMapItem alloc] initWithPlacemark:destinationP];
+            destination.name = display_waypoint.title;
+            
+            // Only offer walking directions if the distance is shorter than 7 kilometers, otherwise it will
+            // fail with an error message. We're assuming location is reasonably up to date, because we're 
+            // displaying a map already.
+            
+            CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+            NSDictionary *options;
+
+            if(locationManager.location != nil && [locationManager.location distanceFromLocation:display_waypoint.location] < 7000) {
+                options = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeWalking,};
+            } else {
+                options = nil;
+            }
+                
+            [destination openInMapsWithLaunchOptions:options];
+            
+            
+        } else {
+            // iOs 5 or earlier: use Google Maps
+            
+            NSString *latlong = [NSString stringWithFormat:@"%f,%f", display_waypoint.location.coordinate.latitude, display_waypoint.location.coordinate.longitude];
+            
+            url = [NSString stringWithFormat:@"http://maps.google.com/maps?daddr=%@&saddr=%@&dirflg=w", [latlong stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [[LocalizedCurrentLocation currentLocationStringForCurrentLanguage] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ];
+            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        }
+        
+        
+        
+
 
         
         
@@ -334,9 +378,10 @@
             [mixpanel track:@"link" properties:[NSDictionary dictionaryWithObjectsAndKeys:link.identifier, @"id", link.title, @"title", nil]];
         }
         
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        
     }
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
