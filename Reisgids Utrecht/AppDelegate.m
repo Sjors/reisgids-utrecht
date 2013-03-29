@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Waypoint.h"
 #import "Link.h"
+#import <MTMigration/MTMigration.h>
 
 @implementation AppDelegate
 
@@ -35,31 +36,38 @@
 #endif
     }
     
-    if(![defaults valueForKey:@"version"] && [[Waypoint findById:@9 managedObjectContext:self.managedObjectContext].title isEqualToString:@"Richting Dom kerk"]) {
-        // Fix bugs in version 0.1
-        [Waypoint findById:@9 managedObjectContext:self.managedObjectContext].title = @"Richting Domkerk";
-         
-        [Link findById:@48 managedObjectContext:self.managedObjectContext].match = @"App";
-      
-        [Link findById:@25 managedObjectContext:self.managedObjectContext].match = @"app";
+    [MTMigration migrateToVersion:@"0.2.1" block:^{
+        
+        // If the user ever installed version 0.1, apply corrections:
+        // Note: this migration can (and probably should) be removed
+        // once we start syncing with a server
+        
+        if(![defaults valueForKey:@"version"] && [[Waypoint findById:@9 managedObjectContext:self.managedObjectContext].title isEqualToString:@"Richting Dom kerk"]) {
+            // Fix bugs in version 0.1
+            [Waypoint findById:@9 managedObjectContext:self.managedObjectContext].title = @"Richting Domkerk";
+            
+            [Link findById:@48 managedObjectContext:self.managedObjectContext].match = @"App";
+            
+            [Link findById:@25 managedObjectContext:self.managedObjectContext].match = @"app";
+            
+            Waypoint *straatweg = [Waypoint findById:@30 managedObjectContext:self.managedObjectContext];
+            straatweg.title = @"Amsterdamsestraatweg";
+            straatweg.intro = [straatweg.intro stringByReplacingOccurrencesOfString:@"Amsterdamse Straatweg" withString:@"Amsterdamsestraatweg"];
+            
+            [Waypoint findById:@21 managedObjectContext:self.managedObjectContext].intro = @"Aan de noordzijde van de Neude staat een standbeeld dat sterk aan het konijn uit de film Donnie Darko doet denken. Net als de huidige burgemeester is ook dit beeld tijdens een niet geheel democratisch referendum verkozen.\nLoop nu richting de flat.";
+            
+            [Waypoint findById:@23 managedObjectContext:self.managedObjectContext].intro = @"Volg de borden Centraal Station. Bekijk vooral het filmpje over hoe en waarom dit winkelcentrum gebouwd is \"met een op de toekomst gerichte voortvarendheid\". Hopelijk heb je genoten van de rondleiding.\nFeedback is erg welkom!";
+            
+            NSError *error = nil;
+            [self.managedObjectContext save:&error];
+            
+        }
 
-        Waypoint *straatweg = [Waypoint findById:@30 managedObjectContext:self.managedObjectContext];
-        straatweg.title = @"Amsterdamsestraatweg";
-        straatweg.intro = [straatweg.intro stringByReplacingOccurrencesOfString:@"Amsterdamse Straatweg" withString:@"Amsterdamsestraatweg"];
-        
-        [Waypoint findById:@21 managedObjectContext:self.managedObjectContext].intro = @"Aan de noordzijde van de Neude staat een standbeeld dat sterk aan het konijn uit de film Donnie Darko doet denken. Net als de huidige burgemeester is ook dit beeld tijdens een niet geheel democratisch referendum verkozen.\nLoop nu richting de flat.";
-        
-        [Waypoint findById:@23 managedObjectContext:self.managedObjectContext].intro = @"Volg de borden Centraal Station. Bekijk vooral het filmpje over hoe en waarom dit winkelcentrum gebouwd is \"met een op de toekomst gerichte voortvarendheid\". Hopelijk heb je genoten van de rondleiding.\nFeedback is erg welkom!";
-        
-        NSError *error = nil;
-        [self.managedObjectContext save:&error];
-  
-    }
     
-    if(![defaults objectForKey:@"version"] || ![[defaults objectForKey:@"version"] isEqualToArray:@[@0,@2,@1]] ) {
-        [defaults setObject:@[@0,@2, @1] forKey:@"version"];
-    }
+    }];
     
+        
+     
     
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
