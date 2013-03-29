@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "MixpanelAPI.h"
+#import "Mixpanel.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
 
     NSManagedObjectContext *managedObjectContext;
-    MixpanelAPI *mixpanel;
 
 @private
     NSManagedObjectModel *managedObjectModel;

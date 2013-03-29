@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A202447A1507C5D7004810BA /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = A20244791507C5D7004810BA /* Link.m */; };
-		A25CD18315109EE6006B2946 /* MPCJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD17715109EE6006B2946 /* MPCJSONDataSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
-		A25CD18415109EE6006B2946 /* MPCJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD17915109EE6006B2946 /* MPCJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A25CD18515109EE6006B2946 /* MPCSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD17B15109EE6006B2946 /* MPCSerializedJSONData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A25CD18615109EE6006B2946 /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD17E15109EE6006B2946 /* NSData+MPBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A25CD18715109EE6006B2946 /* MixpanelAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD18015109EE6006B2946 /* MixpanelAPI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A25CD18815109EE6006B2946 /* MixpanelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CD18215109EE6006B2946 /* MixpanelEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A25CD1941510A158006B2946 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A25CD1931510A158006B2946 /* Settings.bundle */; };
 		A25EE1D714F163F600A81707 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EE1D614F163F600A81707 /* UIKit.framework */; };
 		A25EE1D914F163F600A81707 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EE1D814F163F600A81707 /* Foundation.framework */; };
@@ -25,6 +19,16 @@
 		A25EE1F014F163F700A81707 /* WaypointController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EE1EF14F163F700A81707 /* WaypointController.m */; };
 		A262749414F7E15C007304C2 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A262749314F7E15C007304C2 /* InfoTableViewController.m */; };
 		A262749714F7E25D007304C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A262749614F7E25D007304C2 /* MapKit.framework */; };
+		A27E217817061143006E1B1C /* Prefill Bundle.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A27E217717061143006E1B1C /* Prefill Bundle.sqlite */; };
+		A27E218617061246006E1B1C /* MPCJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E217C17061246006E1B1C /* MPCJSONDataSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
+		A27E218717061246006E1B1C /* MPCJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E217E17061246006E1B1C /* MPCJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
+		A27E218817061246006E1B1C /* MPCSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E218017061246006E1B1C /* MPCSerializedJSONData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
+		A27E218917061246006E1B1C /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E218317061246006E1B1C /* NSData+MPBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
+		A27E218A17061246006E1B1C /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E218517061246006E1B1C /* Mixpanel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
+		A27E218C170612F1006E1B1C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27E218B170612F1006E1B1C /* CoreTelephony.framework */; };
+		A27E2190170613DB006E1B1C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E218F170613DB006E1B1C /* Reachability.m */; };
+		A27E219217061419006E1B1C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27E219117061419006E1B1C /* SystemConfiguration.framework */; };
+		A27E21951706150D006E1B1C /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E21941706150D006E1B1C /* TTTAttributedLabel.m */; };
 		A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A287E88014F2561300807435 /* Model.xcdatamodeld */; };
 		A287E88614F2585E00807435 /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A287E88514F2585E00807435 /* Waypoint.m */; };
 		A287E88814F2596E00807435 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287E88714F2596E00807435 /* CoreData.framework */; };
@@ -115,27 +119,13 @@
 		A2DFA862160B19970047135B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA860160B19970047135B /* MainStoryboard.storyboard */; };
 		A2DFA865160B19AA0047135B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA863160B19AA0047135B /* InfoPlist.strings */; };
 		A2DFA867160B1ACB0047135B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA866160B1ACB0047135B /* Default-568h@2x.png */; };
-		A2DFA86A160B20690047135B /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DFA869160B1F790047135B /* TTTAttributedLabel.m */; };
 		A2DFA870160B2A4B0047135B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DFA86F160B2A4B0047135B /* AddressBook.framework */; };
-		A2DFA87C160BC2C00047135B /* Prefill Bundle.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA87B160BC20D0047135B /* Prefill Bundle.sqlite */; };
 		A2FD8D3C15077BFB003D2270 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A20244781507C5D7004810BA /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		A20244791507C5D7004810BA /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
-		A25CD17615109EE6006B2946 /* MPCJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONDataSerializer.h; sourceTree = "<group>"; };
-		A25CD17715109EE6006B2946 /* MPCJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONDataSerializer.m; sourceTree = "<group>"; };
-		A25CD17815109EE6006B2946 /* MPCJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONSerializer.h; sourceTree = "<group>"; };
-		A25CD17915109EE6006B2946 /* MPCJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONSerializer.m; sourceTree = "<group>"; };
-		A25CD17A15109EE6006B2946 /* MPCSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCSerializedJSONData.h; sourceTree = "<group>"; };
-		A25CD17B15109EE6006B2946 /* MPCSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCSerializedJSONData.m; sourceTree = "<group>"; };
-		A25CD17D15109EE6006B2946 /* NSData+MPBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MPBase64.h"; sourceTree = "<group>"; };
-		A25CD17E15109EE6006B2946 /* NSData+MPBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MPBase64.m"; sourceTree = "<group>"; };
-		A25CD17F15109EE6006B2946 /* MixpanelAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixpanelAPI.h; sourceTree = "<group>"; };
-		A25CD18015109EE6006B2946 /* MixpanelAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixpanelAPI.m; sourceTree = "<group>"; };
-		A25CD18115109EE6006B2946 /* MixpanelEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixpanelEvent.h; sourceTree = "<group>"; };
-		A25CD18215109EE6006B2946 /* MixpanelEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixpanelEvent.m; sourceTree = "<group>"; };
 		A25CD1931510A158006B2946 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A25EE1D214F163F600A81707 /* Utrecht Gids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Utrecht Gids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25EE1D614F163F600A81707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -155,6 +145,23 @@
 		A262749214F7E15C007304C2 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
 		A262749314F7E15C007304C2 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
 		A262749614F7E25D007304C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A27E217717061143006E1B1C /* Prefill Bundle.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Prefill Bundle.sqlite"; path = "DerivedData/Reisgids Utrecht/Build/Products/Debug/Prefill Bundle.sqlite"; sourceTree = "<group>"; };
+		A27E217B17061246006E1B1C /* MPCJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONDataSerializer.h; sourceTree = "<group>"; };
+		A27E217C17061246006E1B1C /* MPCJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONDataSerializer.m; sourceTree = "<group>"; };
+		A27E217D17061246006E1B1C /* MPCJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONSerializer.h; sourceTree = "<group>"; };
+		A27E217E17061246006E1B1C /* MPCJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONSerializer.m; sourceTree = "<group>"; };
+		A27E217F17061246006E1B1C /* MPCSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCSerializedJSONData.h; sourceTree = "<group>"; };
+		A27E218017061246006E1B1C /* MPCSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCSerializedJSONData.m; sourceTree = "<group>"; };
+		A27E218217061246006E1B1C /* NSData+MPBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MPBase64.h"; sourceTree = "<group>"; };
+		A27E218317061246006E1B1C /* NSData+MPBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MPBase64.m"; sourceTree = "<group>"; };
+		A27E218417061246006E1B1C /* Mixpanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mixpanel.h; path = Submodules/Mixpanel/Mixpanel/Mixpanel.h; sourceTree = SOURCE_ROOT; };
+		A27E218517061246006E1B1C /* Mixpanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mixpanel.m; path = Submodules/Mixpanel/Mixpanel/Mixpanel.m; sourceTree = SOURCE_ROOT; };
+		A27E218B170612F1006E1B1C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A27E218E170613DB006E1B1C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Submodules/Reachability/Reachability.h; sourceTree = "<group>"; };
+		A27E218F170613DB006E1B1C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Submodules/Reachability/Reachability.m; sourceTree = "<group>"; };
+		A27E219117061419006E1B1C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A27E21931706150D006E1B1C /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = Submodules/TTTAttributedLabel/TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = "<group>"; };
+		A27E21941706150D006E1B1C /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = Submodules/TTTAttributedLabel/TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = "<group>"; };
 		A287E88114F2561300807435 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A287E88414F2585E00807435 /* Waypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waypoint.h; sourceTree = "<group>"; };
 		A287E88514F2585E00807435 /* Waypoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waypoint.m; sourceTree = "<group>"; };
@@ -250,10 +257,7 @@
 		A2DFA861160B19970047135B /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = nl; path = nl.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A2DFA864160B19AA0047135B /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2DFA866160B1ACB0047135B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A2DFA868160B1F790047135B /* TTTAttributedLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = Submodules/TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = "<group>"; };
-		A2DFA869160B1F790047135B /* TTTAttributedLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = Submodules/TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = "<group>"; };
 		A2DFA86F160B2A4B0047135B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		A2DFA87B160BC20D0047135B /* Prefill Bundle.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Prefill Bundle.sqlite"; path = "../../../../Library/Developer/Xcode/DerivedData/Prefill_Bundle-eklzjfjrijnzqgchruuyehgjwmml/Build/Products/Debug/Prefill Bundle.sqlite"; sourceTree = "<group>"; };
 		A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -262,6 +266,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A27E219217061419006E1B1C /* SystemConfiguration.framework in Frameworks */,
+				A27E218C170612F1006E1B1C /* CoreTelephony.framework in Frameworks */,
 				A262749714F7E25D007304C2 /* MapKit.framework in Frameworks */,
 				A2DFA870160B2A4B0047135B /* AddressBook.framework in Frameworks */,
 				A29B5EFD150F4C92008A0C59 /* CoreText.framework in Frameworks */,
@@ -277,48 +283,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A25CD17315109EE6006B2946 /* MPLib */ = {
+		A25CD17315109EE6006B2946 /* Mixpanel */ = {
 			isa = PBXGroup;
 			children = (
-				A25CD17415109EE6006B2946 /* lib */,
-				A25CD17F15109EE6006B2946 /* MixpanelAPI.h */,
-				A25CD18015109EE6006B2946 /* MixpanelAPI.m */,
-				A25CD18115109EE6006B2946 /* MixpanelEvent.h */,
-				A25CD18215109EE6006B2946 /* MixpanelEvent.m */,
+				A27E217917061246006E1B1C /* Library */,
+				A27E218417061246006E1B1C /* Mixpanel.h */,
+				A27E218517061246006E1B1C /* Mixpanel.m */,
 			);
-			name = MPLib;
+			name = Mixpanel;
 			path = Submodules/Mixpanel/MPLib;
-			sourceTree = "<group>";
-		};
-		A25CD17415109EE6006B2946 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				A25CD17515109EE6006B2946 /* JSON */,
-				A25CD17C15109EE6006B2946 /* NSData_Base64 */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		A25CD17515109EE6006B2946 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				A25CD17615109EE6006B2946 /* MPCJSONDataSerializer.h */,
-				A25CD17715109EE6006B2946 /* MPCJSONDataSerializer.m */,
-				A25CD17815109EE6006B2946 /* MPCJSONSerializer.h */,
-				A25CD17915109EE6006B2946 /* MPCJSONSerializer.m */,
-				A25CD17A15109EE6006B2946 /* MPCSerializedJSONData.h */,
-				A25CD17B15109EE6006B2946 /* MPCSerializedJSONData.m */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		A25CD17C15109EE6006B2946 /* NSData_Base64 */ = {
-			isa = PBXGroup;
-			children = (
-				A25CD17D15109EE6006B2946 /* NSData+MPBase64.h */,
-				A25CD17E15109EE6006B2946 /* NSData+MPBase64.m */,
-			);
-			path = NSData_Base64;
 			sourceTree = "<group>";
 		};
 		A25EE1C714F163F600A81707 = {
@@ -344,6 +317,8 @@
 		A25EE1D514F163F600A81707 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A27E219117061419006E1B1C /* SystemConfiguration.framework */,
+				A27E218B170612F1006E1B1C /* CoreTelephony.framework */,
 				A2DFA86F160B2A4B0047135B /* AddressBook.framework */,
 				A29B5EFC150F4C92008A0C59 /* CoreText.framework */,
 				A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */,
@@ -482,10 +457,52 @@
 			name = Photos;
 			sourceTree = "<group>";
 		};
+		A27E217917061246006E1B1C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A27E217A17061246006E1B1C /* JSON */,
+				A27E218117061246006E1B1C /* NSData_Base64 */,
+			);
+			name = Library;
+			path = Submodules/Mixpanel/Mixpanel/Library;
+			sourceTree = SOURCE_ROOT;
+		};
+		A27E217A17061246006E1B1C /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A27E217B17061246006E1B1C /* MPCJSONDataSerializer.h */,
+				A27E217C17061246006E1B1C /* MPCJSONDataSerializer.m */,
+				A27E217D17061246006E1B1C /* MPCJSONSerializer.h */,
+				A27E217E17061246006E1B1C /* MPCJSONSerializer.m */,
+				A27E217F17061246006E1B1C /* MPCSerializedJSONData.h */,
+				A27E218017061246006E1B1C /* MPCSerializedJSONData.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		A27E218117061246006E1B1C /* NSData_Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				A27E218217061246006E1B1C /* NSData+MPBase64.h */,
+				A27E218317061246006E1B1C /* NSData+MPBase64.m */,
+			);
+			path = NSData_Base64;
+			sourceTree = "<group>";
+		};
+		A27E218D17061319006E1B1C /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				A27E218E170613DB006E1B1C /* Reachability.h */,
+				A27E218F170613DB006E1B1C /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		A29B5EFF150F4CE4008A0C59 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				A25CD17315109EE6006B2946 /* MPLib */,
+				A27E218D17061319006E1B1C /* Reachability */,
+				A25CD17315109EE6006B2946 /* Mixpanel */,
 				A29B5F00150F4CF7008A0C59 /* TTTAttributedLabel */,
 			);
 			name = External;
@@ -494,8 +511,8 @@
 		A29B5F00150F4CF7008A0C59 /* TTTAttributedLabel */ = {
 			isa = PBXGroup;
 			children = (
-				A2DFA868160B1F790047135B /* TTTAttributedLabel.h */,
-				A2DFA869160B1F790047135B /* TTTAttributedLabel.m */,
+				A27E21931706150D006E1B1C /* TTTAttributedLabel.h */,
+				A27E21941706150D006E1B1C /* TTTAttributedLabel.m */,
 			);
 			name = TTTAttributedLabel;
 			sourceTree = "<group>";
@@ -503,7 +520,7 @@
 		A2ABFE5B14F27C6700550070 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A2DFA87B160BC20D0047135B /* Prefill Bundle.sqlite */,
+				A27E217717061143006E1B1C /* Prefill Bundle.sqlite */,
 				A29FA1AB150FED3D00C900C2 /* Default.png */,
 				A29FA1AC150FED3D00C900C2 /* Default@2x.png */,
 				A2DFA866160B1ACB0047135B /* Default-568h@2x.png */,
@@ -566,7 +583,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DFA87C160BC2C00047135B /* Prefill Bundle.sqlite in Resources */,
 				A2ABFE5E14F27C8C00550070 /* Icon.png in Resources */,
 				A2ABFE5F14F27C8C00550070 /* Icon@2x.png in Resources */,
 				A29FA1AD150FED3D00C900C2 /* Default.png in Resources */,
@@ -649,6 +665,7 @@
 				A2DFA862160B19970047135B /* MainStoryboard.storyboard in Resources */,
 				A2DFA865160B19AA0047135B /* InfoPlist.strings in Resources */,
 				A2DFA867160B1ACB0047135B /* Default-568h@2x.png in Resources */,
+				A27E217817061143006E1B1C /* Prefill Bundle.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,7 +676,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DFA86A160B20690047135B /* TTTAttributedLabel.m in Sources */,
 				A25EE1E314F163F600A81707 /* main.m in Sources */,
 				A25EE1E714F163F700A81707 /* AppDelegate.m in Sources */,
 				A25EE1EA14F163F700A81707 /* RootViewController.m in Sources */,
@@ -673,12 +689,13 @@
 				A2BED8C81507C01C007A20B3 /* LocalizedCurrentLocation.m in Sources */,
 				A202447A1507C5D7004810BA /* Link.m in Sources */,
 				A29A3DCC150A754000797851 /* AboutViewController.m in Sources */,
-				A25CD18315109EE6006B2946 /* MPCJSONDataSerializer.m in Sources */,
-				A25CD18415109EE6006B2946 /* MPCJSONSerializer.m in Sources */,
-				A25CD18515109EE6006B2946 /* MPCSerializedJSONData.m in Sources */,
-				A25CD18615109EE6006B2946 /* NSData+MPBase64.m in Sources */,
-				A25CD18715109EE6006B2946 /* MixpanelAPI.m in Sources */,
-				A25CD18815109EE6006B2946 /* MixpanelEvent.m in Sources */,
+				A27E218617061246006E1B1C /* MPCJSONDataSerializer.m in Sources */,
+				A27E218717061246006E1B1C /* MPCJSONSerializer.m in Sources */,
+				A27E218817061246006E1B1C /* MPCSerializedJSONData.m in Sources */,
+				A27E218917061246006E1B1C /* NSData+MPBase64.m in Sources */,
+				A27E218A17061246006E1B1C /* Mixpanel.m in Sources */,
+				A27E2190170613DB006E1B1C /* Reachability.m in Sources */,
+				A27E21951706150D006E1B1C /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,12 +772,12 @@
 		A25EE1F714F163F700A81707 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sjors Provoost (A885HU8JZH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reisgids Utrecht/Utrecht Gids-Prefix.pch";
 				INFOPLIST_FILE = "Reisgids Utrecht/Utrecht Gids-Info.plist";
 				PRODUCT_NAME = "Utrecht Gids";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "10059C45-EF83-45CD-80B8-BF6CB63F31E1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

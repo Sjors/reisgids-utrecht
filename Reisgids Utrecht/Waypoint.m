@@ -7,7 +7,7 @@
 //
 
 #import "Waypoint.h"
-#import "MixpanelAPI.h"
+#import "Mixpanel.h"
 
 
 @implementation Waypoint
@@ -186,10 +186,9 @@
     }
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
     
     if([defaults boolForKey:@"logActivity"]) {
-        [mixpanel track:@"visitSight" properties:[NSDictionary dictionaryWithObjectsAndKeys:self.identifier, @"id", self.title, @"title", nil]];
+        [[Mixpanel sharedInstance] track:@"visitSight" properties:[NSDictionary dictionaryWithObjectsAndKeys:self.identifier, @"id", self.title, @"title", nil]];
     }
     
 

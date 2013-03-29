@@ -46,7 +46,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
     
     if([defaults boolForKey:@"logActivity"]) {
         NSString *title = self.waypoint.title;
@@ -305,7 +305,7 @@
     NSString *url;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
     
     if(indexPath.section == 0 && indexPath.row == 1) {
         Waypoint *display_waypoint;

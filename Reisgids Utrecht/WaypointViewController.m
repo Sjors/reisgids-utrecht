@@ -9,7 +9,7 @@
 #import "WaypointViewController.h"
 #import "InfoTableViewController.h"
 #import "Link.h"
-#import "MixpanelAPI.h"
+#import "Mixpanel.h"
 #import "AppDelegate.h"
 
 @implementation WaypointViewController
@@ -257,7 +257,7 @@
 
     
     if([defaults boolForKey:@"logActivity"]) {
-        MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+        Mixpanel *mixpanel = [Mixpanel sharedInstance];
         Link *link = [Link findByUrl:url managedObjectContext:[(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
 
         [mixpanel track:@"link" properties:[NSDictionary dictionaryWithObjectsAndKeys:link.identifier, @"id", link.title, @"title", nil]];
@@ -276,7 +276,7 @@
     Link *link = [sortedLinks objectAtIndex:sender.tag];
     
     if([defaults boolForKey:@"logActivity"]) {
-        MixpanelAPI *mixpanel = [MixpanelAPI sharedAPI];
+        Mixpanel *mixpanel = [Mixpanel sharedInstance];
         
 
         [mixpanel track:@"link" properties:[NSDictionary dictionaryWithObjectsAndKeys:link.identifier, @"id", link.title, @"title", nil]];

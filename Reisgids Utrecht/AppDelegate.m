@@ -26,6 +26,15 @@
         [defaults synchronize];
     }
     
+    // Analytics (Mixpanel)
+    if([defaults boolForKey:@"logActivity"]) {
+#ifdef DEBUG
+        [Mixpanel sharedInstanceWithToken:@"60f7d9a9f202586a0d96a63b155337a8"];
+#else
+        [Mixpanel sharedInstanceWithToken:@"2c4aba7e3b7f4b125fb9326dc74fa6ba"];
+#endif
+    }
+    
     if(![defaults valueForKey:@"version"] && [[Waypoint findById:@9 managedObjectContext:self.managedObjectContext].title isEqualToString:@"Richting Dom kerk"]) {
         // Fix bugs in version 0.1
         [Waypoint findById:@9 managedObjectContext:self.managedObjectContext].title = @"Richting Domkerk";
@@ -47,20 +56,11 @@
   
     }
     
-    if(![defaults objectForKey:@"version"] || ![[defaults objectForKey:@"version"] isEqualToArray:@[@0,@2]] ) {
-        [defaults setObject:@[@0,@2] forKey:@"version"];
+    if(![defaults objectForKey:@"version"] || ![[defaults objectForKey:@"version"] isEqualToArray:@[@0,@2,@1]] ) {
+        [defaults setObject:@[@0,@2, @1] forKey:@"version"];
     }
     
     
-    // Analytics (Mixpanel)
-    if([defaults boolForKey:@"logActivity"]) {
-#ifdef DEBUG
-        mixpanel = [MixpanelAPI sharedAPIWithToken:@"60f7d9a9f202586a0d96a63b155337a8"];
-#else 
-        mixpanel = [MixpanelAPI sharedAPIWithToken:@"2c4aba7e3b7f4b125fb9326dc74fa6ba"];
-#endif
-        
-    }
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:@"TenSecondsAfterLaunch" object:nil userInfo:nil];
@@ -79,7 +79,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if([defaults boolForKey:@"logActivity"]) {
-        [mixpanel flush]; // Uploads datapoints to the Mixpanel Server.
+        [[Mixpanel sharedInstance] flush]; // Uploads datapoints to the Mixpanel Server.
     }
 
 }
@@ -104,6 +104,12 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+
+    // Analytics (Mixpanel)
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([defaults boolForKey:@"logActivity"]) {
+        [[Mixpanel sharedInstance] track:@"launch"];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -185,8 +191,7 @@
         // Analytics (Mixpanel)
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         if([defaults boolForKey:@"logActivity"]) {
-            mixpanel = [MixpanelAPI sharedAPI];
-            [mixpanel track:@"firstLaunch"];
+            [[Mixpanel sharedInstance] track:@"firstLaunch"];
         }
     }
     
