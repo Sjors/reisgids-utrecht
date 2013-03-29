@@ -1,9 +1,0 @@
-[submodule "Submodules/Mixpanel"]
-	path = Submodules/Mixpanel
-	url = git://github.com/mixpanel/mixpanel-iphone.git
-[submodule "Submodules/TTTAttributedLabel"]
-	path = Submodules/TTTAttributedLabel
-	url = git://github.com/mattt/TTTAttributedLabel.git
-[submodule "Submodules/Reachability"]
-	path = Submodules/Reachability
-	url = git://github.com/tonymillion/Reachability.git
