@@ -5,6 +5,9 @@
       location = "group:Prefill/Prefill Bundle/Prefill Bundle.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:Utrecht Gids.xcodeproj">
+      location = "group:Utrecht Gids.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

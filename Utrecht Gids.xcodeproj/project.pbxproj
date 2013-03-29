@@ -20,15 +20,8 @@
 		A262749414F7E15C007304C2 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A262749314F7E15C007304C2 /* InfoTableViewController.m */; };
 		A262749714F7E25D007304C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A262749614F7E25D007304C2 /* MapKit.framework */; };
 		A27E217817061143006E1B1C /* Prefill Bundle.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A27E217717061143006E1B1C /* Prefill Bundle.sqlite */; };
-		A27E218617061246006E1B1C /* MPCJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E217C17061246006E1B1C /* MPCJSONDataSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
-		A27E218717061246006E1B1C /* MPCJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E217E17061246006E1B1C /* MPCJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
-		A27E218817061246006E1B1C /* MPCSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E218017061246006E1B1C /* MPCSerializedJSONData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
-		A27E218917061246006E1B1C /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E218317061246006E1B1C /* NSData+MPBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
-		A27E218A17061246006E1B1C /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E218517061246006E1B1C /* Mixpanel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
 		A27E218C170612F1006E1B1C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27E218B170612F1006E1B1C /* CoreTelephony.framework */; };
-		A27E2190170613DB006E1B1C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E218F170613DB006E1B1C /* Reachability.m */; };
 		A27E219217061419006E1B1C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27E219117061419006E1B1C /* SystemConfiguration.framework */; };
-		A27E21951706150D006E1B1C /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E21941706150D006E1B1C /* TTTAttributedLabel.m */; };
 		A287E88214F2561300807435 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A287E88014F2561300807435 /* Model.xcdatamodeld */; };
 		A287E88614F2585E00807435 /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A287E88514F2585E00807435 /* Waypoint.m */; };
 		A287E88814F2596E00807435 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287E88714F2596E00807435 /* CoreData.framework */; };
@@ -121,9 +114,11 @@
 		A2DFA867160B1ACB0047135B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA866160B1ACB0047135B /* Default-568h@2x.png */; };
 		A2DFA870160B2A4B0047135B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DFA86F160B2A4B0047135B /* AddressBook.framework */; };
 		A2FD8D3C15077BFB003D2270 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */; };
+		EFAA247896314A729BB00EFF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A86EDB56D8A3483784A22745 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A922DBAC7A04E65AC872464 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		A20244781507C5D7004810BA /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		A20244791507C5D7004810BA /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
 		A25CD1931510A158006B2946 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -146,22 +141,8 @@
 		A262749314F7E15C007304C2 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
 		A262749614F7E25D007304C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A27E217717061143006E1B1C /* Prefill Bundle.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Prefill Bundle.sqlite"; path = "DerivedData/Reisgids Utrecht/Build/Products/Debug/Prefill Bundle.sqlite"; sourceTree = "<group>"; };
-		A27E217B17061246006E1B1C /* MPCJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONDataSerializer.h; sourceTree = "<group>"; };
-		A27E217C17061246006E1B1C /* MPCJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONDataSerializer.m; sourceTree = "<group>"; };
-		A27E217D17061246006E1B1C /* MPCJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONSerializer.h; sourceTree = "<group>"; };
-		A27E217E17061246006E1B1C /* MPCJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONSerializer.m; sourceTree = "<group>"; };
-		A27E217F17061246006E1B1C /* MPCSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCSerializedJSONData.h; sourceTree = "<group>"; };
-		A27E218017061246006E1B1C /* MPCSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCSerializedJSONData.m; sourceTree = "<group>"; };
-		A27E218217061246006E1B1C /* NSData+MPBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MPBase64.h"; sourceTree = "<group>"; };
-		A27E218317061246006E1B1C /* NSData+MPBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MPBase64.m"; sourceTree = "<group>"; };
-		A27E218417061246006E1B1C /* Mixpanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mixpanel.h; path = Submodules/Mixpanel/Mixpanel/Mixpanel.h; sourceTree = SOURCE_ROOT; };
-		A27E218517061246006E1B1C /* Mixpanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mixpanel.m; path = Submodules/Mixpanel/Mixpanel/Mixpanel.m; sourceTree = SOURCE_ROOT; };
 		A27E218B170612F1006E1B1C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		A27E218E170613DB006E1B1C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Submodules/Reachability/Reachability.h; sourceTree = "<group>"; };
-		A27E218F170613DB006E1B1C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Submodules/Reachability/Reachability.m; sourceTree = "<group>"; };
 		A27E219117061419006E1B1C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		A27E21931706150D006E1B1C /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = Submodules/TTTAttributedLabel/TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = "<group>"; };
-		A27E21941706150D006E1B1C /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = Submodules/TTTAttributedLabel/TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = "<group>"; };
 		A287E88114F2561300807435 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A287E88414F2585E00807435 /* Waypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waypoint.h; sourceTree = "<group>"; };
 		A287E88514F2585E00807435 /* Waypoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waypoint.m; sourceTree = "<group>"; };
@@ -259,6 +240,7 @@
 		A2DFA866160B1ACB0047135B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A2DFA86F160B2A4B0047135B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A86EDB56D8A3483784A22745 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,32 +259,22 @@
 				A25EE1D714F163F600A81707 /* UIKit.framework in Frameworks */,
 				A25EE1D914F163F600A81707 /* Foundation.framework in Frameworks */,
 				A25EE1DB14F163F600A81707 /* CoreGraphics.framework in Frameworks */,
+				EFAA247896314A729BB00EFF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A25CD17315109EE6006B2946 /* Mixpanel */ = {
-			isa = PBXGroup;
-			children = (
-				A27E217917061246006E1B1C /* Library */,
-				A27E218417061246006E1B1C /* Mixpanel.h */,
-				A27E218517061246006E1B1C /* Mixpanel.m */,
-			);
-			name = Mixpanel;
-			path = Submodules/Mixpanel/MPLib;
-			sourceTree = "<group>";
-		};
 		A25EE1C714F163F600A81707 = {
 			isa = PBXGroup;
 			children = (
 				A25EE1DC14F163F600A81707 /* Reisgids Utrecht */,
 				A25EE1DD14F163F600A81707 /* Supporting Files */,
 				A2ABFE5B14F27C6700550070 /* Resources */,
-				A29B5EFF150F4CE4008A0C59 /* External */,
 				A25EE1D514F163F600A81707 /* Frameworks */,
 				A25EE1D314F163F600A81707 /* Products */,
+				4A922DBAC7A04E65AC872464 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -328,6 +300,7 @@
 				A25EE1D614F163F600A81707 /* UIKit.framework */,
 				A25EE1D814F163F600A81707 /* Foundation.framework */,
 				A25EE1DA14F163F600A81707 /* CoreGraphics.framework */,
+				A86EDB56D8A3483784A22745 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -457,66 +430,6 @@
 			name = Photos;
 			sourceTree = "<group>";
 		};
-		A27E217917061246006E1B1C /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				A27E217A17061246006E1B1C /* JSON */,
-				A27E218117061246006E1B1C /* NSData_Base64 */,
-			);
-			name = Library;
-			path = Submodules/Mixpanel/Mixpanel/Library;
-			sourceTree = SOURCE_ROOT;
-		};
-		A27E217A17061246006E1B1C /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				A27E217B17061246006E1B1C /* MPCJSONDataSerializer.h */,
-				A27E217C17061246006E1B1C /* MPCJSONDataSerializer.m */,
-				A27E217D17061246006E1B1C /* MPCJSONSerializer.h */,
-				A27E217E17061246006E1B1C /* MPCJSONSerializer.m */,
-				A27E217F17061246006E1B1C /* MPCSerializedJSONData.h */,
-				A27E218017061246006E1B1C /* MPCSerializedJSONData.m */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		A27E218117061246006E1B1C /* NSData_Base64 */ = {
-			isa = PBXGroup;
-			children = (
-				A27E218217061246006E1B1C /* NSData+MPBase64.h */,
-				A27E218317061246006E1B1C /* NSData+MPBase64.m */,
-			);
-			path = NSData_Base64;
-			sourceTree = "<group>";
-		};
-		A27E218D17061319006E1B1C /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				A27E218E170613DB006E1B1C /* Reachability.h */,
-				A27E218F170613DB006E1B1C /* Reachability.m */,
-			);
-			name = Reachability;
-			sourceTree = "<group>";
-		};
-		A29B5EFF150F4CE4008A0C59 /* External */ = {
-			isa = PBXGroup;
-			children = (
-				A27E218D17061319006E1B1C /* Reachability */,
-				A25CD17315109EE6006B2946 /* Mixpanel */,
-				A29B5F00150F4CF7008A0C59 /* TTTAttributedLabel */,
-			);
-			name = External;
-			sourceTree = "<group>";
-		};
-		A29B5F00150F4CF7008A0C59 /* TTTAttributedLabel */ = {
-			isa = PBXGroup;
-			children = (
-				A27E21931706150D006E1B1C /* TTTAttributedLabel.h */,
-				A27E21941706150D006E1B1C /* TTTAttributedLabel.m */,
-			);
-			name = TTTAttributedLabel;
-			sourceTree = "<group>";
-		};
 		A2ABFE5B14F27C6700550070 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +454,7 @@
 				A25EE1CE14F163F600A81707 /* Sources */,
 				A25EE1CF14F163F600A81707 /* Frameworks */,
 				A25EE1D014F163F600A81707 /* Resources */,
+				759781FF93794DC6ABC0E2C5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -671,6 +585,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		759781FF93794DC6ABC0E2C5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A25EE1CE14F163F600A81707 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -689,13 +620,6 @@
 				A2BED8C81507C01C007A20B3 /* LocalizedCurrentLocation.m in Sources */,
 				A202447A1507C5D7004810BA /* Link.m in Sources */,
 				A29A3DCC150A754000797851 /* AboutViewController.m in Sources */,
-				A27E218617061246006E1B1C /* MPCJSONDataSerializer.m in Sources */,
-				A27E218717061246006E1B1C /* MPCJSONSerializer.m in Sources */,
-				A27E218817061246006E1B1C /* MPCSerializedJSONData.m in Sources */,
-				A27E218917061246006E1B1C /* NSData+MPBase64.m in Sources */,
-				A27E218A17061246006E1B1C /* Mixpanel.m in Sources */,
-				A27E2190170613DB006E1B1C /* Reachability.m in Sources */,
-				A27E21951706150D006E1B1C /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +695,7 @@
 		};
 		A25EE1F714F163F700A81707 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A922DBAC7A04E65AC872464 /* Pods.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -784,6 +709,7 @@
 		};
 		A25EE1F814F163F700A81707 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A922DBAC7A04E65AC872464 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sjors Provoost";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sjors Provoost";
@@ -820,6 +746,7 @@
 		};
 		A298D48014F2825000ECB06C /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A922DBAC7A04E65AC872464 /* Pods.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sjors Provoost";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
