@@ -1,5 +1,6 @@
-platform :ios, '5.0'
-pod 'Reachability'
-pod 'Mixpanel'
-pod 'TTTAttributedLabel'
-pod "MTMigration"
+platform :ios, '13.3'
+
+target 'Utrecht Gids' do
+  pod 'TTTAttributedLabel'
+  pod "MTMigration"
+end

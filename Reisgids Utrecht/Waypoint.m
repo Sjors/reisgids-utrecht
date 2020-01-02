@@ -7,8 +7,6 @@
 //
 
 #import "Waypoint.h"
-#import "Mixpanel.h"
-
 
 @implementation Waypoint
 
@@ -26,39 +24,39 @@
 @dynamic links;
 
 +(NSArray *)allWaypointsAfter:(Waypoint *)currentWaypoint managedObjectContext:(NSManagedObjectContext *)moc {
-    
+
     NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:[NSEntityDescription entityForName:@"Waypoint" inManagedObjectContext:moc]];
-    
+
     [fetch setPredicate:[NSPredicate predicateWithFormat:@"position > %@", currentWaypoint.position]];
-    
-    NSSortDescriptor *sort1 = [[NSSortDescriptor alloc] 
-                              initWithKey:@"range" ascending:YES]; 
-    
-    NSSortDescriptor *sort2 = [[NSSortDescriptor alloc] 
-                               initWithKey:@"position" ascending:YES]; 
-    
+
+    NSSortDescriptor *sort1 = [[NSSortDescriptor alloc]
+                              initWithKey:@"range" ascending:YES];
+
+    NSSortDescriptor *sort2 = [[NSSortDescriptor alloc]
+                               initWithKey:@"position" ascending:YES];
+
     [fetch setSortDescriptors:[NSArray arrayWithObjects:sort1, sort2, nil]];
-    
+
     NSError *error = nil;
     return [moc executeFetchRequest:fetch error:&error];
 }
 
 +(NSArray *)allWaypointsBefore:(Waypoint *)currentWaypoint managedObjectContext:(NSManagedObjectContext *)moc {
-    
+
     NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:[NSEntityDescription entityForName:@"Waypoint" inManagedObjectContext:moc]];
-    
+
     [fetch setPredicate:[NSPredicate predicateWithFormat:@"position < %@", currentWaypoint.position]];
-    
-    NSSortDescriptor *sort1 = [[NSSortDescriptor alloc] 
-                               initWithKey:@"range" ascending:NO]; 
-    
-    NSSortDescriptor *sort2 = [[NSSortDescriptor alloc] 
-                               initWithKey:@"position" ascending:NO]; 
-    
+
+    NSSortDescriptor *sort1 = [[NSSortDescriptor alloc]
+                               initWithKey:@"range" ascending:NO];
+
+    NSSortDescriptor *sort2 = [[NSSortDescriptor alloc]
+                               initWithKey:@"position" ascending:NO];
+
     [fetch setSortDescriptors:[NSArray arrayWithObjects:sort1, sort2, nil]];
-    
+
     NSError *error = nil;
     return [moc executeFetchRequest:fetch error:&error];
 }
@@ -67,9 +65,9 @@
 +(Waypoint *)findByPosition:(NSNumber *)position managedObjectContext:(NSManagedObjectContext *)moc {
     NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:[NSEntityDescription entityForName:@"Waypoint" inManagedObjectContext:moc]];
-    
+
     [fetch setPredicate:[NSPredicate predicateWithFormat:@"position = %@", position]];
-    
+
     NSError *error = nil;
     NSArray *array = [moc executeFetchRequest:fetch error:&error];
     if (array != nil) {
@@ -84,15 +82,15 @@
     else {
         // Deal with error.
     }
-    
+
     return nil;
 }
 +(Waypoint *)findById:(NSNumber *)identifier managedObjectContext:(NSManagedObjectContext *)moc {
     NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:[NSEntityDescription entityForName:@"Waypoint" inManagedObjectContext:moc]];
-    
+
     [fetch setPredicate:[NSPredicate predicateWithFormat:@"identifier = %@", identifier]];
-    
+
     NSError *error = nil;
     NSArray *array = [moc executeFetchRequest:fetch error:&error];
     if (array != nil) {
@@ -107,7 +105,7 @@
     else {
         // Deal with error.
     }
-    
+
     return nil;
 }
 
@@ -123,13 +121,13 @@
 -(Waypoint *)next:(NSManagedObjectContext *)moc {
     NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:[NSEntityDescription entityForName:@"Waypoint" inManagedObjectContext:moc]];
-    
+
     [fetch setPredicate:[NSPredicate predicateWithFormat:@"position = %d", [self.position intValue] + 1]];
-    
+
     NSError *error = nil;
     NSArray *array = [moc executeFetchRequest:fetch error:&error];
     if (array != nil) {
-        NSUInteger count = [array count];      
+        NSUInteger count = [array count];
         if (count > 0) {
             return [array objectAtIndex:0];
         } else {
@@ -140,7 +138,7 @@
     else {
         // Deal with error.
     }
-    
+
     return nil;
 }
 
@@ -152,12 +150,12 @@
     if([currentWaypoint.location distanceFromLocation:location] < [currentWaypoint.range intValue] && location.horizontalAccuracy <= [currentWaypoint.range intValue] && currentWaypoint.last_visited_at == nil) {
         return currentWaypoint;
     }
-    
+
     // Go through all other waypoints in the following order:
     // * all sights after the current one, ordered by "range" (so that overlapping sights with large ranges don't take precendence)
     // * all sights before the current one (same order as above)
     // Pick the first sight within range that has not been marked as visited yet.
-    
+
     for(Waypoint *waypoint in [self allWaypointsAfter:currentWaypoint managedObjectContext:moc]) {
         int distance = [waypoint.location distanceFromLocation:location];
 //        NSLog(@"Distance to %@ is %d meters.", waypoint.title, distance);
@@ -165,13 +163,13 @@
             return waypoint;
         }
     }
-    
+
     for(Waypoint *waypoint in [self allWaypointsBefore:currentWaypoint managedObjectContext:moc]) {
         if ([waypoint.location distanceFromLocation:location] < [waypoint.range intValue]  && location.horizontalAccuracy <= [waypoint.range intValue]  && waypoint.last_visited_at == nil) {
             return waypoint;
         }
     }
-    
+
     // No (new) waypoints in range:
     return nil;
 }
@@ -184,14 +182,6 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    if([defaults boolForKey:@"logActivity"]) {
-        [[Mixpanel sharedInstance] track:@"visitSight" properties:[NSDictionary dictionaryWithObjectsAndKeys:self.identifier, @"id", self.title, @"title", nil]];
-    }
-    
-
 
 }
 

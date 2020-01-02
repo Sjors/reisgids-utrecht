@@ -34,7 +34,7 @@ static NSManagedObjectContext *managedObjectContext()
     }
 
     @autoreleasepool {
-        context = [[NSManagedObjectContext alloc] init];
+        context = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSMainQueueConcurrencyType];
         
         NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel()];
         [context setPersistentStoreCoordinator:coordinator];

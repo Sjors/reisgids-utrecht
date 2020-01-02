@@ -114,13 +114,16 @@
 		A2DFA867160B1ACB0047135B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA866160B1ACB0047135B /* Default-568h@2x.png */; };
 		A2DFA870160B2A4B0047135B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DFA86F160B2A4B0047135B /* AddressBook.framework */; };
 		A2FD8D3C15077BFB003D2270 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */; };
-		EFAA247896314A729BB00EFF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A86EDB56D8A3483784A22745 /* libPods.a */; };
+		C03F8B0AC77C1FE39D8252B2 /* libPods-Utrecht Gids.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E04D3854C84D175F7EBA7F /* libPods-Utrecht Gids.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03FA1426B9E4BF4BA95F5E21 /* Pods-Utrecht Gids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utrecht Gids.release.xcconfig"; path = "Target Support Files/Pods-Utrecht Gids/Pods-Utrecht Gids.release.xcconfig"; sourceTree = "<group>"; };
+		249602D89D8BCBD7BD355956 /* Pods-Utrecht Gids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utrecht Gids.debug.xcconfig"; path = "Target Support Files/Pods-Utrecht Gids/Pods-Utrecht Gids.debug.xcconfig"; sourceTree = "<group>"; };
 		4A922DBAC7A04E65AC872464 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		A20244781507C5D7004810BA /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		A20244791507C5D7004810BA /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
+		A255A91E23BE17990019C542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A25CD1931510A158006B2946 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A25EE1D214F163F600A81707 /* Utrecht Gids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Utrecht Gids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25EE1D614F163F600A81707 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -140,7 +143,7 @@
 		A262749214F7E15C007304C2 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
 		A262749314F7E15C007304C2 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
 		A262749614F7E25D007304C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		A27E217717061143006E1B1C /* Prefill Bundle.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Prefill Bundle.sqlite"; path = "DerivedData/Reisgids Utrecht/Build/Products/Debug/Prefill Bundle.sqlite"; sourceTree = "<group>"; };
+		A27E217717061143006E1B1C /* Prefill Bundle.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Prefill Bundle.sqlite"; sourceTree = "<group>"; };
 		A27E218B170612F1006E1B1C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A27E219117061419006E1B1C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A287E88114F2561300807435 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -235,12 +238,12 @@
 		A2BED8C71507C01C007A20B3 /* LocalizedCurrentLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedCurrentLocation.m; sourceTree = "<group>"; };
 		A2C799A614F7F127000D197E /* WaypointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaypointAnnotation.h; sourceTree = "<group>"; };
 		A2C799A714F7F127000D197E /* WaypointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaypointAnnotation.m; sourceTree = "<group>"; };
-		A2DFA861160B19970047135B /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = nl; path = nl.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A2DFA864160B19AA0047135B /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2DFA866160B1ACB0047135B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A2DFA86F160B2A4B0047135B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		A2FD8D3B15077BFB003D2270 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		A86EDB56D8A3483784A22745 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9E04D3854C84D175F7EBA7F /* libPods-Utrecht Gids.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Utrecht Gids.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33C0D14E3AE7EDA4A2C4756 /* Pods-Utrecht Gids.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utrecht Gids.ad hoc.xcconfig"; path = "Target Support Files/Pods-Utrecht Gids/Pods-Utrecht Gids.ad hoc.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,13 +262,23 @@
 				A25EE1D714F163F600A81707 /* UIKit.framework in Frameworks */,
 				A25EE1D914F163F600A81707 /* Foundation.framework in Frameworks */,
 				A25EE1DB14F163F600A81707 /* CoreGraphics.framework in Frameworks */,
-				EFAA247896314A729BB00EFF /* libPods.a in Frameworks */,
+				C03F8B0AC77C1FE39D8252B2 /* libPods-Utrecht Gids.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93A945D96572BB6CDD24D375 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				249602D89D8BCBD7BD355956 /* Pods-Utrecht Gids.debug.xcconfig */,
+				03FA1426B9E4BF4BA95F5E21 /* Pods-Utrecht Gids.release.xcconfig */,
+				D33C0D14E3AE7EDA4A2C4756 /* Pods-Utrecht Gids.ad hoc.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A25EE1C714F163F600A81707 = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +288,7 @@
 				A25EE1D514F163F600A81707 /* Frameworks */,
 				A25EE1D314F163F600A81707 /* Products */,
 				4A922DBAC7A04E65AC872464 /* Pods.xcconfig */,
+				93A945D96572BB6CDD24D375 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -300,7 +314,7 @@
 				A25EE1D614F163F600A81707 /* UIKit.framework */,
 				A25EE1D814F163F600A81707 /* Foundation.framework */,
 				A25EE1DA14F163F600A81707 /* CoreGraphics.framework */,
-				A86EDB56D8A3483784A22745 /* libPods.a */,
+				A9E04D3854C84D175F7EBA7F /* libPods-Utrecht Gids.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -451,10 +465,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25EE1F614F163F700A81707 /* Build configuration list for PBXNativeTarget "Utrecht Gids" */;
 			buildPhases = (
+				BBACD2CF509307B828AE0588 /* [CP] Check Pods Manifest.lock */,
 				A25EE1CE14F163F600A81707 /* Sources */,
 				A25EE1CF14F163F600A81707 /* Frameworks */,
 				A25EE1D014F163F600A81707 /* Resources */,
-				759781FF93794DC6ABC0E2C5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -471,16 +485,17 @@
 		A25EE1C914F163F600A81707 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Sjors Provoost";
 			};
 			buildConfigurationList = A25EE1CC14F163F600A81707 /* Build configuration list for PBXProject "Utrecht Gids" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				nl,
+				Base,
 			);
 			mainGroup = A25EE1C714F163F600A81707;
 			productRefGroup = A25EE1D314F163F600A81707 /* Products */;
@@ -586,19 +601,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		759781FF93794DC6ABC0E2C5 /* Copy Pods Resources */ = {
+		BBACD2CF509307B828AE0588 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Utrecht Gids-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -629,7 +652,7 @@
 		A2DFA860160B19970047135B /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A2DFA861160B19970047135B /* nl */,
+				A255A91E23BE17990019C542 /* Base */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -649,16 +672,32 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sjors Provoost (A885HU8JZH)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -666,11 +705,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				ONLY_ACTIVE_ARCH = YES;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "10059C45-EF83-45CD-80B8-BF6CB63F31E1";
 				SDKROOT = iphoneos;
 			};
@@ -680,22 +723,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sjors Provoost";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "APP_STORE=1";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "04E871F4-687A-4994-8850-3BDDA5CBF8DF";
 				SDKROOT = iphoneos;
@@ -705,12 +766,14 @@
 		};
 		A25EE1F714F163F700A81707 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A922DBAC7A04E65AC872464 /* Pods.xcconfig */;
+			baseConfigurationReference = 249602D89D8BCBD7BD355956 /* Pods-Utrecht Gids.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reisgids Utrecht/Utrecht Gids-Prefix.pch";
 				INFOPLIST_FILE = "Reisgids Utrecht/Utrecht Gids-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.reisgids-utrecht.gids";
 				PRODUCT_NAME = "Utrecht Gids";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -719,13 +782,15 @@
 		};
 		A25EE1F814F163F700A81707 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A922DBAC7A04E65AC872464 /* Pods.xcconfig */;
+			baseConfigurationReference = 03FA1426B9E4BF4BA95F5E21 /* Pods-Utrecht Gids.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sjors Provoost";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sjors Provoost";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reisgids Utrecht/Utrecht Gids-Prefix.pch";
 				INFOPLIST_FILE = "Reisgids Utrecht/Utrecht Gids-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.reisgids-utrecht.gids";
 				PRODUCT_NAME = "Utrecht Gids";
 				PROVISIONING_PROFILE = "04E871F4-687A-4994-8850-3BDDA5CBF8DF";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "04E871F4-687A-4994-8850-3BDDA5CBF8DF";
@@ -737,22 +802,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "AD_HOC=1";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -761,12 +844,14 @@
 		};
 		A298D48014F2825000ECB06C /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A922DBAC7A04E65AC872464 /* Pods.xcconfig */;
+			baseConfigurationReference = D33C0D14E3AE7EDA4A2C4756 /* Pods-Utrecht Gids.ad hoc.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sjors Provoost";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reisgids Utrecht/Utrecht Gids-Prefix.pch";
 				INFOPLIST_FILE = "Reisgids Utrecht/Utrecht Gids-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.reisgids-utrecht.gids";
 				PRODUCT_NAME = "Utrecht Gids";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "04E871F4-687A-4994-8850-3BDDA5CBF8DF";
 				WRAPPER_EXTENSION = app;
